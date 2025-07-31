@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Theme Documentation - Basics - Kathiravan Muthaiah</title><meta name="Description" content="Discover what the Hugo - LoveIt theme is all about and the core-concepts behind it."><meta property="og:url" content="http://localhost:1313/posts/theme-documentation-basics/">
+  <meta property="og:site_name" content="Kathiravan Muthaiah">
+  <meta property="og:title" content="Theme Documentation - Basics">
+  <meta property="og:description" content="Discover what the Hugo - LoveIt theme is all about and the core-concepts behind it.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-03-06T21:29:01+08:00">
+    <meta property="article:modified_time" content="2020-03-06T21:29:01+08:00">
+    <meta property="article:tag" content="Installation">
+    <meta property="article:tag" content="Configuration">
+    <meta property="og:image" content="http://localhost:1313/images/profile.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/profile.jpg">
+  <meta name="twitter:title" content="Theme Documentation - Basics">
+  <meta name="twitter:description" content="Discover what the Hugo - LoveIt theme is all about and the core-concepts behind it.">
+<meta name="application-name" content="Kathiravan Muthaiah">
+<meta name="apple-mobile-web-app-title" content="Kathiravan Muthaiah"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/theme-documentation-basics/" /><link rel="prev" href="http://localhost:1313/posts/theme-documentation-content/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Theme Documentation - Basics",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/theme-documentation-basics\/"
+        },"genre": "posts","keywords": "installation, configuration","wordcount":  1414 ,
+        "url": "http:\/\/localhost:1313\/posts\/theme-documentation-basics\/","datePublished": "2020-03-06T21:29:01+08:00","dateModified": "2020-03-06T21:29:01+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Dillon"
+            },"description": "Discover what the Hugo - LoveIt theme is all about and the core-concepts behind it."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Theme Documentation - Basics</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://dillonzq.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Dillon</a></span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Documentation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-03-06">2020-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1414 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-requirements">1 Requirements</a></li>
+    <li><a href="#2-installation">2 Installation</a>
+      <ul>
+        <li><a href="#21-create-your-project">2.1 Create Your Project</a></li>
+        <li><a href="#22-install-the-theme">2.2 Install the Theme</a></li>
+        <li><a href="#basic-configuration">2.3 Basic Configuration</a></li>
+        <li><a href="#24-create-your-first-post">2.4 Create Your First Post</a></li>
+        <li><a href="#25-launching-the-website-locally">2.5 Launching the Website Locally</a></li>
+        <li><a href="#26-build-the-website">2.6 Build the Website</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-configuration">3 Configuration</a>
+      <ul>
+        <li><a href="#site-configuration">3.1 Site Configuration</a></li>
+        <li><a href="#32-favicons-browserconfig-manifest">3.2 Favicons, Browserconfig, Manifest</a></li>
+        <li><a href="#style-customization">3.3 Style Customization</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-multilingual-and-i18n">4 Multilingual and i18n</a>
+      <ul>
+        <li><a href="#language-compatibility">4.1 Compatibility</a></li>
+        <li><a href="#42-basic-configuration">4.2 Basic Configuration</a></li>
+        <li><a href="#43-overwrite-translation-strings">4.3 Overwrite Translation Strings</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-search">5 Search</a>
+      <ul>
+        <li><a href="#51-output-configuration">5.1 Output Configuration</a></li>
+        <li><a href="#52-search-configuration">5.2 Search Configuration</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Discover what the Hugo - <strong>LoveIt</strong> theme is all about and the core-concepts behind it.</p>
+<h2 id="1-requirements">1 Requirements</h2>
+<p>Thanks to the simplicity of Hugo, <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer ">Hugo</a> is the only dependency of this theme.</p>
+<p>Just install latest edition of <a href="https://gohugo.io/getting-started/installing/" target="_blank" rel="noopener noreffer "><i class="far fa-file-archive fa-fw" aria-hidden="true"></i>&nbsp;Hugo</a> for your OS (<strong>Windows</strong>, <strong>Linux</strong>, <strong>macOS</strong>).</p>
+<div class="details admonition note">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>When you need to use Hugo extended edition?<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>When you want <a href="#style-customization" rel="">style customization</a>, you need to use the Hugo <strong>extended edition</strong> for correct rendering.</p>
+<p><figure><a class="lightgallery" href="hugo-extended-edition.png" title="Hugo extended edition" data-thumbnail="hugo-extended-edition.png" data-sub-html="<h2>Hugo extended edition</h2><p>Hugo extended edition</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="hugo-extended-edition.png"
+            data-srcset="hugo-extended-edition.png, hugo-extended-edition.png 1.5x, hugo-extended-edition.png 2x"
+            data-sizes="auto"
+            alt="hugo-extended-edition.png" />
+    </a><figcaption class="image-caption">Hugo extended edition</figcaption>
+    </figure></p>
+</div>
+        </div>
+    </div>
+<h2 id="2-installation">2 Installation</h2>
+<p>The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you learn more about it by following this <a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener noreffer ">great documentation for beginners</a>.</p>
+<h3 id="21-create-your-project">2.1 Create Your Project</h3>
+<p>Hugo provides a <code>new</code> command to create a new website:</p>
+
+
+<h3 id="22-install-the-theme">2.2 Install the Theme</h3>
+<p>The <strong>LoveIt</strong> theme&rsquo;s repository is: <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer ">https://github.com/dillonzq/LoveIt</a>.</p>
+<p>You can download the <a href="https://github.com/dillonzq/LoveIt/releases" target="_blank" rel="noopener noreffer ">release <i class="far fa-file-archive fa-fw" aria-hidden="true"></i>&nbsp;.zip file</a> of the theme and extract it in the <code>themes</code> directory.</p>
+<p>Alternatively, clone this repository to the <code>themes</code> directory:</p>
+
+
+<p>Or, create an empty git repository and make this repository a submodule of your site directory:</p>
+
+
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>LoveIt theme&#39;s compatibility<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">LoveIt branch or version</th>
+          <th style="text-align: center">Supported Hugo versions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">master(Unstable)</td>
+          <td style="text-align: center">≥ 0.128.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>0.3.X(Recommended)</strong></td>
+          <td style="text-align: center">0.128.0 - 0.143.1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.2.X(Outdated)</td>
+          <td style="text-align: center">0.68.0 - 0.127.0</td>
+      </tr>
+  </tbody>
+</table>
+</div>
+        </div>
+    </div>
+<h3 id="basic-configuration">2.3 Basic Configuration</h3>
+<p>The following is a basic configuration for the LoveIt theme:</p>
+
+
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">When building the website, you can set a theme by using <code>--theme</code> option. However, we suggest you modify the configuration file (<strong>hugo.toml</strong>) and set the theme as the default.</div>
+        </div>
+    </div>
+<h3 id="24-create-your-first-post">2.4 Create Your First Post</h3>
+<p>Here is the way to create your first post:</p>
+
+
+<p>Feel free to edit the post file by adding some sample content and replacing the title value in the beginning of the file.</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">By default all posts and pages are created as a draft. If you want to render these pages, remove the property <code>draft: true</code> from the metadata, set the property <code>draft: false</code> or add <code>-D</code>/<code>--buildDrafts</code> parameter to <code>hugo</code> command.</div>
+        </div>
+    </div>
+<h3 id="25-launching-the-website-locally">2.5 Launching the Website Locally</h3>
+<p>Launch by using the following command:</p>
+
+
+<p>Go to <code>http://localhost:1313</code>.</p>
+<p><figure><a class="lightgallery" href="basic-configuration-preview.png" title="Basic configuration preview" data-thumbnail="basic-configuration-preview.png" data-sub-html="<h2>Basic configuration preview</h2><p>Basic configuration preview</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="basic-configuration-preview.png"
+            data-srcset="basic-configuration-preview.png, basic-configuration-preview.png 1.5x, basic-configuration-preview.png 2x"
+            data-sizes="auto"
+            alt="basic-configuration-preview.png" />
+    </a><figcaption class="image-caption">Basic configuration preview</figcaption>
+    </figure></p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">When you run <code>hugo serve</code>, when the contents of the files change, the page automatically refreshes with the changes.</div>
+        </div>
+    </div>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Since the theme use <code>.Scratch</code> in Hugo to implement some features,
+it is highly recommended that you add <code>--disableFastRender</code> parameter to <code>hugo server</code> command for the live preview of the page you are editing.</div>
+        </div>
+    </div>
+<h3 id="26-build-the-website">2.6 Build the Website</h3>
+<p>When your site is ready to deploy, run the following command:</p>
+
+
+<p>A <code>public</code> folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">The website can be automatically published and hosted with <a href="https://www.netlify.com/" target="_blank" rel="noopener noreffer ">Netlify</a> (Read more about <a href="https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/" target="_blank" rel="noopener noreffer ">Automated HUGO deployments with Netlify</a>).
+Alternatively, you can use <a href="https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/" target="_blank" rel="noopener noreffer ">AWS Amplify</a>, <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank" rel="noopener noreffer ">Github pages</a>, <a href="https://gohugo.io/hosting-and-deployment/hosting-on-render/" target="_blank" rel="noopener noreffer ">Render</a> and more&hellip;</div>
+        </div>
+    </div>
+<h2 id="3-configuration">3 Configuration</h2>
+<h3 id="site-configuration">3.1 Site Configuration</h3>
+<p>In addition to <a href="https://gohugo.io/overview/configuration/" target="_blank" rel="noopener noreffer ">Hugo global configuration</a> and <a href="#basic-configuration" rel="">menu configuration</a>, <strong>LoveIt</strong> lets you define the following parameters in your site configuration (here is a <code>hugo.toml</code>, whose values are default).</p>
+<p>Please open the code block below to view the complete sample configuration <i class="far fa-hand-point-down fa-fw" aria-hidden="true"></i>:</p>
+
+
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Note that some of these parameters are explained in details in other sections of this documentation.</div>
+        </div>
+    </div>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Hugo environments<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Default environments are <code>development</code> with <code>hugo serve</code> and <code>production</code> with <code>hugo</code>.</p>
+<p>Due to limitations in the local <code>development</code> environment,
+the <strong>comment system</strong>, <strong>CDN</strong> and <strong>fingerprint</strong> will not be enabled in the <code>development</code> environment.</p>
+<p>You could enable these features with <code>hugo serve -e production</code>.</p>
+</div>
+        </div>
+    </div>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tips about CDN Configuration<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+
+<p>The default CDN data file is located in <code>themes/LoveIt/assets/data/cdn/</code> directory.
+You can store your own data file in the same path under your project: <code>assets/data/cdn/</code>.</p>
+</div>
+        </div>
+    </div>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tips about social Configuration<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>You can directly set your ID to get a default social link and its icon:</p>
+
+
+<p>The social link generated is <code>https://mastodon.technology/@xxxx</code>.</p>
+<p>Or You can set more options through a dict:</p>
+
+
+<p>The default data of all supported social links is located in <code>themes/LoveIt/assets/data/social.yaml</code>,
+which is you can refer to.</p>
+</div>
+        </div>
+    </div>
+<p><figure><a class="lightgallery" href="complete-configuration-preview.png" title="Complete configuration preview" data-thumbnail="complete-configuration-preview.png" data-sub-html="<h2>Complete configuration preview</h2><p>Complete configuration preview</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="complete-configuration-preview.png"
+            data-srcset="complete-configuration-preview.png, complete-configuration-preview.png 1.5x, complete-configuration-preview.png 2x"
+            data-sizes="auto"
+            alt="complete-configuration-preview.png" />
+    </a><figcaption class="image-caption">Complete configuration preview</figcaption>
+    </figure></p>
+<h3 id="32-favicons-browserconfig-manifest">3.2 Favicons, Browserconfig, Manifest</h3>
+<p>It is recommended to put your own favicons:</p>
+<ul>
+<li>apple-touch-icon.png (180x180)</li>
+<li>favicon-32x32.png (32x32)</li>
+<li>favicon-16x16.png (16x16)</li>
+<li>mstile-150x150.png (150x150)</li>
+<li>android-chrome-192x192.png (192x192)</li>
+<li>android-chrome-512x512.png (512x512)</li>
+</ul>
+<p>into <code>/static</code>. They’re easily created via <a href="https://realfavicongenerator.net/" target="_blank" rel="noopener noreffer ">https://realfavicongenerator.net/</a>.</p>
+<p>Customize <code>browserconfig.xml</code> and <code>site.webmanifest</code> to set theme-color and background-color.</p>
+<h3 id="style-customization">3.3 Style Customization</h3>
+<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.8" rel="noopener noreffer" target="_blank"><img
+        class="lazyload version"
+        src="/svg/loading.min.svg"
+        data-src="/svg/version/0.2.8-changed.min.svg"
+        data-srcset="/svg/version/0.2.8-changed.min.svg, /svg/version/0.2.8-changed.min.svg 1.5x, /svg/version/0.2.8-changed.min.svg 2x"
+        data-sizes="auto"
+        alt="LoveIt CHANGED | 0.2.8"
+        title="LoveIt CHANGED | 0.2.8" /></a>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Hugo extended version is necessary<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Since Hugo need to processes <i class="fab fa-sass fa-fw" aria-hidden="true"></i>&nbsp;SCSS to <i class="fab fa-css3 fa-fw" aria-hidden="true"></i>&nbsp;CSS,
+Hugo <strong>extended</strong> version is necessary for the style customization.</div>
+        </div>
+    </div>
+<p><strong>LoveIt</strong> theme has been built to be as configurable as possible by defining custom <code>.scss</code> style files.</p>
+<p>The directory including the custom <code>.scss</code> style files is <code>assets/css</code> relative to <strong>your project root directory</strong>.</p>
+<p>In <code>assets/css/_override.scss</code>, you can override the variables in <code>themes/LoveIt/assets/css/_variables.scss</code> to customize the style.</p>
+<p>Here is a example:</p>
+
+
+<p>In <code>assets/css/_custom.scss</code>, you can add some css style code to customize the style.</p>
+<h2 id="4-multilingual-and-i18n">4 Multilingual and i18n</h2>
+<p><strong>LoveIt</strong> theme is fully compatible with Hugo multilingual mode, which provides in-browser language switching.</p>
+<p><figure><a class="lightgallery" href="language-switch.gif" title="Language Switch" data-thumbnail="language-switch.gif" data-sub-html="<h2>Language Switch</h2><p>Language Switch</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="language-switch.gif"
+            data-srcset="language-switch.gif, language-switch.gif 1.5x, language-switch.gif 2x"
+            data-sizes="auto"
+            alt="language-switch.gif" />
+    </a><figcaption class="image-caption">Language Switch</figcaption>
+    </figure></p>
+<h3 id="language-compatibility">4.1 Compatibility</h3>
+<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.10" rel="noopener noreffer" target="_blank"><img
+        class="lazyload version"
+        src="/svg/loading.min.svg"
+        data-src="/svg/version/0.2.10-changed.min.svg"
+        data-srcset="/svg/version/0.2.10-changed.min.svg, /svg/version/0.2.10-changed.min.svg 1.5x, /svg/version/0.2.10-changed.min.svg 2x"
+        data-sizes="auto"
+        alt="LoveIt CHANGED | 0.2.10"
+        title="LoveIt CHANGED | 0.2.10" /></a>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Language</th>
+          <th style="text-align: center">Hugo Code</th>
+          <th style="text-align: center">HTML <code>lang</code> Attribute</th>
+          <th style="text-align: center">Theme Docs</th>
+          <th style="text-align: center">Lunr.js Support</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">English</td>
+          <td style="text-align: center"><code>en</code></td>
+          <td style="text-align: center"><code>en</code></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Simplified Chinese</td>
+          <td style="text-align: center"><code>zh-cn</code></td>
+          <td style="text-align: center"><code>zh-CN</code></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Traditional Chinese</td>
+          <td style="text-align: center"><code>zh-tw</code></td>
+          <td style="text-align: center"><code>zh-TW</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">French</td>
+          <td style="text-align: center"><code>fr</code></td>
+          <td style="text-align: center"><code>fr</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Polish</td>
+          <td style="text-align: center"><code>pl</code></td>
+          <td style="text-align: center"><code>pl</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Portuguese (Brazil)</td>
+          <td style="text-align: center"><code>pt-br</code></td>
+          <td style="text-align: center"><code>pt-BR</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Italian</td>
+          <td style="text-align: center"><code>it</code></td>
+          <td style="text-align: center"><code>it</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Spanish</td>
+          <td style="text-align: center"><code>es</code></td>
+          <td style="text-align: center"><code>es</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">German</td>
+          <td style="text-align: center"><code>de</code></td>
+          <td style="text-align: center"><code>de</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">German</td>
+          <td style="text-align: center"><code>de</code></td>
+          <td style="text-align: center"><code>de</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Serbian</td>
+          <td style="text-align: center"><code>sr</code></td>
+          <td style="text-align: center"><code>sr</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Russian</td>
+          <td style="text-align: center"><code>ru</code></td>
+          <td style="text-align: center"><code>ru</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Romanian</td>
+          <td style="text-align: center"><code>ro</code></td>
+          <td style="text-align: center"><code>ro</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Vietnamese</td>
+          <td style="text-align: center"><code>vi</code></td>
+          <td style="text-align: center"><code>vi</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Arabic</td>
+          <td style="text-align: center"><code>ar</code></td>
+          <td style="text-align: center"><code>ar</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Catalan</td>
+          <td style="text-align: center"><code>ca</code></td>
+          <td style="text-align: center"><code>ca</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Thai</td>
+          <td style="text-align: center"><code>th</code></td>
+          <td style="text-align: center"><code>th</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Telugu</td>
+          <td style="text-align: center"><code>te</code></td>
+          <td style="text-align: center"><code>te</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Indonesian</td>
+          <td style="text-align: center"><code>id</code></td>
+          <td style="text-align: center"><code>id</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Turkish</td>
+          <td style="text-align: center"><code>tr</code></td>
+          <td style="text-align: center"><code>tr</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Korean</td>
+          <td style="text-align: center"><code>ko</code></td>
+          <td style="text-align: center"><code>ko</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Hindi</td>
+          <td style="text-align: center"><code>hi</code></td>
+          <td style="text-align: center"><code>hi</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Dutch</td>
+          <td style="text-align: center"><code>nl</code></td>
+          <td style="text-align: center"><code>nl</code></td>
+          <td style="text-align: center"><i class="far fa-square fa-fw" aria-hidden="true"></i></td>
+          <td style="text-align: center"><i class="far fa-check-square fa-fw" aria-hidden="true"></i></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="42-basic-configuration">4.2 Basic Configuration</h3>
+<p>After learning <a href="https://gohugo.io/content-management/multilingual" target="_blank" rel="noopener noreffer ">how Hugo handle multilingual websites</a>, define your languages in your <a href="#site-configuration" rel="">site configuration</a>.</p>
+<p>For example with English, Chinese and French website:</p>
+
+
+<p>Then, for each new page, append the language code to the file name.</p>
+<p>Single file <code>my-page.md</code> is split in three files:</p>
+<ul>
+<li>in English: <code>my-page.en.md</code></li>
+<li>in Chinese: <code>my-page.zh-cn.md</code></li>
+<li>in French: <code>my-page.fr.md</code></li>
+</ul>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Be aware that only translated pages are displayed in menu. It’s not replaced with default language content.</div>
+        </div>
+    </div>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Use <a href="https://gohugo.io/content-management/multilingual#translate-your-content" target="_blank" rel="noopener noreffer ">Front Matter parameter</a> to translate urls too.</div>
+        </div>
+    </div>
+<h3 id="43-overwrite-translation-strings">4.3 Overwrite Translation Strings</h3>
+<p>Translations strings are used for common default values used in the theme. Translations are available in <a href="#language-compatibility" rel="">some languages</a>, but you may use another language or want to override default values.</p>
+<p>To override these values, create a new file in your local i18n folder <code>i18n/&lt;languageCode&gt;.toml</code> and inspire yourself from <code>themes/LoveIt/i18n/en.toml</code>.</p>
+<p>By the way, as these translations could be used by other people, please take the time to propose a translation by <a href="https://github.com/dillonzq/LoveIt/pulls" target="_blank" rel="noopener noreffer "><i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>&nbsp;making a PR</a> to the theme!</p>
+<h2 id="5-search">5 Search</h2>
+<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.0" rel="noopener noreffer" target="_blank"><img
+        class="lazyload version"
+        src="/svg/loading.min.svg"
+        data-src="/svg/version/0.2.0-new.min.svg"
+        data-srcset="/svg/version/0.2.0-new.min.svg, /svg/version/0.2.0-new.min.svg 1.5x, /svg/version/0.2.0-new.min.svg 2x"
+        data-sizes="auto"
+        alt="LoveIt NEW | 0.2.0"
+        title="LoveIt NEW | 0.2.0" /></a>
+<p>Based on <a href="https://lunrjs.com/" target="_blank" rel="noopener noreffer ">Lunr.js</a> or <a href="https://www.algolia.com/" target="_blank" rel="noopener noreffer ">algolia</a>, searching is supported in <strong>LoveIt</strong> theme.</p>
+<h3 id="51-output-configuration">5.1 Output Configuration</h3>
+<p>In order to generate <code>index.json</code> for searching, add <code>JSON</code> output file type to the <code>home</code> of the <code>outputs</code> part in your <a href="#site-configuration" rel="">site configuration</a>.</p>
+
+
+<h3 id="52-search-configuration">5.2 Search Configuration</h3>
+<p>Based on <code>index.json</code> generated by Hugo, you could activate searching.</p>
+<p>Here is the search configuration in your <a href="#site-configuration" rel="">site configuration</a>:</p>
+
+
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>How to choose search engine?<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>The following is a comparison of two search engines:</p>
+<ul>
+<li><code>lunr</code>: simple, no need to synchronize <code>index.json</code>, no limit for <code>contentLength</code>,
+but high bandwidth and low performance (Especially for Chinese which needs a large segmentit library)</li>
+<li><code>algolia</code>: high performance and low bandwidth, but need to synchronize <code>index.json</code> and limit for <code>contentLength</code></li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --> The content of the post is separated by <code>h2</code> and <code>h3</code> HTML tag to improve query performance and basically implement full-text search.
+<code>contentLength</code> is used to limit the max index length of the part starting with <code>h2</code> and <code>h3</code> HTML tag.</p>
+</div>
+        </div>
+    </div>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tips about algolia<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">You need to upload <code>index.json</code> files to algolia to activate searching.
+You could upload the <code>index.json</code> files by browsers but a CLI tool may be better.
+The official <a href="https://github.com/algolia/algolia-cli" target="_blank" rel="noopener noreffer ">Algolia CLI</a> is a good choice.
+To be compatible with Hugo multilingual mode,
+you need to upload different <code>index.json</code> for each language to the different index of algolia, such as <code>zh-cn/index.json</code> or <code>fr/index.json</code>&hellip;</div>
+        </div>
+    </div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-03-06</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/theme-documentation-basics/" data-title="Theme Documentation - Basics" data-hashtags="installation,configuration"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/theme-documentation-basics/" data-hashtag="installation"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/theme-documentation-basics/" data-title="Theme Documentation - Basics"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/theme-documentation-basics/" data-title="Theme Documentation - Basics"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/theme-documentation-basics/" data-title="Theme Documentation - Basics"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/installation/">Installation</a>,&nbsp;<a href="/tags/configuration/">Configuration</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/theme-documentation-content/" class="prev" rel="prev" title="Theme Documentation - Content"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Theme Documentation - Content</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Kathiravan Muthaiah</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
