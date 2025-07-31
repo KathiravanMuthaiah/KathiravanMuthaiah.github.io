@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learning on Sample Web</title><link>https://sampleweb.mikcore.net/tags/learning/</link><description>Recent content in Learning on Sample Web</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 31 Jul 2025 10:00:00 +0200</lastBuildDate><atom:link href="https://sampleweb.mikcore.net/tags/learning/index.xml" rel="self" type="application/rss+xml"/><item><title>My First Blog Post</title><link>https://sampleweb.mikcore.net/posts/first-post/</link><pubDate>Thu, 31 Jul 2025 10:00:00 +0200</pubDate><guid>https://sampleweb.mikcore.net/posts/first-post/</guid><description>This is my first post on my personal site using Hugo LoveIt theme. Exploring markdown, code blocks, images, and shortcodes.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning on Kathiravan Muthaiah</title>
+    <link>http://localhost:1313/tags/learning/</link>
+    <description>Recent content in Learning on Kathiravan Muthaiah</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
