@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Enhancing Hugo with Dynamic Markdown - Kathiravan Muthaiah</title><meta name="Description" content="My param description"><meta property="og:url" content="http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/">
+  <meta property="og:site_name" content="Kathiravan Muthaiah">
+  <meta property="og:title" content="Enhancing Hugo with Dynamic Markdown">
+  <meta property="og:description" content="How to enhance the hugo generator to support direct markdown files without generating at build time and generating at runtime with Mermaid diagrams and Table Of Contents">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-01T20:00:00+02:00">
+    <meta property="article:modified_time" content="2025-08-01T20:00:00+02:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Mermaid">
+    <meta property="article:tag" content="Website">
+    <meta property="article:tag" content="Markdown">
+    <meta property="og:image" content="http://localhost:1313/images/profile.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/profile.jpg">
+  <meta name="twitter:title" content="Enhancing Hugo with Dynamic Markdown">
+  <meta name="twitter:description" content="How to enhance the hugo generator to support direct markdown files without generating at build time and generating at runtime with Mermaid diagrams and Table Of Contents">
+<meta name="application-name" content="Kathiravan Muthaiah">
+<meta name="apple-mobile-web-app-title" content="Kathiravan Muthaiah"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/" /><link rel="prev" href="http://localhost:1313/posts/mathematical_foundation_and_sss/" /><link rel="next" href="http://localhost:1313/posts/how-i-built-my-personal-website/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Enhancing Hugo with Dynamic Markdown",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/enhancing_hugo_with_dynamic_markdown\/"
+        },"genre": "posts","keywords": "Hugo, Mermaid, website, markdown","wordcount":  1676 ,
+        "url": "http:\/\/localhost:1313\/posts\/enhancing_hugo_with_dynamic_markdown\/","datePublished": "2025-08-01T20:00:00+02:00","dateModified": "2025-08-01T20:00:00+02:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Kathir"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container">
+  
+  <script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  
+  <script src="/js/tex-svg.js"></script>
+
+  <link rel="stylesheet" href="/css/github.min.css">
+  <link rel="stylesheet" href="/css/github-markdown.min.css">
+  <script src="/js/marked.min.js"></script>
+  <script src="/js/highlight.min.js"></script>
+  <script src="/js/markdown-viewer.js"></script>
+  <script src="/js/mermaid.min.js"></script>
+  
+  <script>
+    mermaid.initialize({ startOnLoad: false });
+  </script>
+  <div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Enhancing Hugo with Dynamic Markdown</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Kathir</a></span>&nbsp;<span class="post-category">included in <a href="/categories/personalprojects/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>PersonalProjects</a>&nbsp;<a href="/categories/webdevelopment/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>WebDevelopment</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-08-01">2025-08-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1676 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#enhancing-hugo-with-dynamic-markdown-mermaid-and-styled-toc"><strong>Enhancing Hugo with Dynamic Markdown, Mermaid, and Styled TOC</strong></a>
+      <ul>
+        <li><a href="#1-why-dynamic-markdown-rendering"><strong>1 Why Dynamic Markdown Rendering</strong></a></li>
+        <li><a href="#2-adding-dynamic-markdown-viewer"><strong>2 Adding Dynamic Markdown Viewer</strong></a></li>
+        <li><a href="#3-table-styling-and-github-look"><strong>3 Table Styling and GitHub Look</strong></a></li>
+        <li><a href="#4-adding-mermaid-diagram-support"><strong>4 Adding Mermaid Diagram Support</strong></a></li>
+        <li><a href="#5-mathjax-for-math-expressions"><strong>5 MathJax for Math Expressions</strong></a></li>
+        <li><a href="#6-dynamic-table-of-contents-toc"><strong>6 Dynamic Table of Contents (TOC)</strong></a></li>
+        <li><a href="#7-ill-show-stepbystep-how-to"><strong>7 I’ll show step‑by‑step how to</strong></a></li>
+        <li><a href="#5-test-in-local-hugo-server"><strong>5️⃣ Test in Local Hugo Server</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="enhancing-hugo-with-dynamic-markdown-mermaid-and-styled-toc"><strong>Enhancing Hugo with Dynamic Markdown, Mermaid, and Styled TOC</strong></h2>
+<p>After successfully building my <strong>Hugo + LoveIt personal website</strong>, I wanted to explore how to <strong>dynamically load Markdown files</strong> in the browser, instead of pre‑rendering everything through Hugo.</p>
+<p>This learning journey included:</p>
+<ul>
+<li>Rendering raw Markdown files dynamically</li>
+<li>Supporting <strong>Mermaid diagrams</strong> for flowcharts and sequences</li>
+<li>Adding <strong>MathJax</strong> for inline math expressions</li>
+<li>Styling <strong>tables and code blocks</strong> like GitHub</li>
+<li>Dynamically <strong>generating Table of Contents (TOC)</strong> for the loaded Markdown</li>
+</ul>
+<p>Here are my step‑by‑step learnings.</p>
+<hr>
+<h3 id="1-why-dynamic-markdown-rendering"><strong>1 Why Dynamic Markdown Rendering</strong></h3>
+<p>By default, Hugo expects all posts in <code>content/</code> and pre‑renders them into static HTML.</p>
+<p>But I wanted to:</p>
+<ul>
+<li><strong>View standalone <code>.md</code> files</strong> (good for sharing raw notes)</li>
+<li>Avoid rewriting Markdown into Hugo shortcodes</li>
+<li>Experiment with a <strong>GitHub-like Markdown viewer</strong> in my blog</li>
+</ul>
+<p>For this, I used <strong>Marked.js</strong> to render Markdown at runtime.</p>
+<hr>
+<h3 id="2-adding-dynamic-markdown-viewer"><strong>2 Adding Dynamic Markdown Viewer</strong></h3>
+<p>Created a <strong>markdown-viewer.html</strong> layout and a <strong>markdown-viewer.js</strong> script to:</p>
+<ol>
+<li>Fetch Markdown file from <code>static/files/*.md</code></li>
+<li>Render using <strong>Marked.js</strong></li>
+<li>Apply syntax highlighting with <strong>Highlight.js</strong></li>
+</ol>
+<p><strong>HTML Structure:</strong></p>
+
+<pre><code class="language-text">&ltdiv id="markdown-container" data-file="/files/sample.md"&gt
+  Loading markdown...
+&lt/div&gt
+&lt!-- Include scripts --&gt
+&ltlink rel="stylesheet" href="/css/github-markdown.min.css"&gt
+&ltscript src="/js/marked.min.js"&gt&lt/script&gt
+&ltscript src="/js/highlight.min.js"&gt&lt/script&gt
+&ltscript src="/js/markdown-viewer.js"&gt&lt/script&gt</code></pre>
+<hr>
+<h3 id="3-table-styling-and-github-look"><strong>3 Table Styling and GitHub Look</strong></h3>
+<p>Markdown tables are plain by default.
+I added a <strong>GitHub-like table style</strong>:</p>
+
+<pre><code class="language-css.markdown-body">  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid #d0d7de;
+  padding: 6px 13px;
+}
+
+.markdown-body tr:nth-child(even) {
+  background-color: #f6f8fa;
+}</code></pre>
+<p>And ensured <code>markdown-viewer.js</code> adds <code>.markdown-body</code> class for styling.</p>
+<hr>
+<h3 id="4-adding-mermaid-diagram-support"><strong>4 Adding Mermaid Diagram Support</strong></h3>
+<p>LoveIt does not natively support Mermaid for dynamically loaded Markdown.</p>
+<p><strong>Steps I followed:</strong></p>
+<ol>
+<li>Added <strong>Mermaid.js</strong> to <code>static/js/mermaid.min.js</code></li>
+<li>In <code>markdown-viewer.js</code>, converted fenced code blocks:</li>
+</ol>
+
+<pre><code class="language-js">// Convert mermaid code fences into <div class="mermaid">
+container.querySelectorAll('pre code.language-mermaid').forEach(block => {
+  const div = document.createElement('div');
+  div.classList.add('mermaid');
+  div.textContent = block.textContent;
+  block.parentNode.replaceWith(div);
+});
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false });
+  mermaid.run({ querySelector: ".mermaid" });
+}</code></pre>
+<p>Now my Markdown with:</p>
+<pre> ```mermaid graph TD A[Start] --> B[Process] --> C[End] ``` </pre>
+<p>…renders a live Mermaid diagram in the browser.</p>
+<hr>
+<h3 id="5-mathjax-for-math-expressions"><strong>5 MathJax for Math Expressions</strong></h3>
+<p>To support LaTeX‑style math like:</p>
+
+<pre><code class="language-text">$$ 10 \mod 7 = 3 $$</code></pre>
+<p>I included <strong>MathJax v3</strong>:</p>
+
+<pre><code class="language-js">&lt;script&gt;
+window.MathJax = {
+  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+  svg: { fontCache: 'global' }
+};
+&lt;/script&gt;
+&lt;script src=&quot;/js/tex-svg.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Then triggered it in JS:</p>
+
+<pre><code class="language-js">if (window.MathJax) {
+  window.MathJax.typesetPromise();
+}</code></pre>
+<hr>
+<h3 id="6-dynamic-table-of-contents-toc"><strong>6 Dynamic Table of Contents (TOC)</strong></h3>
+<p>Hugo normally builds TOC at <strong>build time</strong>.
+Since my Markdown is <strong>dynamic</strong>, I built the TOC <strong>after rendering</strong>:</p>
+<ul>
+<li>Detected headings <code>h1</code>, <code>h2</code>, <code>h3</code> in <code>#markdown-container</code></li>
+<li>Populated the existing LoveIt <code>&lt;nav id=&quot;TableOfContents&quot;&gt;</code> dynamically</li>
+</ul>
+<p><strong>Simplified Example:</strong></p>
+
+<pre><code class="language-js">const tocNav = document.getElementById("TableOfContents");
+const headings = container.querySelectorAll("h1, h2, h3");
+
+if (tocNav && headings.length > 0) {
+  const ul = document.createElement("ul");
+  headings.forEach(h => {
+    const id = h.id || h.textContent.trim().replace(/\s+/g, "-").toLowerCase();
+    h.id = id;
+
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.textContent = h.textContent;
+    a.href = "#" + id;
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  tocNav.innerHTML = "";
+  tocNav.appendChild(ul);
+}</code></pre>
+<p>Now LoveIt’s floating TOC shows headings for dynamically loaded Markdown too.</p>
+<h3 id="7-ill-show-stepbystep-how-to"><strong>7 I’ll show step‑by‑step how to</strong></h3>
+<ul>
+<li>Create a <strong>HTML viewer layout</strong> in Hugo</li>
+<li>Add a <strong>JavaScript file to render Markdown dynamically</strong></li>
+<li>Support <strong>Mermaid diagrams, MathJax formulas, and GitHub‑style tables</strong></li>
+<li>Generate a <strong>dynamic Table of Contents (TOC)</strong> for the loaded Markdown file</li>
+</ul>
+<h4 id="71-create-a-hugo-layout-for-the-markdown-viewer"><strong>7.1 Create a Hugo Layout for the Markdown Viewer</strong></h4>
+<p>Inside your Hugo project:</p>
+
+<pre><code class="language-text">layouts/markdown-viewer.html</code></pre>
+<p><strong>Example:</strong></p>
+
+<pre><code class="language-html">html
+{{- define &quot;title&quot; }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define &quot;content&quot; -}}
+  &lt;!-- Markdown Viewer Scripts --&gt;
+  &lt;!-- MathJax v3 Configuration --&gt;
+  &lt;script&gt;
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+  };
+  &lt;/script&gt;
+  &lt;!-- Load MathJax AFTER config --&gt;
+  &lt;script src=&quot;/js/tex-svg.js&quot;&gt;&lt;/script&gt;
+&lt;!--  &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markdown-viewer.css&quot;&gt; --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/github.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/github-markdown.min.css&quot;&gt;
+  &lt;script src=&quot;/js/marked.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/js/highlight.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/js/markdown-viewer.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/js/mermaid.min.js&quot;&gt;&lt;/script&gt;
+  
+  &lt;script&gt;
+    mermaid.initialize({ startOnLoad: false });
+  &lt;/script&gt;
+  &lt;!-- Markdown Viewer Scripts --&gt;
+    {{- $params := .Scratch.Get &quot;params&quot; -}}
+
+    {{- $toc := $params.toc -}}
+    {{- if eq $toc true -}}
+        {{- $toc = .Site.Params.page.toc | default dict -}}
+    {{- else if eq $toc false -}}
+        {{- $toc = dict &quot;enable&quot; false -}}
+    {{- end -}}
+
+    {{- /* Auto TOC */ -}}
+    {{- if ne $toc.enable false -}}
+        &lt;div class=&quot;toc&quot; id=&quot;toc-auto&quot;&gt;
+            &lt;h2 class=&quot;toc-title&quot;&gt;{{ T &quot;contents&quot; }}&lt;/h2&gt;
+            &lt;div class=&quot;toc-content{{ if eq $toc.auto false }} always-active{{ end }}&quot; id=&quot;toc-content-auto&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    {{- end -}}
+
+    &lt;article class=&quot;page single&quot;&gt;
+        {{- /* Title */ -}}
+        &lt;h1 class=&quot;single-title animate__animated animate__flipInX&quot;&gt;{{ .Title | emojify }}&lt;/h1&gt;
+
+        {{- /* Subtitle */ -}}
+        {{- with $params.subtitle -}}
+            &lt;h2 class=&quot;single-subtitle&quot;&gt;{{ . }}&lt;/h2&gt;
+        {{- end -}}
+
+        {{- /* Meta */ -}}
+        &lt;div class=&quot;post-meta&quot;&gt;
+            &lt;div class=&quot;post-meta-line&quot;&gt;
+                {{- $author := $params.author | default .Site.Params.Author.name | default (T &quot;author&quot;) -}}
+                {{- $authorLink := $params.authorlink | default .Site.Params.Author.link | default .Site.Home.RelPermalink -}}
+                &lt;span class=&quot;post-author&quot;&gt;
+                    {{- $options := dict &quot;Class&quot; &quot;author&quot; &quot;Destination&quot; $authorLink &quot;Title&quot; &quot;Author&quot; &quot;Rel&quot; &quot;author&quot; &quot;Icon&quot; (dict &quot;Class&quot; &quot;fas fa-user-circle fa-fw&quot;) &quot;Content&quot; $author -}}
+                    {{- partial &quot;plugin/a.html&quot; $options -}}
+                &lt;/span&gt;
+
+                {{- $categories := slice -}}
+                {{- range .Params.categories -}}
+                    {{- $category := partialCached &quot;function/path.html&quot; . . | printf &quot;/categories/%v&quot; | $.Site.GetPage -}}
+                    {{- $categories = $categories | append (printf `&lt;a href=&quot;%v&quot;&gt;&lt;i class=&quot;far fa-folder fa-fw&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;%v&lt;/a&gt;` $category.RelPermalink $category.Title) -}}
+                {{- end -}}
+                {{- with delimit $categories &quot;&amp;nbsp;&quot; -}}
+                    &amp;nbsp;&lt;span class=&quot;post-category&quot;&gt;
+                        {{- dict &quot;Categories&quot; . | T &quot;includedInCategories&quot; | safeHTML -}}
+                    &lt;/span&gt;
+                {{- end -}}
+            &lt;/div&gt;
+            &lt;div class=&quot;post-meta-line&quot;&gt;
+                {{- with .Site.Params.dateformat | default &quot;2006-01-02&quot; | .PublishDate.Format -}}
+                    &lt;i class=&quot;far fa-calendar-alt fa-fw&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&amp;nbsp;&lt;time datetime=&quot;{{ . }}&quot;&gt;{{ . }}&lt;/time&gt;&amp;nbsp;
+                {{- end -}}
+                &lt;i class=&quot;fas fa-pencil-alt fa-fw&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&amp;nbsp;{{ T &quot;wordCount&quot; .WordCount }}&amp;nbsp;
+                &lt;i class=&quot;far fa-clock fa-fw&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&amp;nbsp;{{ T &quot;readingTime&quot; .ReadingTime }}&amp;nbsp;
+                {{- $comment := .Scratch.Get &quot;comment&quot; | default dict -}}
+                {{- if $comment.enable | and $comment.valine.enable | and $comment.valine.visitor -}}
+                    &lt;span id=&quot;{{ .RelPermalink }}&quot; class=&quot;leancloud_visitors&quot; data-flag-title=&quot;{{ .Title }}&quot;&gt;
+                        &lt;i class=&quot;far fa-eye fa-fw&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&amp;nbsp;&lt;span class=leancloud-visitors-count&gt;&lt;/span&gt;&amp;nbsp;{{ T &quot;views&quot; }}
+                    &lt;/span&gt;&amp;nbsp;
+                {{- end -}}
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        {{- /* Featured image */ -}}
+        {{- $image := $params.featuredimage -}}
+        {{- with .Resources.GetMatch &quot;featured-image&quot; -}}
+            {{- $image = .RelPermalink -}}
+        {{- end -}}
+        {{- with $image -}}
+            &lt;div class=&quot;featured-image&quot;&gt;
+                {{- dict &quot;Src&quot; . &quot;Title&quot; $.Description &quot;Resources&quot; $.Resources | partial &quot;plugin/img.html&quot; -}}
+            &lt;/div&gt;
+        {{- end -}}
+
+        {{- /* Static TOC */ -}}
+        {{- if ne $toc.enable false -}}
+            &lt;div class=&quot;details toc&quot; id=&quot;toc-static&quot;  data-kept=&quot;{{ if $toc.keepStatic }}true{{ end }}&quot;&gt;
+                &lt;div class=&quot;details-summary toc-title&quot;&gt;
+                    &lt;span&gt;{{ T &quot;contents&quot; }}&lt;/span&gt;
+                    &lt;span&gt;&lt;i class=&quot;details-icon fas fa-angle-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;details-content toc-content&quot; id=&quot;toc-content-static&quot;&gt;
+                    {{- dict &quot;Content&quot; .TableOfContents &quot;Ruby&quot; $params.ruby &quot;Fraction&quot; $params.fraction &quot;Fontawesome&quot; $params.fontawesome | partial &quot;function/content.html&quot; | safeHTML -}}
+                &lt;/div&gt;
+            &lt;/div&gt;
+        {{- end -}}
+
+        {{- /* Content */ -}}
+        &lt;div class=&quot;content&quot; id=&quot;content&quot;&gt;
+            {{- dict &quot;Content&quot; .Content &quot;Ruby&quot; $params.ruby &quot;Fraction&quot; $params.fraction &quot;Fontawesome&quot; $params.fontawesome | partial &quot;function/content.html&quot; | safeHTML -}}
+        &lt;/div&gt;
+
+        {{- /* Footer */ -}}
+        {{- partial &quot;single/footer.html&quot; . -}}
+
+        {{- /* Comment */ -}}
+        {{- partial &quot;comment.html&quot; . -}}
+    &lt;/article&gt;
+{{- end -}}</code></pre>
+<p><strong>Key points:</strong></p>
+<ul>
+<li><code>data-file=&quot;{{ .Params.markdownFile }}&quot;</code> → Tells JS which Markdown to load</li>
+<li>TOC <code>&lt;nav&gt;</code> is pre‑rendered for LoveIt floating TOC</li>
+</ul>
+<hr>
+<h4 id="72-create-the-javascript-renderer"><strong>7.2 Create the JavaScript Renderer</strong></h4>
+<p>File:</p>
+
+<pre><code class="language-text">static/js/markdown-viewer.js</code></pre>
+<p><strong>Full Script (Development Version)</strong></p>
+
+<pre><code class="language-js">document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+  const container = document.getElementById(&quot;markdown-container&quot;);
+  if (!container) return;
+
+  const file = container.dataset.file;
+
+  fetch(file)
+    .then(res =&gt; {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.text();
+    })
+    .then(md =&gt; {
+      // 1 Render Markdown to HTML using Marked.js
+      container.innerHTML = marked.parse(md);
+
+      // 2 Highlight regular code blocks
+      hljs.highlightAll();
+
+      // 3 Convert mermaid fenced code blocks to &lt;div class=&quot;mermaid&quot;&gt;
+      container.querySelectorAll('pre code.language-mermaid').forEach(block =&gt; {
+        const div = document.createElement('div');
+        div.classList.add('mermaid');
+        div.textContent = block.textContent; // keep inner text as raw mermaid code
+        block.parentNode.replaceWith(div);
+      });
+      
+      // 4 Force table styling if no CSS is applied
+  container.querySelectorAll('table').forEach(tbl =&gt; {
+    tbl.classList.add('table', 'table-striped', 'table-bordered', 'table-hover');
+
+    // Inline fallback styling (guaranteed)
+    tbl.style.borderCollapse = 'collapse';
+    tbl.style.border = '1px solid #d0d7de';
+    tbl.style.margin = '1rem 0';
+    tbl.style.width = '100%';
+
+    tbl.querySelectorAll('th, td').forEach(cell =&gt; {
+      cell.style.border = '1px solid #d0d7de';
+      cell.style.padding = '6px 13px';
+    });
+
+    tbl.querySelectorAll('tr:nth-child(even)').forEach(row =&gt; {
+      row.style.backgroundColor = '#f6f8fa'; // GitHub-like striped rows
+    });
+  });
+
+      // 5 Trigger Mermaid rendering if available
+      if (window.mermaid) {
+        mermaid.initialize({ startOnLoad: false });
+        mermaid.run({ querySelector: &quot;.mermaid&quot; });
+      }
+      
+      // 6 Trigger MathJax typesetting for equations
+      if (window.MathJax) {
+        window.MathJax.typesetPromise();
+      }
+      
+     // 7 Minimal LoveIt-style Dynamic TOC generation
+	
+		
+	console.log(&quot;🔹 Starting dynamic TOC generation...&quot;);
+
+	const tocAuto = document.getElementById(&quot;toc-content-auto&quot;);
+	if (!tocAuto) {
+	  console.warn(&quot;⚠️ TOC container #toc-content-auto NOT found in DOM.&quot;);
+	} else {
+	  console.log(&quot;✅ Found #toc-content-auto container:&quot;, tocAuto);
+	}
+
+	const markdownContainer = document.getElementById(&quot;markdown-container&quot;);
+	if (!markdownContainer) {
+	  console.warn(&quot;⚠️ Markdown container #markdown-container NOT found in DOM.&quot;);
+	} else {
+	  console.log(&quot;✅ Found #markdown-container container:&quot;, markdownContainer);
+	}
+
+	if (tocAuto &amp;&amp; markdownContainer) {
+	  const tocNav = document.getElementById(&quot;TableOfContents&quot;);
+	  if (!tocNav) {
+	    console.warn(&quot;⚠️ &lt;nav id='TableOfContents'&gt; NOT found inside #toc-auto.&quot;);
+	  } else {
+	    console.log(&quot;✅ Found &lt;nav id='TableOfContents'&gt; inside #toc-auto:&quot;, tocNav);
+	  }
+
+	  const headings = markdownContainer.querySelectorAll(&quot;h1, h2, h3&quot;);
+	  console.log(&quot;🔹 Headings detected inside #markdown-container:&quot;, headings.length);
+
+	  if (tocNav &amp;&amp; headings.length &gt; 0) {
+	    const ul = document.createElement(&quot;ul&quot;);
+
+	    headings.forEach((h, idx) =&gt; {
+	      // Generate a safe ID for the heading
+	      const headingId =
+		h.id ||
+		h.textContent
+		  .trim()
+		  .replace(/\s+/g, &quot;-&quot;)
+		  .replace(/[^\w-]/g, &quot;&quot;)
+		  .toLowerCase();
+
+	      h.id = headingId;
+	      console.log(`  ➜ Heading ${idx + 1}: &quot;${h.textContent}&quot; -&gt; #${headingId}`);
+
+	      const li = document.createElement(&quot;li&quot;);
+	      const a = document.createElement(&quot;a&quot;);
+	      a.textContent = h.textContent;
+	      a.href = &quot;#&quot; + headingId;
+
+	      // Mark first heading as active for LoveIt styling
+	      if (idx === 0) {
+		li.classList.add(&quot;has-active&quot;);
+		a.classList.add(&quot;active&quot;);
+	      }
+
+	      li.appendChild(a);
+	      ul.appendChild(li);
+	    });
+
+	    // Clear any existing content and append generated TOC
+	    tocNav.innerHTML = &quot;&quot;;
+	    tocNav.appendChild(ul);
+
+	    console.log(&quot;✅ Dynamic TOC successfully generated with&quot;, headings.length, &quot;entries.&quot;);
+	  } else {
+	    console.warn(&quot;⚠️ TOC generation skipped: either no headings or tocNav missing.&quot;);
+	  }
+	}
+
+
+      
+    })
+    .catch(err =&gt; {
+      container.innerHTML = `&lt;p style=&quot;color:red&quot;&gt;Failed to load markdown: ${err}&lt;/p&gt;`;
+      console.error(err);
+    });
+});</code></pre>
+<p>This script:</p>
+<ul>
+<li>Loads Markdown dynamically</li>
+<li>Highlights code and styles tables</li>
+<li>Supports Mermaid and MathJax</li>
+<li>Generates LoveIt‑style TOC</li>
+</ul>
+<hr>
+<h4 id="73-create-a-sample-hugo-content-page"><strong>7.3 Create a Sample Hugo Content Page</strong></h4>
+<p>Inside your Hugo project:</p>
+
+<pre><code class="language-text">content/posts/markdown-demo/index.md</code></pre>
+<p><strong>Front Matter:</strong></p>
+
+<pre><code class="language-markdown">---
+title: &quot;Dynamic Markdown Demo&quot;
+date: 2025-08-01
+---
+&lt;div id=&quot;markdown-container&quot; data-file=&quot;/files/sample.md&quot;&gt;
+  Loading markdown...
+&lt;/div&gt;</code></pre>
+<ul>
+<li>Uses the <strong><code>markdown-viewer</code> layout</strong></li>
+<li>Loads Markdown from <code>/static/files/sample.md</code></li>
+</ul>
+<hr>
+<h4 id="74-provide-a-sample-markdown-file"><strong>7.4 Provide a Sample Markdown File</strong></h4>
+
+<pre><code class="language-text">static/files/sample.md</code></pre>
+<p><strong>Example Markdown:</strong></p>
+
+<pre><code class="language-markdown"># 1️⃣ Introduction
+
+This is a dynamic markdown demo with **Mermaid**, **MathJax**, and **TOC**.
+
+```mermaid
+graph TD
+A[Start] --> B[Process] --> C[End]
+```
+
+$10 \mod 7 = 3$
+
+| Item   | Price |
+| ------ | ----- |
+| Apple  | $1    |
+| Banana | $2    |</code></pre>
+<hr>
+<h3 id="5-test-in-local-hugo-server"><strong>5️⃣ Test in Local Hugo Server</strong></h3>
+
+<pre><code class="language-bash">hugo server -D</code></pre>
+<p>Open the page:</p>
+
+<pre><code class="language-url">http://localhost:1313/posts/markdown-demo/</code></pre>
+<p>You should see:</p>
+<ul>
+<li>Rendered Markdown</li>
+<li>Highlighted code</li>
+<li>Mermaid diagram</li>
+<li>Math formula</li>
+<li>GitHub‑style table</li>
+<li>Floating TOC</li>
+</ul>
+<p><strong>Happy Learning</strong></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-08-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/" data-title="Enhancing Hugo with Dynamic Markdown" data-hashtags="Hugo,Mermaid,website,markdown"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/" data-hashtag="Hugo"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/" data-title="Enhancing Hugo with Dynamic Markdown"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/" data-title="Enhancing Hugo with Dynamic Markdown"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/" data-title="Enhancing Hugo with Dynamic Markdown"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/mermaid/">Mermaid</a>,&nbsp;<a href="/tags/website/">Website</a>,&nbsp;<a href="/tags/markdown/">Markdown</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/mathematical_foundation_and_sss/" class="prev" rel="prev" title="Mathematical foundation and SSS"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Mathematical foundation and SSS</a>
+            <a href="/posts/how-i-built-my-personal-website/" class="next" rel="next" title="How I Built My Personal Website with Hugo &amp; LoveIt">How I Built My Personal Website with Hugo & LoveIt<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Kathiravan Muthaiah</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

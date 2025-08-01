@@ -1,1 +1,88 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Tags - Tag - Kathiravan Muthaiah</title><link>https://kathiravanmuthaiah.com/tags/</link><description>Tags - Tag - Kathiravan Muthaiah</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor><webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Thu, 31 Jul 2025 18:00:00 +0200</lastBuildDate><atom:link href="https://kathiravanmuthaiah.com/tags/" rel="self" type="application/rss+xml"/><item><title>Algorithm</title><link>https://kathiravanmuthaiah.com/tags/algorithm/</link><pubDate>Thu, 31 Jul 2025 18:00:00 +0200</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/tags/algorithm/</guid><description></description></item><item><title>Mathematics</title><link>https://kathiravanmuthaiah.com/tags/mathematics/</link><pubDate>Thu, 31 Jul 2025 18:00:00 +0200</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/tags/mathematics/</guid><description></description></item><item><title>Configuration</title><link>https://kathiravanmuthaiah.com/tags/configuration/</link><pubDate>Fri, 06 Mar 2020 21:29:01 +0800</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/tags/configuration/</guid><description></description></item><item><title>Installation</title><link>https://kathiravanmuthaiah.com/tags/installation/</link><pubDate>Fri, 06 Mar 2020 21:29:01 +0800</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/tags/installation/</guid><description></description></item><item><title>Content</title><link>https://kathiravanmuthaiah.com/tags/content/</link><pubDate>Thu, 05 Mar 2020 15:58:26 +0800</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/tags/content/</guid><description></description></item><item><title>Markdown</title><link>https://kathiravanmuthaiah.com/tags/markdown/</link><pubDate>Thu, 05 Mar 2020 15:58:26 +0800</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/tags/markdown/</guid><description></description></item><item><title>Shortcodes</title><link>https://kathiravanmuthaiah.com/tags/shortcodes/</link><pubDate>Wed, 04 Mar 2020 16:29:41 +0800</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/tags/shortcodes/</guid><description></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - Kathiravan Muthaiah</title>
+        <link>http://localhost:1313/tags/</link>
+        <description>Tags - Tag - Kathiravan Muthaiah</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo</title>
+    <link>http://localhost:1313/tags/hugo/</link>
+    <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/hugo/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Markdown</title>
+    <link>http://localhost:1313/tags/markdown/</link>
+    <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/markdown/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Mermaid</title>
+    <link>http://localhost:1313/tags/mermaid/</link>
+    <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/mermaid/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Website</title>
+    <link>http://localhost:1313/tags/website/</link>
+    <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/website/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Algorithm</title>
+    <link>http://localhost:1313/tags/algorithm/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/algorithm/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Configuration</title>
+    <link>http://localhost:1313/tags/configuration/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/configuration/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Installation</title>
+    <link>http://localhost:1313/tags/installation/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/installation/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>LoveIt</title>
+    <link>http://localhost:1313/tags/loveit/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/loveit/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Mathematics</title>
+    <link>http://localhost:1313/tags/mathematics/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/mathematics/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>SSS</title>
+    <link>http://localhost:1313/tags/sss/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/sss/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
