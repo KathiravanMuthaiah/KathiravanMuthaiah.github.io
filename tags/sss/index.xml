@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SSS - Tag - Kathiravan Muthaiah</title>
+        <link>http://localhost:1313/tags/sss/</link>
+        <description>SSS - Tag - Kathiravan Muthaiah</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/sss/" rel="self" type="application/rss+xml" /><item>
+    <title>Mathematical foundation and SSS</title>
+    <link>http://localhost:1313/posts/mathematical_foundation_and_sss/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathir</author>
+    <guid>http://localhost:1313/posts/mathematical_foundation_and_sss/</guid>
+    <description><![CDATA[Shamir&rsquo;s secrret sharing (SSS) algorithm and foundation on mathematics related to SSS]]></description>
+</item>
+<item>
+    <title>Polynomials and Lagranges Interpolation for SSS</title>
+    <link>http://localhost:1313/posts/polynomial_and_lagrange_interpolation/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathir</author>
+    <guid>http://localhost:1313/posts/polynomial_and_lagrange_interpolation/</guid>
+    <description><![CDATA[Shamir&rsquo;s secrret sharing (SSS) algorithm and foundation on Polynomials and Lagranges Interpolation]]></description>
+</item>
+</channel>
+</rss>

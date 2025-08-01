@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>LoveIt on Kathiravan Muthaiah</title>
-    <link>http://localhost:1313/tags/loveit/</link>
-    <description>Recent content in LoveIt on Kathiravan Muthaiah</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
-    <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster>
-    <atom:link href="http://localhost:1313/tags/loveit/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>LoveIt - Tag - Kathiravan Muthaiah</title>
+        <link>http://localhost:1313/tags/loveit/</link>
+        <description>LoveIt - Tag - Kathiravan Muthaiah</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/loveit/" rel="self" type="application/rss+xml" /><item>
+    <title>How I Built My Personal Website with Hugo &amp; LoveIt</title>
+    <link>http://localhost:1313/posts/how-i-built-my-personal-website/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathir</author>
+    <guid>http://localhost:1313/posts/how-i-built-my-personal-website/</guid>
+    <description><![CDATA[<p>Discover what the Hugo - <strong>LoveIt</strong> theme is all about and the core-concepts behind it.</p>]]></description>
+</item>
+</channel>
 </rss>

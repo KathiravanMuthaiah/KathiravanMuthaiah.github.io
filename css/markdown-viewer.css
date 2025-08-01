@@ -1,0 +1,15 @@
+.markdown-body table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid #d0d7de;
+  padding: 6px 13px;
+}
+
+.markdown-body tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
