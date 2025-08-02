@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Technology - Category - Kathiravan Muthaiah</title>
-        <link>http://localhost:42123/categories/technology/</link>
+        <link>http://localhost:33203/categories/technology/</link>
         <description>Technology - Category - Kathiravan Muthaiah</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:42123/categories/technology/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:33203/categories/technology/" rel="self" type="application/rss+xml" /><item>
     <title>Home | Kathiravan Muthaiah</title>
-    <link>http://localhost:42123/</link>
+    <link>http://localhost:33203/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:42123/</guid>
+    <guid>http://localhost:33203/</guid>
     <description><![CDATA[<h1 id="hi-im-kathiravan-muthaiah-">Hi, I’m <strong>Kathiravan Muthaiah</strong> 👋</h1>
 <p><strong>Solution Architect | Technologist | Explorer</strong></p>
 <p>I believe in <strong>building with curiosity and clarity</strong>.<br>
@@ -26,58 +26,58 @@ you’ll find my <strong>notes, experiments, and reflections</strong> here.</p>]
 </item>
 <item>
     <title>Leveraging ChatGPT as a Professional Companion</title>
-    <link>http://localhost:42123/posts/leveraging_chatgpt_as_a_professional_companion/</link>
+    <link>http://localhost:33203/posts/leveraging_chatgpt_as_a_professional_companion/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:42123/posts/leveraging_chatgpt_as_a_professional_companion/</guid>
+    <guid>http://localhost:33203/posts/leveraging_chatgpt_as_a_professional_companion/</guid>
     <description><![CDATA[My experience leveraging ChatGPT as a professional companion for design, debugging, documentation, and AI-accelerated learning.]]></description>
 </item>
 <item>
     <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 1</title>
-    <link>http://localhost:42123/posts/reactive_springboot_vs_quarkus_part1/</link>
+    <link>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part1/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:42123/posts/reactive_springboot_vs_quarkus_part1/</guid>
+    <guid>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part1/</guid>
     <description><![CDATA[Part 1 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 <item>
     <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 2</title>
-    <link>http://localhost:42123/posts/reactive_springboot_vs_quarkus_part2/</link>
+    <link>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part2/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:42123/posts/reactive_springboot_vs_quarkus_part2/</guid>
+    <guid>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part2/</guid>
     <description><![CDATA[Part 2 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 <item>
     <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 3</title>
-    <link>http://localhost:42123/posts/reactive_springboot_vs_quarkus_part3/</link>
+    <link>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part3/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:42123/posts/reactive_springboot_vs_quarkus_part3/</guid>
+    <guid>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part3/</guid>
     <description><![CDATA[Part 3 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 <item>
     <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 4</title>
-    <link>http://localhost:42123/posts/reactive_springboot_vs_quarkus_part4/</link>
+    <link>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part4/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:42123/posts/reactive_springboot_vs_quarkus_part4/</guid>
+    <guid>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part4/</guid>
     <description><![CDATA[Part 4 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 <item>
     <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5</title>
-    <link>http://localhost:42123/posts/reactive_springboot_vs_quarkus_part5/</link>
+    <link>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part5/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:42123/posts/reactive_springboot_vs_quarkus_part5/</guid>
+    <guid>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part5/</guid>
     <description><![CDATA[Part 5 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 <item>
     <title>About Me | Kathiravan Muthaiah</title>
-    <link>http://localhost:42123/about/</link>
+    <link>http://localhost:33203/about/</link>
     <pubDate>Thu, 31 Jul 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:42123/about/</guid>
+    <guid>http://localhost:33203/about/</guid>
     <description><![CDATA[<p></p>
 <h1 id="kathiravan-muthaiah">Kathiravan Muthaiah</h1>
 <p><strong>Senior Delivery Architect | Technologist &amp; AI Enthusiast</strong></p>
