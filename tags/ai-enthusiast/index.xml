@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>AI Enthusiast - Tag - Kathiravan Muthaiah</title>
-        <link>http://localhost:1313/tags/ai-enthusiast/</link>
+        <link>http://localhost:42123/tags/ai-enthusiast/</link>
         <description>AI Enthusiast - Tag - Kathiravan Muthaiah</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/ai-enthusiast/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:42123/tags/ai-enthusiast/" rel="self" type="application/rss+xml" /><item>
     <title>Home | Kathiravan Muthaiah</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:42123/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/</guid>
+    <guid>http://localhost:42123/</guid>
     <description><![CDATA[<h1 id="hi-im-kathiravan-muthaiah-">Hi, I’m <strong>Kathiravan Muthaiah</strong> 👋</h1>
 <p><strong>Solution Architect | Technologist | Explorer</strong></p>
 <p>I believe in <strong>building with curiosity and clarity</strong>.<br>
@@ -26,10 +26,10 @@ you’ll find my <strong>notes, experiments, and reflections</strong> here.</p>]
 </item>
 <item>
     <title>About Me | Kathiravan Muthaiah</title>
-    <link>http://localhost:1313/about/</link>
+    <link>http://localhost:42123/about/</link>
     <pubDate>Thu, 31 Jul 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/about/</guid>
+    <guid>http://localhost:42123/about/</guid>
     <description><![CDATA[<p></p>
 <h1 id="kathiravan-muthaiah">Kathiravan Muthaiah</h1>
 <p><strong>Senior Delivery Architect | Technologist &amp; AI Enthusiast</strong></p>

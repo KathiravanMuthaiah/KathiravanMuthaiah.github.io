@@ -1,87 +1,87 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - Tag - Kathiravan Muthaiah</title>
-        <link>http://localhost:1313/tags/</link>
+        <link>http://localhost:42123/tags/</link>
         <description>Tags - Tag - Kathiravan Muthaiah</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:42123/tags/" rel="self" type="application/rss+xml" /><item>
     <title>AI Enthusiast</title>
-    <link>http://localhost:1313/tags/ai-enthusiast/</link>
+    <link>http://localhost:42123/tags/ai-enthusiast/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/ai-enthusiast/</guid>
+    <guid>http://localhost:42123/tags/ai-enthusiast/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>AI Productivity</title>
-    <link>http://localhost:1313/tags/ai-productivity/</link>
+    <link>http://localhost:42123/tags/ai-productivity/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/ai-productivity/</guid>
+    <guid>http://localhost:42123/tags/ai-productivity/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>ChatGPT</title>
-    <link>http://localhost:1313/tags/chatgpt/</link>
+    <link>http://localhost:42123/tags/chatgpt/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/chatgpt/</guid>
+    <guid>http://localhost:42123/tags/chatgpt/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>ChatGPT4o</title>
-    <link>http://localhost:1313/tags/chatgpt4o/</link>
+    <link>http://localhost:42123/tags/chatgpt4o/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/chatgpt4o/</guid>
+    <guid>http://localhost:42123/tags/chatgpt4o/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Cloud Solutions</title>
-    <link>http://localhost:1313/tags/cloud-solutions/</link>
+    <link>http://localhost:42123/tags/cloud-solutions/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/cloud-solutions/</guid>
+    <guid>http://localhost:42123/tags/cloud-solutions/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Enterprise Architecture</title>
-    <link>http://localhost:1313/tags/enterprise-architecture/</link>
+    <link>http://localhost:42123/tags/enterprise-architecture/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/enterprise-architecture/</guid>
+    <guid>http://localhost:42123/tags/enterprise-architecture/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Home</title>
-    <link>http://localhost:1313/tags/home/</link>
+    <link>http://localhost:42123/tags/home/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/home/</guid>
+    <guid>http://localhost:42123/tags/home/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>LLM</title>
-    <link>http://localhost:1313/tags/llm/</link>
+    <link>http://localhost:42123/tags/llm/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/llm/</guid>
+    <guid>http://localhost:42123/tags/llm/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>OpenAI</title>
-    <link>http://localhost:1313/tags/openai/</link>
+    <link>http://localhost:42123/tags/openai/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/openai/</guid>
+    <guid>http://localhost:42123/tags/openai/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>AI Ethics</title>
-    <link>http://localhost:1313/tags/ai-ethics/</link>
+    <link>http://localhost:42123/tags/ai-ethics/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/ai-ethics/</guid>
+    <guid>http://localhost:42123/tags/ai-ethics/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
