@@ -1,1 +1,16 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Mermaid - Tag - Kathiravan Muthaiah</title><link>https://kathiravanmuthaiah.com/tags/mermaid/</link><description>Mermaid - Tag - Kathiravan Muthaiah</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor><webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Fri, 01 Aug 2025 20:00:00 +0200</lastBuildDate><atom:link href="https://kathiravanmuthaiah.com/tags/mermaid/" rel="self" type="application/rss+xml"/><item><title>Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC</title><link>https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/</link><pubDate>Fri, 01 Aug 2025 20:00:00 +0200</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/</guid><description>Step-by-step guide to render Markdown dynamically in Hugo with Mermaid, MathJax, GitHub-style tables, and an auto-generated TOC.</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Mermaid - Tag - Kathiravan Muthaiah</title>
+        <link>http://localhost:1313/tags/mermaid/</link>
+        <description>Mermaid - Tag - Kathiravan Muthaiah</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/mermaid/" rel="self" type="application/rss+xml" /><item>
+    <title>Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC</title>
+    <link>http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/</link>
+    <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/</guid>
+    <description><![CDATA[Step-by-step guide to render Markdown dynamically in Hugo with Mermaid, MathJax, GitHub-style tables, and an auto-generated TOC.]]></description>
+</item>
+</channel>
+</rss>
