@@ -1,87 +1,87 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - Category - Kathiravan Muthaiah</title>
-        <link>http://localhost:1313/categories/</link>
+        <link>http://localhost:42123/categories/</link>
         <description>Categories - Category - Kathiravan Muthaiah</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:42123/categories/" rel="self" type="application/rss+xml" /><item>
     <title>AI Tools</title>
-    <link>http://localhost:1313/categories/ai-tools/</link>
+    <link>http://localhost:42123/categories/ai-tools/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/ai-tools/</guid>
+    <guid>http://localhost:42123/categories/ai-tools/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Personal</title>
-    <link>http://localhost:1313/categories/personal/</link>
+    <link>http://localhost:42123/categories/personal/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/personal/</guid>
+    <guid>http://localhost:42123/categories/personal/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Technology</title>
-    <link>http://localhost:1313/categories/technology/</link>
+    <link>http://localhost:42123/categories/technology/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/technology/</guid>
+    <guid>http://localhost:42123/categories/technology/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>AI &amp; Talent</title>
-    <link>http://localhost:1313/categories/ai--talent/</link>
+    <link>http://localhost:42123/categories/ai--talent/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/ai--talent/</guid>
+    <guid>http://localhost:42123/categories/ai--talent/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Java</title>
+    <link>http://localhost:42123/categories/java/</link>
+    <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:42123/categories/java/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>ReactiveProgramming</title>
+    <link>http://localhost:42123/categories/reactiveprogramming/</link>
+    <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:42123/categories/reactiveprogramming/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Whitepaper</title>
-    <link>http://localhost:1313/categories/whitepaper/</link>
+    <link>http://localhost:42123/categories/whitepaper/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/whitepaper/</guid>
+    <guid>http://localhost:42123/categories/whitepaper/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>HugoTips</title>
-    <link>http://localhost:1313/categories/hugotips/</link>
+    <link>http://localhost:42123/categories/hugotips/</link>
     <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/hugotips/</guid>
+    <guid>http://localhost:42123/categories/hugotips/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>WebDevelopment</title>
-    <link>http://localhost:1313/categories/webdevelopment/</link>
+    <link>http://localhost:42123/categories/webdevelopment/</link>
     <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/webdevelopment/</guid>
+    <guid>http://localhost:42123/categories/webdevelopment/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Cryptography</title>
-    <link>http://localhost:1313/categories/cryptography/</link>
+    <link>http://localhost:42123/categories/cryptography/</link>
     <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/cryptography/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Mathematics</title>
-    <link>http://localhost:1313/categories/mathematics/</link>
-    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/mathematics/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>PersonalProjects</title>
-    <link>http://localhost:1313/categories/personalprojects/</link>
-    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/personalprojects/</guid>
+    <guid>http://localhost:42123/categories/cryptography/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

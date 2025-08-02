@@ -441,3 +441,22 @@ The plotted graph above shows:
 - Blue curve: Full polynomial determined from any 3 of those red dots
 
 Even though we don’t know the full curve, **any 3 valid shares** (on the red points) allow you to reconstruct the entire blue curve, and thereby compute $f(0)$.
+
+
+---
+
+## 🔗 GitHub Project: Shamir's Secret Share Implementation
+
+If you want to **experiment with Shamir’s Secret Sharing (SSS) in Java**,  
+I have published a **working project** here:
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-KathiravanMuthaiah%2Fshamir--file--splitter-181717?logo=github)](https://github.com/KathiravanMuthaiah/shamir-file-splitter)
+
+**Key Features:**
+- Implements **Shamir’s Secret Sharing (SSS)** for secure file splitting  
+- Supports **k-of-n threshold reconstruction**  
+- Works with **binary files** via Base64 encoding  
+- Includes **CLI usage instructions** and sample data
+
+---
+*Project by Kathiravan Muthaiah | Open-source for learning and security experimentation*
