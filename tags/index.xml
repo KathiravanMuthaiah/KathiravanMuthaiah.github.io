@@ -4,84 +4,84 @@
         <link>http://localhost:1313/tags/</link>
         <description>Tags - Tag - Kathiravan Muthaiah</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>Hugo</title>
-    <link>http://localhost:1313/tags/hugo/</link>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>AI Enthusiast</title>
+    <link>http://localhost:1313/tags/ai-enthusiast/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/ai-enthusiast/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>AI Productivity</title>
+    <link>http://localhost:1313/tags/ai-productivity/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/ai-productivity/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>ChatGPT</title>
+    <link>http://localhost:1313/tags/chatgpt/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/chatgpt/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>ChatGPT4o</title>
+    <link>http://localhost:1313/tags/chatgpt4o/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/chatgpt4o/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Cloud Solutions</title>
+    <link>http://localhost:1313/tags/cloud-solutions/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/cloud-solutions/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Enterprise Architecture</title>
+    <link>http://localhost:1313/tags/enterprise-architecture/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/enterprise-architecture/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Home</title>
+    <link>http://localhost:1313/tags/home/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/home/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>LLM</title>
+    <link>http://localhost:1313/tags/llm/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/llm/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>OpenAI</title>
+    <link>http://localhost:1313/tags/openai/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/openai/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Dynamic TOC</title>
+    <link>http://localhost:1313/tags/dynamic-toc/</link>
     <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/hugo/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Markdown</title>
-    <link>http://localhost:1313/tags/markdown/</link>
-    <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/markdown/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Mermaid</title>
-    <link>http://localhost:1313/tags/mermaid/</link>
-    <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/mermaid/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Website</title>
-    <link>http://localhost:1313/tags/website/</link>
-    <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/website/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Algorithm</title>
-    <link>http://localhost:1313/tags/algorithm/</link>
-    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/algorithm/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Configuration</title>
-    <link>http://localhost:1313/tags/configuration/</link>
-    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/configuration/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Installation</title>
-    <link>http://localhost:1313/tags/installation/</link>
-    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/installation/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>LoveIt</title>
-    <link>http://localhost:1313/tags/loveit/</link>
-    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/loveit/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Mathematics</title>
-    <link>http://localhost:1313/tags/mathematics/</link>
-    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/mathematics/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>SSS</title>
-    <link>http://localhost:1313/tags/sss/</link>
-    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/sss/</guid>
+    <guid>http://localhost:1313/tags/dynamic-toc/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

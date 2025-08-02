@@ -4,12 +4,36 @@
         <link>http://localhost:1313/categories/</link>
         <description>Categories - Category - Kathiravan Muthaiah</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>PersonalProjects</title>
-    <link>http://localhost:1313/categories/personalprojects/</link>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>AI Tools</title>
+    <link>http://localhost:1313/categories/ai-tools/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/categories/ai-tools/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Personal</title>
+    <link>http://localhost:1313/categories/personal/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/categories/personal/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Technology</title>
+    <link>http://localhost:1313/categories/technology/</link>
+    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/categories/technology/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>HugoTips</title>
+    <link>http://localhost:1313/categories/hugotips/</link>
     <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/personalprojects/</guid>
+    <guid>http://localhost:1313/categories/hugotips/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -21,11 +45,27 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>Cryptography</title>
+    <link>http://localhost:1313/categories/cryptography/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/categories/cryptography/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Mathematics</title>
     <link>http://localhost:1313/categories/mathematics/</link>
     <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
     <guid>http://localhost:1313/categories/mathematics/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>PersonalProjects</title>
+    <link>http://localhost:1313/categories/personalprojects/</link>
+    <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/categories/personalprojects/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

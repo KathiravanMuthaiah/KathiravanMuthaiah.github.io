@@ -1,8 +1,8 @@
-# 📘 Polynomial and Lagrange Interpolation — Foundations for Shamir’s Secret Sharing
+# Polynomial and Lagrange Interpolation — Foundations for Shamir’s Secret Sharing
 
 ------
 
-## 🎯 Learning Outcomes
+### Learning Outcomes
 
 By the end of this, you'll understand:
 
@@ -14,11 +14,11 @@ By the end of this, you'll understand:
 
 ------
 
-## 1️⃣ What is a Polynomial?
+## 1. What is a Polynomial?
 
 A **polynomial** is a mathematical expression involving a sum of powers of $x$ multiplied by coefficients.
 
-### General form:
+#### General form:
 
 $$
 f(x) = a_0 + a_1x + a_2x^2 + a_3x^3 + \dots + a_nx^n
@@ -28,7 +28,7 @@ $$
 - $x$ is the variable
 - The **degree** of the polynomial is the highest power of $x$ with a non-zero coefficient
 
-### 📌 Examples:
+#### 📌 Examples:
 
 - $f(x) = 5x^3 + 2x + 1$ is a **3rd-degree polynomial**
 - $f(x) = 7x + 4$ is a **1st-degree polynomial**
@@ -36,11 +36,11 @@ $$
 
 ------
 
-## 2️⃣ What is an n-degree Polynomial?
+## 2. What is an n-degree Polynomial?
 
 An **n-degree polynomial** is a polynomial where the highest exponent of $x$ is $n$.
 
-### Why does this matter?
+#### Why does this matter?
 
 - You need $n + 1$ unique points to fully determine an n-degree polynomial.
 - Example:
@@ -49,13 +49,13 @@ An **n-degree polynomial** is a polynomial where the highest exponent of $x$ is 
 
 ------
 
-## 3️⃣ Why Use Polynomials in Shamir's Secret Sharing?
+## 3. Why Use Polynomials in Shamir's Secret Sharing?
 
-### Problem:
+#### Problem:
 
 You want to split a secret $s$ into parts and only allow recovery if **at least $k$** out of **$n$** parts are combined.
 
-### Solution:
+#### Solution:
 
 Use a **(k - 1)-degree polynomial**:
 $$
@@ -69,13 +69,13 @@ $$
 
 ------
 
-## 4️⃣ What is Lagrange Interpolation?
+## 4. What is Lagrange Interpolation?
 
-### Goal:
+#### Goal:
 
 Given $k$ points $(x_1, y_1), (x_2, y_2), ..., (x_k, y_k)$, find a polynomial $f(x)$ of degree ≤ $k - 1$ that passes through all points.
 
-### The Formula:
+#### The Formula:
 
 $$
 f(x) = \sum_{j=1}^{k} y_j \cdot L_j(x)
@@ -88,7 +88,7 @@ $$
 
 ------
 
-### To Find the Secret:
+#### To Find the Secret:
 
 Set $x = 0$, so:
 $$
@@ -136,7 +136,7 @@ This gives us the secret!
 
 ------
 
-## 📊 Visual Explanation: f(0) and the Curve
+### 📊 Visual Explanation: f(0) and the Curve
 
 
 
@@ -149,9 +149,7 @@ You can reconstruct this entire blue curve using **just the red dots** (if ≥ $
 
 
 
-# **Lagrange Interpolation – Simple Explanation**
-
-### **1️⃣ What is Lagrange Interpolation?**
+## **5. Lagrange Interpolation – Simple Explanation**
 
 - Imagine a **curve** (a polynomial) drawn on a graph.
 - If you **know a few points** on that curve, you can **recreate the entire curve**.
@@ -165,7 +163,7 @@ You can reconstruct this entire blue curve using **just the red dots** (if ≥ $
 
 ------
 
-### **2️⃣ Intuitive Analogy**
+### **Intuitive Analogy**
 
 Think of a **polynomial curve** as a **smooth slide in a playground**:
 
@@ -181,7 +179,7 @@ In math:
 
 ------
 
-### **3️⃣ Why It Works for Polynomials**
+### **Why It Works for Polynomials**
 
 A **polynomial of degree k-1** is fully determined by **k points** (as long as all x-values are unique):
 
@@ -196,7 +194,7 @@ A **polynomial of degree k-1** is fully determined by **k points** (as long as a
 
 ------
 
-### **4️⃣ Lagrange Formula – Step by Step**
+### **Lagrange Formula – Step by Step**
 
 Suppose we have `k` points:
 
@@ -225,7 +223,7 @@ Let’s break it down in **plain English**:
 
 ------
 
-### **5️⃣ Mini Example with Numbers**
+### **Mini Example with Numbers**
 
 #### **Polynomial straight line (k=2)**
 
@@ -385,7 +383,7 @@ $$
 
 ------
 
-### **6️⃣ How Modular Arithmetic Fits In**
+## **6. How Modular Arithmetic Fits In**
 
 - In Shamir’s Secret Sharing, we **work modulo a prime** to:
   - Avoid fractions → we use **modular inverse** instead.
@@ -399,7 +397,7 @@ So in actual code:
 
 ------
 
-### **7️⃣ Why Lagrange Interpolation is Perfect for SSS**
+## **7. Why Lagrange Interpolation is Perfect for SSS**
 
 1. **Guarantee:** Any `k` points can recover the secret.
 2. **Security:** Fewer than `k` points reveal **nothing** because there are **infinite possible polynomials** passing through fewer points.
@@ -407,7 +405,7 @@ So in actual code:
 
 ------
 
-## 🧠 Why is This Secure?
+## 8. Why is This Secure?
 
 - A $(k - 1)$-degree polynomial is **underdetermined** with fewer than $k$ points.
 - Example: With 2 points, infinitely many 2nd-degree curves could fit — no way to guess the real one.
@@ -426,13 +424,13 @@ This gives Shamir’s scheme **information-theoretic security** — even with **
 | Lagrange Interpolation | Way to reconstruct a polynomial from known points            |
 | $f(0) = s$             | The secret is recovered by evaluating the polynomial at $x = 0$ |
 
-## Shamir's Secret Sharing - Polynomial and Lagrange Interpolation
+### Shamir's Secret Sharing - Polynomial and Lagrange Interpolation
 
 
 
 ![output](./images/output.png)
 
-## 📉 Graph Explanation
+### 📉 Graph Explanation
 
 The plotted graph above shows:
 
