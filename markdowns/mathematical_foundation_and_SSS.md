@@ -526,6 +526,14 @@ $$
 - Security:
   - Without random padding, attacker can **try all 0–65535** secrets easily.
 
+## 🔗 GitHub Project: Shamir's Secret Share Implementation
 
+If you want to **experiment with Shamir’s Secret Sharing (SSS) in Java**,  
+I have published a **working project** here:
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-KathiravanMuthaiah%2Fshamir--file--splitter-181717?logo=github)](https://github.com/KathiravanMuthaiah/shamir-file-splitter)
+
+
+*Project by Kathiravan Muthaiah | Open-source for learning and security experimentation*
 
 # Wish you all success
