@@ -118,7 +118,7 @@ reactive-mqtt-file-pipeline/
 - **line_data**: stores raw and transformed lines
 - **file_summary**: stores file name and total line count
 
-See [`PGschema.sql`](https://github.com/KathiravanMuthaiah/reactive-mqtt-file-pipeline/blob/main/PGschema.sql) for exact DDL.
+See [`PGschema.sql`](https://github.com/KathiravanMuthaiah/reactive-mqtt-file-pipeline/blob/main/supportScripts/PGschema.sql) for exact DDL.
 
 ------
 
