@@ -16,7 +16,7 @@ After implementing **Reader** and **Writer** services in both frameworks, we can
 
 ## **5.1 Database Schema**
 
-See [`PGschema.sql`](https://github.com/KathiravanMuthaiah/reactive-mqtt-file-pipeline/blob/main/PGschema.sql) for exact DDL.
+See [`PGschema.sql`](https://github.com/KathiravanMuthaiah/reactive-mqtt-file-pipeline/blob/main/supportScripts/PGschema.sql) for exact DDL.
 
 ```sql
 CREATE SCHEMA IF NOT EXISTS fileproc;
