@@ -1,17 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Kathiravan Muthaiah</title>
-        <link>http://localhost:33203/</link>
+        <link>http://localhost:1313/</link>
         <description>My param description</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
             <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate>
-            <atom:link href="http://localhost:33203/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>How I Built My Personal Website with Hugo &amp; LoveIt</title>
-    <link>http://localhost:33203/posts/how-i-built-my-personal-website/</link>
+    <link>http://localhost:1313/posts/how-i-built-my-personal-website/</link>
     <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:33203/posts/how-i-built-my-personal-website/</guid>
+    <guid>http://localhost:1313/posts/how-i-built-my-personal-website/</guid>
     <description><![CDATA[<p>Building a <strong>personal website</strong> can be simple, elegant, and completely under your control with<br>
 <strong>Hugo v0.143.1</strong> and the <strong>LoveIt v0.3.0 theme</strong>.</p>
 <p>In this post, I share my <strong>step-by-step journey</strong> of creating my website,<br>
@@ -19,74 +19,74 @@ including <strong>installation, configuration, GitHub Pages deployment, and a cu
 </item>
 <item>
     <title>Leveraging ChatGPT as a Professional Companion</title>
-    <link>http://localhost:33203/posts/leveraging_chatgpt_as_a_professional_companion/</link>
+    <link>http://localhost:1313/posts/leveraging_chatgpt_as_a_professional_companion/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:33203/posts/leveraging_chatgpt_as_a_professional_companion/</guid>
+    <guid>http://localhost:1313/posts/leveraging_chatgpt_as_a_professional_companion/</guid>
     <description><![CDATA[My experience leveraging ChatGPT as a professional companion for design, debugging, documentation, and AI-accelerated learning.]]></description>
 </item>
 <item>
     <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 1</title>
-    <link>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part1/</link>
+    <link>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part1/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part1/</guid>
+    <guid>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part1/</guid>
     <description><![CDATA[Part 1 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 <item>
     <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 2</title>
-    <link>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part2/</link>
+    <link>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part2/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part2/</guid>
+    <guid>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part2/</guid>
     <description><![CDATA[Part 2 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 <item>
     <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 3</title>
-    <link>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part3/</link>
+    <link>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part3/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part3/</guid>
+    <guid>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part3/</guid>
     <description><![CDATA[Part 3 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 <item>
     <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 4</title>
-    <link>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part4/</link>
+    <link>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part4/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part4/</guid>
+    <guid>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part4/</guid>
     <description><![CDATA[Part 4 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 <item>
     <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5</title>
-    <link>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part5/</link>
+    <link>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:33203/posts/reactive_springboot_vs_quarkus_part5/</guid>
+    <guid>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/</guid>
     <description><![CDATA[Part 5 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 <item>
     <title>Towards an Ethical Cognitive-Presence Index (CPI)</title>
-    <link>http://localhost:33203/posts/towards_an_ethical_cognitive_presence_index/</link>
+    <link>http://localhost:1313/posts/towards_an_ethical_cognitive_presence_index/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:33203/posts/towards_an_ethical_cognitive_presence_index/</guid>
+    <guid>http://localhost:1313/posts/towards_an_ethical_cognitive_presence_index/</guid>
     <description><![CDATA[Introducing the Cognitive-Presence Index (CPI) — a human-first, AI-assisted framework for ethical talent discovery and cognitive profiling.]]></description>
 </item>
 <item>
     <title>Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC</title>
-    <link>http://localhost:33203/posts/enhancing_hugo_with_dynamic_markdown/</link>
+    <link>http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/</link>
     <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:33203/posts/enhancing_hugo_with_dynamic_markdown/</guid>
+    <guid>http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/</guid>
     <description><![CDATA[Step-by-step guide to render Markdown dynamically in Hugo with Mermaid, MathJax, GitHub-style tables, and an auto-generated TOC.]]></description>
 </item>
 <item>
     <title>Mathematical Foundation of Shamir&#39;s Secret Sharing (SSS)</title>
-    <link>http://localhost:33203/posts/mathematical_foundation_and_sss/</link>
+    <link>http://localhost:1313/posts/mathematical_foundation_and_sss/</link>
     <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:33203/posts/mathematical_foundation_and_sss/</guid>
+    <guid>http://localhost:1313/posts/mathematical_foundation_and_sss/</guid>
     <description><![CDATA[A comprehensive guide to the mathematics behind Shamir&rsquo;s Secret Sharing (SSS), covering modular arithmetic, finite fields, and how polynomial interpolation secures secrets.]]></description>
 </item>
 </channel>

@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Cognitive Presence - Tag - Kathiravan Muthaiah</title>
-        <link>http://localhost:1313/tags/cognitive-presence/</link>
-        <description>Cognitive Presence - Tag - Kathiravan Muthaiah</description>
+        <title>Recruitment - Category - Kathiravan Muthaiah</title>
+        <link>http://localhost:1313/categories/recruitment/</link>
+        <description>Recruitment - Category - Kathiravan Muthaiah</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cognitive-presence/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/categories/recruitment/" rel="self" type="application/rss+xml" /><item>
     <title>Towards an Ethical Cognitive-Presence Index (CPI)</title>
     <link>http://localhost:1313/posts/towards_an_ethical_cognitive_presence_index/</link>
     <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
