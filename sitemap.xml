@@ -2,24 +2,32 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
+            <loc>http://localhost:1313/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
             <loc>http://localhost:1313/posts/how-i-built-my-personal-website/</loc><lastmod>2025-07-31T18:00:00&#43;02:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/ai-enthusiast/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/ai/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/ai-enthusiast/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/art/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/chatgpt/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/cloud-solutions/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/enterprise-architecture/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/flux-model/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/fun/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/home/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/music/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/personal/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/personal-reflection/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/suno.ai/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/technology/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/technology_meets_art_a_fan_moment/</loc><lastmod>2025-08-03T00:00:00&#43;00:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/ai-productivity/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
             <loc>http://localhost:1313/categories/ai-tools/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
-            <loc>http://localhost:1313/categories/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/chatgpt/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/chatgpt4o/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/cloud-solutions/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/enterprise-architecture/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/home/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
             <loc>http://localhost:1313/posts/leveraging_chatgpt_as_a_professional_companion/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/llm/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/openai/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
-            <loc>http://localhost:1313/categories/personal/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
-            <loc>http://localhost:1313/posts/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
-            <loc>http://localhost:1313/categories/technology/</loc><lastmod>2025-08-02T12:00:00&#43;02:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/ai-ethics/</loc><lastmod>2025-08-02T00:00:00&#43;00:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/cognitive-presence/</loc><lastmod>2025-08-02T00:00:00&#43;00:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/human-centric-ai/</loc><lastmod>2025-08-02T00:00:00&#43;00:00</lastmod></url><url>
