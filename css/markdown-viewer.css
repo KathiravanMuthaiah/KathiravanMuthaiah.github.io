@@ -1,15 +1,157 @@
-.markdown-body table {
-  border-collapse: collapse;
-  margin: 1rem 0;
+/* =======================================
+   Markdown Viewer Styles (Scoped)
+   ---------------------------------------
+   ✅ Only affects elements under #markdown-container
+   ✅ Supports LoveIt theme switching
+   ✅ Separates inline vs block code
+   ✅ Adds mobile-friendly scroll for code & tables
+   ======================================= */
+
+/* Root markdown container */
+#markdown-container,
+.markdown-body {
+  line-height: 1.6;
+  font-size: 1rem;
+  overflow-wrap: break-word;
 }
 
+/* ----------------------------
+   1. Code Styling
+----------------------------- */
+
+/* Inline code (not in <pre>) */
+#markdown-container :not(pre) > code,
+.markdown-body :not(pre) > code {
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.875em;
+  font-family: var(--code-font-family, "Source Code Pro", monospace);
+  color: #e74c3c; /* Default LoveIt inline code color */
+}
+
+/* Code blocks (<pre><code>) */
+#markdown-container pre,
+.markdown-body pre {
+  overflow-x: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  font-family: var(--code-font-family, "Source Code Pro", monospace);
+  font-size: 0.875rem;
+}
+
+/* Remove double background from <code> inside <pre> */
+#markdown-container pre code,
+.markdown-body pre code {
+  background: none;
+  padding: 0;
+  display: block;
+  white-space: pre;
+}
+
+/* Light theme code block */
+[theme=light] #markdown-container pre,
+[theme=light] .markdown-body pre {
+  background-color: #f6f8fa;
+  color: #1b1f23;
+}
+
+/* Dark theme code block */
+[theme=dark] #markdown-container pre,
+[theme=dark] .markdown-body pre {
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+/* Highlight.js override for dark mode */
+[theme=dark] #markdown-container pre code.hljs,
+[theme=dark] .markdown-body pre code.hljs {
+  color: #e6edf3;
+}
+
+/* ----------------------------
+   2. Table Styling
+----------------------------- */
+
+#markdown-container table,
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  display: block;       /* Ensure horizontal scroll on mobile */
+  overflow-x: auto;
+}
+
+#markdown-container th,
+#markdown-container td,
 .markdown-body th,
 .markdown-body td {
   border: 1px solid #d0d7de;
   padding: 6px 13px;
+  text-align: left;
 }
 
-.markdown-body tr:nth-child(2n) {
+#markdown-container tr:nth-child(even),
+.markdown-body tr:nth-child(even) {
   background-color: #f6f8fa;
+}
+
+/* Dark mode table */
+[theme=dark] #markdown-container tr:nth-child(even),
+[theme=dark] .markdown-body tr:nth-child(even) {
+  background-color: #161b22;
+}
+
+[theme=dark] #markdown-container th,
+[theme=dark] #markdown-container td,
+[theme=dark] .markdown-body th,
+[theme=dark] .markdown-body td {
+  border-color: #30363d;
+}
+
+/* ----------------------------
+   3. Image & Media
+----------------------------- */
+
+#markdown-container img,
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin: 1rem 0;
+}
+
+/* ----------------------------
+   4. Blockquotes
+----------------------------- */
+#markdown-container blockquote,
+.markdown-body blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #d0d7de;
+  color: #6a737d;
+}
+
+[theme=dark] #markdown-container blockquote,
+[theme=dark] .markdown-body blockquote {
+  border-left-color: #30363d;
+  color: #8b949e;
+}
+
+/* ----------------------------
+   5. Horizontal Rule
+----------------------------- */
+#markdown-container hr,
+.markdown-body hr {
+  border: none;
+  border-top: 1px solid #d0d7de;
+  margin: 2rem 0;
+}
+
+[theme=dark] #markdown-container hr,
+[theme=dark] .markdown-body hr {
+  border-top-color: #30363d;
 }
 
