@@ -31,7 +31,7 @@ We explore two **reactive approaches**:
 
 ### **Example: Reading File Lines with Flux**
 
-```java
+```text
 Flux.using(
     () -> Files.newBufferedReader(Path.of("samplefile.txt")),
     reader -> Flux.fromStream(reader.lines()),
@@ -56,7 +56,7 @@ Flux.using(
 
 `Sinks.Many<T>` allows **manual emission of data**:
 
-```java
+```text
 Sinks.Many<String> sink = Sinks.many().unicast().onBackpressureBuffer();
 
 sink.asFlux()
@@ -94,7 +94,7 @@ sink.tryEmitNext("Line 2");
 
 ### **Example: Reading File Lines with Multi**
 
-```java
+```text
 BufferedReader reader = Files.newBufferedReader(Path.of("samplefile.txt"));
 
 Multi.createFrom().items(reader.lines()::iterator)

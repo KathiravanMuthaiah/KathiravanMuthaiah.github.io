@@ -29,7 +29,7 @@ The **Writer Service** subscribes to MQTT and writes the transformed lines to a 
 
 ### **4.1.2 AsyncFileWriterService.java**
 
-```java
+```text
 @Service
 public class AsyncFileWriterService {
 
@@ -78,7 +78,7 @@ public class AsyncFileWriterService {
 
 ### **4.1.3 Spring Boot Configuration (application.yml)**
 
-```yaml
+```text
 server:
   port: 8082
 
@@ -110,7 +110,7 @@ output:
 
 ### **4.2.2 AsyncFileWriterService.java**
 
-```java
+```text
 @ApplicationScoped
 public class AsyncFileWriterService {
 
@@ -161,7 +161,7 @@ public class AsyncFileWriterService {
 
 ### **4.2.3 Quarkus Writer Configuration (application.properties)**
 
-```properties
+```text
 quarkus.http.port=8082
 mqtt.broker=tcp://localhost:1883
 mqtt.topic=file.processed.line
