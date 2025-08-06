@@ -98,7 +98,7 @@ flowchart LR
 
 ### **Repository Modules**
 
-```structured text
+```text
 reactive-mqtt-file-pipeline/
 │
 ├── reader-springboot/   # Spring Boot Reader
@@ -133,7 +133,7 @@ See [`PGschema.sql`](https://github.com/KathiravanMuthaiah/reactive-mqtt-file-pi
 
 2. Prepare `.env` for local Docker Compose:
 
-   ```structured text
+   ```text
    POSTGRES_USER=postgres
    POSTGRES_PASSWORD=postgres
    POSTGRES_DB=fileproc
