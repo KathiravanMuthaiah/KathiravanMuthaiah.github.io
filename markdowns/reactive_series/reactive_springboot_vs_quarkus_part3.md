@@ -28,7 +28,7 @@ The **Reader Service** is the heart of this project.
 
 **Spring Boot** `FileProcessingService.java`:
 
-```java
+```text
 @Service
 public class FileProcessingService {
 
@@ -120,7 +120,7 @@ In **Quarkus**, you implemented three variations:
 
 ### **Quarkus FileProcessingService (Mutiny Example)**
 
-```java
+```text
 @ApplicationScoped
 public class FileProcessingService {
 

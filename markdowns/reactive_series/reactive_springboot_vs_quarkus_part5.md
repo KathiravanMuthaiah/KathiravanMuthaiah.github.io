@@ -18,7 +18,7 @@ After implementing **Reader** and **Writer** services in both frameworks, we can
 
 See [`PGschema.sql`](https://github.com/KathiravanMuthaiah/reactive-mqtt-file-pipeline/blob/main/supportScripts/PGschema.sql) for exact DDL.
 
-```sql
+```text
 CREATE SCHEMA IF NOT EXISTS fileproc;
 
 CREATE TABLE fileproc.line_data (
@@ -47,7 +47,7 @@ CREATE TABLE fileproc.file_summary (
 
 **Spring Boot Reader** uses JPA to persist each processed line:
 
-```java
+```text
 lineDataRepository.save(new LineData(rawLine, transformed));
 ```
 
@@ -60,7 +60,7 @@ lineDataRepository.save(new LineData(rawLine, transformed));
 
 **Spring Boot `SummaryJdbcWriter.java`**:
 
-```java
+```text
 @Component
 public class SummaryJdbcWriter {
 
@@ -96,7 +96,7 @@ public class SummaryJdbcWriter {
 
 `application.yml` (Reader Service):
 
-```yaml
+```text
 spring:
   datasource:
     url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:fileproc}
@@ -120,7 +120,7 @@ spring:
 
 **Quarkus Reader** uses **Panache Repository** for JPA persistence:
 
-```java
+```text
 lineDataRepository.persist(new LineData(rawLine, transformed));
 ```
 
@@ -133,7 +133,7 @@ lineDataRepository.persist(new LineData(rawLine, transformed));
 
 **Quarkus `SummaryJdbcWriter.java`**:
 
-```java
+```text
 @ApplicationScoped
 public class SummaryJdbcWriter {
 
@@ -176,7 +176,7 @@ public class SummaryJdbcWriter {
 
 `application.yml` (Reader Service):
 
-```yaml
+```text
 quarkus:
   datasource:
     db-kind: postgresql

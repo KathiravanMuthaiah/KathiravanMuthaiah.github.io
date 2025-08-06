@@ -126,7 +126,7 @@ See [`PGschema.sql`](https://github.com/KathiravanMuthaiah/reactive-mqtt-file-pi
 
 1. Clone the repository:
 
-   ```bash
+   ```text
    git clone https://github.com/KathiravanMuthaiah/reactive-mqtt-file-pipeline.git
    cd reactive-mqtt-file-pipeline
    ```
@@ -146,7 +146,7 @@ See [`PGschema.sql`](https://github.com/KathiravanMuthaiah/reactive-mqtt-file-pi
 
 3. Start infrastructure:
 
-   ```bash
+   ```text
    docker compose -f docker-compose.reader-springboot.yaml up -d
    ```
 
