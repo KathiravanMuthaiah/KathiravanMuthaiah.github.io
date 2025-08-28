@@ -4,84 +4,84 @@
         <link>http://localhost:1313/tags/</link>
         <description>Tags - Tag - Kathiravan Muthaiah</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>AI</title>
-    <link>http://localhost:1313/tags/ai/</link>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</pubDate>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Academic Research</title>
+    <link>http://localhost:1313/tags/academic-research/</link>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/ai/</guid>
+    <guid>http://localhost:1313/tags/academic-research/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>AI Enthusiast</title>
     <link>http://localhost:1313/tags/ai-enthusiast/</link>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
     <author>Kathiravan Muthaiah</author>
     <guid>http://localhost:1313/tags/ai-enthusiast/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Art</title>
-    <link>http://localhost:1313/tags/art/</link>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <title>BDes</title>
+    <link>http://localhost:1313/tags/bdes/</link>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/art/</guid>
+    <guid>http://localhost:1313/tags/bdes/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>ChatGPT</title>
-    <link>http://localhost:1313/tags/chatgpt/</link>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <title>Child Behavior</title>
+    <link>http://localhost:1313/tags/child-behavior/</link>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/chatgpt/</guid>
+    <guid>http://localhost:1313/tags/child-behavior/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Child Psychology</title>
+    <link>http://localhost:1313/tags/child-psychology/</link>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/child-psychology/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Cloud Solutions</title>
     <link>http://localhost:1313/tags/cloud-solutions/</link>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
     <author>Kathiravan Muthaiah</author>
     <guid>http://localhost:1313/tags/cloud-solutions/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>Design</title>
+    <link>http://localhost:1313/tags/design/</link>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/tags/design/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Enterprise Architecture</title>
     <link>http://localhost:1313/tags/enterprise-architecture/</link>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
     <author>Kathiravan Muthaiah</author>
     <guid>http://localhost:1313/tags/enterprise-architecture/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>FLUX Model</title>
-    <link>http://localhost:1313/tags/flux-model/</link>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <title>Ethical Parenting</title>
+    <link>http://localhost:1313/tags/ethical-parenting/</link>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/flux-model/</guid>
+    <guid>http://localhost:1313/tags/ethical-parenting/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Fun</title>
-    <link>http://localhost:1313/tags/fun/</link>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <title>Graduation</title>
+    <link>http://localhost:1313/tags/graduation/</link>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
     <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/fun/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Home</title>
-    <link>http://localhost:1313/tags/home/</link>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/home/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Music</title>
-    <link>http://localhost:1313/tags/music/</link>
-    <pubDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/tags/music/</guid>
+    <guid>http://localhost:1313/tags/graduation/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

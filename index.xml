@@ -4,7 +4,7 @@
         <link>http://localhost:1313/</link>
         <description>My param description</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kathir@mikcore.com (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sun, 03 Aug 2025 00:00:00 &#43;0000</lastBuildDate>
+            <webMaster>kathir@mikcore.com (Kathiravan Muthaiah)</webMaster><lastBuildDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>How I Built My Personal Website with Hugo &amp; LoveIt</title>
@@ -16,6 +16,22 @@
 <strong>Hugo v0.143.1</strong> and the <strong>LoveIt v0.3.0 theme</strong>.</p>
 <p>In this post, I share my <strong>step-by-step journey</strong> of creating my website,<br>
 including <strong>installation, configuration, GitHub Pages deployment, and a custom subdomain setup</strong>.</p>]]></description>
+</item>
+<item>
+    <title>Discovery of Young Minds: Nurturing the Voice of Principle in Children</title>
+    <link>http://localhost:1313/posts/discovery_of_young_minds/</link>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/posts/discovery_of_young_minds/</guid>
+    <description><![CDATA[An insightful perspective on children who compulsively express truth and fairness — how to guide their inner moral compass into empathetic, confident leadership. Inspired by real-world examples like Malala and Gandhi.]]></description>
+</item>
+<item>
+    <title>IIT BDes Programs awareness material</title>
+    <link>http://localhost:1313/posts/iit_bdes_program_information/</link>
+    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/posts/iit_bdes_program_information/</guid>
+    <description><![CDATA[IIT B.Des Programs – Specialisations, Seats, Admission via UCEED, and Career Opportunities]]></description>
 </item>
 <item>
     <title>Technology meets Art: A fan moment</title>
@@ -75,22 +91,6 @@ The original song, its music, and lyrics belong entirely to their respective cre
     <author>Kathiravan Muthaiah</author>
     <guid>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/</guid>
     <description><![CDATA[Part 5 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
-</item>
-<item>
-    <title>Towards an Ethical Cognitive-Presence Index (CPI)</title>
-    <link>http://localhost:1313/posts/towards_an_ethical_cognitive_presence_index/</link>
-    <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/posts/towards_an_ethical_cognitive_presence_index/</guid>
-    <description><![CDATA[Introducing the Cognitive-Presence Index (CPI) — a human-first, AI-assisted framework for ethical talent discovery and cognitive profiling.]]></description>
-</item>
-<item>
-    <title>Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC</title>
-    <link>http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/</link>
-    <pubDate>Fri, 01 Aug 2025 20:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/</guid>
-    <description><![CDATA[Step-by-step guide to render Markdown dynamically in Hugo with Mermaid, MathJax, GitHub-style tables, and an auto-generated TOC.]]></description>
 </item>
 </channel>
 </rss>
