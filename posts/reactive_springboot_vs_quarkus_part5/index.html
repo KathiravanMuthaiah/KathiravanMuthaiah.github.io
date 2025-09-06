@@ -26,10 +26,13 @@
   <meta name="twitter:title" content="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5">
   <meta name="twitter:description" content="Learn how to build a reactive file processing pipeline in Java using Spring Boot, Quarkus, MQTT, and PostgreSQL. Compare Project Reactor vs Mutiny with a microservices architecture.">
 <meta name="application-name" content="Kathiravan Muthaiah">
-<meta name="apple-mobile-web-app-title" content="Kathiravan Muthaiah"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="Kathiravan Muthaiah">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" /><link rel="prev" href="http://localhost:1313/posts/towards_an_ethical_cognitive_presence_index/" /><link rel="next" href="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part4/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest">
+
+<link rel="canonical" href="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" value="http://localhost:1313/"/><link rel="prev" href="http://localhost:1313/posts/towards_an_ethical_cognitive_presence_index/" /><link rel="next" href="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part4/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -48,7 +51,18 @@
             },"description": "Learn how to build a reactive file processing pipeline in Java using Spring Boot, Quarkus, MQTT, and PostgreSQL. Compare Project Reactor vs Mutiny with a microservices architecture."
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -135,7 +149,7 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-title="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5" data-hashtags="Spring Boot,Quarkus,Reactive Streams,MQTT,Microservices,Project Reactor,Mutiny"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-hashtag="Spring Boot"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-title="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-title="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-title="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-title="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5" data-hashtags="Spring Boot,Quarkus,Reactive Streams,MQTT,Microservices,Project Reactor,Mutiny"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-title="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-hashtag="Spring Boot"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-title="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-title="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-title="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/" data-title="Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5" data-description="Learn how to build a reactive file processing pipeline in Java using Spring Boot, Quarkus, MQTT, and PostgreSQL. Compare Project Reactor vs Mutiny with a microservices architecture."><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2freactive_springboot_vs_quarkus_part5%2f&amp;text=Reactive%20File%20Processing%20with%20MQTT%3a%20Spring%20Boot%20vs%20Quarkus%20%e2%80%93%20Part%205" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -158,8 +172,11 @@
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
                 <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
 </html>
