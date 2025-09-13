@@ -4,7 +4,7 @@
         <link>/posts/</link>
         <description>All Posts | Kathiravan Muthaiah</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>DM LinkedIn (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 13 Sep 2025 12:00:00 &#43;0400</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
     <title>How I Built My Personal Website with Hugo &amp; LoveIt</title>
     <link>http://localhost:1313/posts/how-i-built-my-personal-website/</link>
     <pubDate>Thu, 31 Jul 2025 18:00:00 &#43;0200</pubDate>
@@ -14,6 +14,14 @@
 <strong>Hugo v0.143.1</strong> and the <strong>LoveIt v0.3.0 theme</strong>.</p>
 <p>In this post, I share my <strong>step-by-step journey</strong> of creating my website,<br>
 including <strong>installation, configuration, GitHub Pages deployment, and a custom subdomain setup</strong>.</p>]]></description>
+</item>
+<item>
+    <title>Relationships: The Hidden Dimension of Time and Health</title>
+    <link>http://localhost:1313/posts/reflections_from_the_journey/</link>
+    <pubDate>Sat, 13 Sep 2025 12:00:00 &#43;0400</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/posts/reflections_from_the_journey/</guid>
+    <description><![CDATA[A personal reflection on a 5-year journey that redefines success through the lens of relationships, time, and health.]]></description>
 </item>
 <item>
     <title>Discovery of Young Minds: Nurturing the Voice of Principle in Children</title>
@@ -81,14 +89,6 @@ The original song, its music, and lyrics belong entirely to their respective cre
     <author>Kathiravan Muthaiah</author>
     <guid>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part4/</guid>
     <description><![CDATA[Part 4 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
-</item>
-<item>
-    <title>Reactive File Processing with MQTT: Spring Boot vs Quarkus – Part 5</title>
-    <link>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/</link>
-    <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/posts/reactive_springboot_vs_quarkus_part5/</guid>
-    <description><![CDATA[Part 5 of a series comparing Spring Boot and Quarkus for reactive file processing using MQTT, Project Reactor, and Mutiny with Dockerized microservices.]]></description>
 </item>
 </channel>
 </rss>

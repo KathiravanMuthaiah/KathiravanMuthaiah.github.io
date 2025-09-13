@@ -4,7 +4,39 @@
         <link>http://localhost:1313/categories/</link>
         <description>Categories - Category - Kathiravan Muthaiah</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>DM LinkedIn (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 13 Sep 2025 12:00:00 &#43;0400</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Life Lessons</title>
+    <link>http://localhost:1313/categories/life-lessons/</link>
+    <pubDate>Sat, 13 Sep 2025 12:00:00 &#43;0400</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/categories/life-lessons/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Personal</title>
+    <link>http://localhost:1313/categories/personal/</link>
+    <pubDate>Sat, 13 Sep 2025 12:00:00 &#43;0400</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/categories/personal/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Reflections</title>
+    <link>http://localhost:1313/categories/reflections/</link>
+    <pubDate>Sat, 13 Sep 2025 12:00:00 &#43;0400</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/categories/reflections/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Technology</title>
+    <link>http://localhost:1313/categories/technology/</link>
+    <pubDate>Sat, 13 Sep 2025 12:00:00 &#43;0400</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/categories/technology/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Child Development</title>
     <link>http://localhost:1313/categories/child-development/</link>
     <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
@@ -37,14 +69,6 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Personal</title>
-    <link>http://localhost:1313/categories/personal/</link>
-    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/personal/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
     <title>Social Awareness</title>
     <link>http://localhost:1313/categories/social-awareness/</link>
     <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
@@ -53,35 +77,11 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Technology</title>
-    <link>http://localhost:1313/categories/technology/</link>
-    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/technology/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
     <title>AI Tools</title>
     <link>http://localhost:1313/categories/ai-tools/</link>
     <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
     <author>Kathiravan Muthaiah</author>
     <guid>http://localhost:1313/categories/ai-tools/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Java</title>
-    <link>http://localhost:1313/categories/java/</link>
-    <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/java/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>ReactiveProgramming</title>
-    <link>http://localhost:1313/categories/reactiveprogramming/</link>
-    <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/categories/reactiveprogramming/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
