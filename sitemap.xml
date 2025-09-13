@@ -2,35 +2,46 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
+            <loc>http://localhost:1313/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
             <loc>http://localhost:1313/posts/how-i-built-my-personal-website/</loc><lastmod>2025-07-31T18:00:00&#43;02:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/ai-enthusiast/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/cloud-solutions/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/enterprise-architecture/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/health/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/home/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/journey/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/life-lessons/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/life-lessons/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/personal/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/personal-growth/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/reflections/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/relationships/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/reflections_from_the_journey/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/self-reflection/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/technology/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/time/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/value-of-relationships/</loc><lastmod>2025-09-13T12:00:00&#43;04:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/academic-research/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/ai-enthusiast/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/bdes/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
-            <loc>http://localhost:1313/categories/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/child-behavior/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/categories/child-development/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/child-psychology/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/cloud-solutions/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/categories/courses/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/design/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/posts/discovery_of_young_minds/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/categories/education/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/enterprise-architecture/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/ethical-parenting/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/graduation/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/home/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/iit/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/posts/iit_bdes_program_information/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/mental-health/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/moral-development/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/categories/parenting/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
-            <loc>http://localhost:1313/categories/personal/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
-            <loc>http://localhost:1313/posts/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/principled-children/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/categories/social-awareness/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
-            <loc>http://localhost:1313/categories/technology/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/truth-telling/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/voice-of-principle/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/young-minds/</loc><lastmod>2025-08-28T12:00:00&#43;03:00</lastmod></url><url>
