@@ -1,16 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Young Minds - Tag - Kathiravan Muthaiah</title>
-        <link>http://localhost:1313/tags/young-minds/</link>
-        <description>Young Minds - Tag - Kathiravan Muthaiah</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>DM LinkedIn (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</lastBuildDate><atom:link href="http://localhost:1313/tags/young-minds/" rel="self" type="application/rss+xml" /><item>
-    <title>Discovery of Young Minds: Nurturing the Voice of Principle in Children</title>
-    <link>http://localhost:1313/posts/discovery_of_young_minds/</link>
-    <pubDate>Thu, 28 Aug 2025 12:00:00 &#43;0300</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/posts/discovery_of_young_minds/</guid>
-    <description><![CDATA[An insightful perspective on children who compulsively express truth and fairness — how to guide their inner moral compass into empathetic, confident leadership. Inspired by real-world examples like Malala and Gandhi.]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Young Minds - Tag - Kathiravan Muthaiah</title><link>https://kathiravanmuthaiah.com/tags/young-minds/</link><description>Young Minds - Tag - Kathiravan Muthaiah</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>DM LinkedIn (Kathiravan Muthaiah)</managingEditor><webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Thu, 28 Aug 2025 12:00:00 +0300</lastBuildDate><atom:link href="https://kathiravanmuthaiah.com/tags/young-minds/" rel="self" type="application/rss+xml"/><item><title>Discovery of Young Minds: Nurturing the Voice of Principle in Children</title><link>https://kathiravanmuthaiah.com/posts/discovery_of_young_minds/</link><pubDate>Thu, 28 Aug 2025 12:00:00 +0300</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/posts/discovery_of_young_minds/</guid><description>An insightful perspective on children who compulsively express truth and fairness — how to guide their inner moral compass into empathetic, confident leadership. Inspired by real-world examples like Malala and Gandhi.</description></item></channel></rss>
