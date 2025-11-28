@@ -1,16 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>ChatGPT4o - Tag - Kathiravan Muthaiah</title>
-        <link>http://localhost:1313/tags/chatgpt4o/</link>
-        <description>ChatGPT4o - Tag - Kathiravan Muthaiah</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>DM LinkedIn (Kathiravan Muthaiah)</managingEditor>
-            <webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/chatgpt4o/" rel="self" type="application/rss+xml" /><item>
-    <title>Leveraging ChatGPT as a Professional Companion</title>
-    <link>http://localhost:1313/posts/leveraging_chatgpt_as_a_professional_companion/</link>
-    <pubDate>Sat, 02 Aug 2025 12:00:00 &#43;0200</pubDate>
-    <author>Kathiravan Muthaiah</author>
-    <guid>http://localhost:1313/posts/leveraging_chatgpt_as_a_professional_companion/</guid>
-    <description><![CDATA[My experience leveraging ChatGPT as a professional companion for design, debugging, documentation, and AI-accelerated learning.]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>ChatGPT4o - Tag - Kathiravan Muthaiah</title><link>https://kathiravanmuthaiah.com/tags/chatgpt4o/</link><description>ChatGPT4o - Tag - Kathiravan Muthaiah</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>DM LinkedIn (Kathiravan Muthaiah)</managingEditor><webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 12:00:00 +0200</lastBuildDate><atom:link href="https://kathiravanmuthaiah.com/tags/chatgpt4o/" rel="self" type="application/rss+xml"/><item><title>Leveraging ChatGPT as a Professional Companion</title><link>https://kathiravanmuthaiah.com/posts/leveraging_chatgpt_as_a_professional_companion/</link><pubDate>Sat, 02 Aug 2025 12:00:00 +0200</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/posts/leveraging_chatgpt_as_a_professional_companion/</guid><description>My experience leveraging ChatGPT as a professional companion for design, debugging, documentation, and AI-accelerated learning.</description></item></channel></rss>
