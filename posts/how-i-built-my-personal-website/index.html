@@ -1,9 +1,155 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>How I Built My Personal Website with Hugo & LoveIt - Kathiravan Muthaiah</title><meta name=Description content="Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain."><meta property="og:url" content="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/">
-<meta property="og:site_name" content="Kathiravan Muthaiah"><meta property="og:title" content="How I Built My Personal Website with Hugo & LoveIt"><meta property="og:description" content="Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-07-31T18:00:00+02:00"><meta property="article:modified_time" content="2025-07-31T18:00:00+02:00"><meta property="article:tag" content="Hugo"><meta property="article:tag" content="LoveIt"><meta property="article:tag" content="GitHub Pages"><meta property="article:tag" content="Static Site"><meta property="article:tag" content="Personal Website"><meta property="og:image" content="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/featured-image.jpeg"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/featured-image.jpeg"><meta name=twitter:title content="How I Built My Personal Website with Hugo & LoveIt"><meta name=twitter:description content="Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain."><meta name=application-name content="Kathiravan Muthaiah"><meta name=apple-mobile-web-app-title content="Kathiravan Muthaiah"><meta name=referrer content="no-referrer"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/><link rel=prev href=https://kathiravanmuthaiah.com/posts/a_beautiful_evening/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css></noscript><link rel=preload href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"How I Built My Personal Website with Hugo \u0026 LoveIt","inLanguage":"en-us","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/kathiravanmuthaiah.com\/posts\/how-i-built-my-personal-website\/"},"image":[{"@type":"ImageObject","url":"https:\/\/kathiravanmuthaiah.com\/posts\/how-i-built-my-personal-website\/","width":1007,"height":142}],"genre":"posts","keywords":"Hugo, LoveIt, GitHub Pages, Static Site, Personal Website","wordcount":665,"url":"https:\/\/kathiravanmuthaiah.com\/posts\/how-i-built-my-personal-website\/","datePublished":"2025-07-31T18:00:00+02:00","dateModified":"2025-07-31T18:00:00+02:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"Kathiravan Muthaiah"},"description":"Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain."}</script></head><body data-header-desktop=fixed data-header-mobile=auto><script>const query=window.matchMedia("(prefers-color-scheme: dark)");function applyTheme(){let e=window.localStorage?.getItem("theme")||"auto",t=e==="dark"||e==="auto"&&query.matches;document.body.setAttribute("theme",t?"dark":"light"),document.body.setAttribute("cfg-theme",e)}applyTheme(),query.addEventListener("change",applyTheme)</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Kathiravan Muthaiah">Kathiravan Muthaiah</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/>Home </a><a class=menu-item href=/about/>About </a><a class=menu-item href=/posts/>Posts </a><a class=menu-item href=/categories/>Categories </a><a class=menu-item href=/tags/>Tags </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
-<i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Kathiravan Muthaiah">Kathiravan Muthaiah</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/ title>Home</a><a class=menu-item href=/about/ title>About</a><a class=menu-item href=/posts/ title>Posts</a><a class=menu-item href=/categories/ title>Categories</a><a class=menu-item href=/tags/ title>Tags</a><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
-<i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></header><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contents</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">How I Built My Personal Website with Hugo & LoveIt</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=https://kathiravanmuthaiah.com title=Author target=_blank rel="noopener noreffer author" class=author><i class="fas fa-user-circle fa-fw" aria-hidden=true></i>Kathiravan Muthaiah</a></span>&nbsp;<span class=post-category>included in <a href=/categories/webdevelopment/><i class="far fa-folder fa-fw" aria-hidden=true></i>WebDevelopment</a>&nbsp;<a href=/categories/personalprojects/><i class="far fa-folder fa-fw" aria-hidden=true></i>PersonalProjects</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw" aria-hidden=true></i>&nbsp;<time datetime=2025-07-31>2025-07-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden=true></i>&nbsp;665 words&nbsp;
-<i class="far fa-clock fa-fw" aria-hidden=true></i>&nbsp;4 minutes&nbsp;</div></div><div class=featured-image><img class=lazyload src=/svg/loading.min.svg data-src=/posts/how-i-built-my-personal-website/featured-image.jpeg data-srcset="/posts/how-i-built-my-personal-website/featured-image.jpeg, /posts/how-i-built-my-personal-website/featured-image.jpeg 1.5x, /posts/how-i-built-my-personal-website/featured-image.jpeg 2x" data-sizes=auto alt=/posts/how-i-built-my-personal-website/featured-image.jpeg title="Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain."></div><div class="details toc" id=toc-static data-kept><div class="details-summary toc-title"><span>Contents</span>
-<span><i class="details-icon fas fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#1-choosing-hugo-and-loveit>1️⃣ Choosing Hugo and LoveIt</a></li><li><a href=#2-local-setup>2️⃣ Local Setup</a></li><li><a href=#3-creating-your-first-post--handling-images>3️⃣ Creating Your First Post & Handling Images</a></li><li><a href=#4-deploying-to-github-pages>4️⃣ Deploying to GitHub Pages</a></li><li><a href=#5-adding-a-custom-subdomain>5️⃣ Adding a Custom Subdomain</a></li><li><a href=#6-key-lessons-learned>6️⃣ Key Lessons Learned</a></li></ul></nav></div></div><div class=content id=content><p>Building a <strong>personal website</strong> can be simple, elegant, and completely under your control with<br><strong>Hugo v0.143.1</strong> and the <strong>LoveIt v0.3.0 theme</strong>.</p><p>In this post, I share my <strong>step-by-step journey</strong> of creating my website,<br>including <strong>installation, configuration, GitHub Pages deployment, and a custom subdomain setup</strong>.</p><p>Discover how the <strong>Hugo + LoveIt combo</strong> enables a <strong>fast, SEO-friendly static site</strong> for personal branding.</p><h2 id=1-choosing-hugo-and-loveit>1️⃣ Choosing Hugo and LoveIt</h2><p>When planning my <strong>personal website</strong>, I had three key requirements:</p><ul><li><strong>Markdown-first workflow</strong> → Easy content creation</li><li><strong>Lightweight static hosting</strong> → Ideal for <strong>GitHub Pages</strong> deployment</li><li><strong>Modern, clean design</strong> → Focus on readability and mobile responsiveness</li></ul><p>After evaluating several <strong>Hugo themes</strong>, I selected:</p><ul><li><strong>Hugo Extended Binary</strong> → Fast, portable, no complex dependencies</li><li><strong>LoveIt theme</strong> → Responsive, SEO-friendly, and perfect for blogs & portfolios</li></ul><hr><h2 id=2-local-setup>2️⃣ Local Setup</h2><p>Setting up <strong>Hugo locally</strong> is the first step to building your site.<br>Here’s how I prepared my environment on <strong>Linux 64-bit</strong>:</p><p><strong>Install Hugo Extended</strong></p><pre><code class=language-bash># Create tools folder
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>How I Built My Personal Website with Hugo &amp; LoveIt - Kathiravan Muthaiah</title><meta name="Description" content="Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain."><meta property="og:url" content="http://localhost:1313/posts/how-i-built-my-personal-website/">
+  <meta property="og:site_name" content="Kathiravan Muthaiah">
+  <meta property="og:title" content="How I Built My Personal Website with Hugo & LoveIt">
+  <meta property="og:description" content="Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-31T18:00:00+02:00">
+    <meta property="article:modified_time" content="2025-07-31T18:00:00+02:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="LoveIt">
+    <meta property="article:tag" content="GitHub Pages">
+    <meta property="article:tag" content="Static Site">
+    <meta property="article:tag" content="Personal Website">
+    <meta property="og:image" content="http://localhost:1313/posts/how-i-built-my-personal-website/featured-image.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/how-i-built-my-personal-website/featured-image.jpeg">
+  <meta name="twitter:title" content="How I Built My Personal Website with Hugo & LoveIt">
+  <meta name="twitter:description" content="Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain.">
+<meta name="application-name" content="Kathiravan Muthaiah">
+<meta name="apple-mobile-web-app-title" content="Kathiravan Muthaiah">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest">
+
+
+
+<link rel="canonical" href="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/" />
+    <link rel="prev" href="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How I Built My Personal Website with Hugo \u0026 LoveIt",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kathiravanmuthaiah.com\/posts\/how-i-built-my-personal-website\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/kathiravanmuthaiah.com\/posts\/how-i-built-my-personal-website\/",
+                            "width":  1007 ,
+                            "height":  142 
+                        }],"genre": "posts","keywords": "Hugo, LoveIt, GitHub Pages, Static Site, Personal Website","wordcount":  665 ,
+        "url": "https:\/\/kathiravanmuthaiah.com\/posts\/how-i-built-my-personal-website\/","datePublished": "2025-07-31T18:00:00+02:00","dateModified": "2025-07-31T18:00:00+02:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Kathiravan Muthaiah"
+            },"description": "Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">How I Built My Personal Website with Hugo & LoveIt</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://kathiravanmuthaiah.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Kathiravan Muthaiah</a></span>&nbsp;<span class="post-category">included in <a href="/categories/webdevelopment/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>WebDevelopment</a>&nbsp;<a href="/categories/personalprojects/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>PersonalProjects</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-07-31">2025-07-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;665 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/how-i-built-my-personal-website/featured-image.jpeg"
+        data-srcset="/posts/how-i-built-my-personal-website/featured-image.jpeg, /posts/how-i-built-my-personal-website/featured-image.jpeg 1.5x, /posts/how-i-built-my-personal-website/featured-image.jpeg 2x"
+        data-sizes="auto"
+        alt="/posts/how-i-built-my-personal-website/featured-image.jpeg"
+        title="Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain." /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-choosing-hugo-and-loveit">1️⃣ Choosing Hugo and LoveIt</a></li>
+    <li><a href="#2-local-setup">2️⃣ Local Setup</a></li>
+    <li><a href="#3-creating-your-first-post--handling-images">3️⃣ Creating Your First Post &amp; Handling Images</a></li>
+    <li><a href="#4-deploying-to-github-pages">4️⃣ Deploying to GitHub Pages</a></li>
+    <li><a href="#5-adding-a-custom-subdomain">5️⃣ Adding a Custom Subdomain</a></li>
+    <li><a href="#6-key-lessons-learned">6️⃣ Key Lessons Learned</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Building a <strong>personal website</strong> can be simple, elegant, and completely under your control with<br>
+<strong>Hugo v0.143.1</strong> and the <strong>LoveIt v0.3.0 theme</strong>.</p>
+<p>In this post, I share my <strong>step-by-step journey</strong> of creating my website,<br>
+including <strong>installation, configuration, GitHub Pages deployment, and a custom subdomain setup</strong>.</p>
+<p>Discover how the <strong>Hugo + LoveIt combo</strong> enables a <strong>fast, SEO-friendly static site</strong> for personal branding.</p>
+<h2 id="1-choosing-hugo-and-loveit">1️⃣ Choosing Hugo and LoveIt</h2>
+<p>When planning my <strong>personal website</strong>, I had three key requirements:</p>
+<ul>
+<li><strong>Markdown-first workflow</strong> → Easy content creation</li>
+<li><strong>Lightweight static hosting</strong> → Ideal for <strong>GitHub Pages</strong> deployment</li>
+<li><strong>Modern, clean design</strong> → Focus on readability and mobile responsiveness</li>
+</ul>
+<p>After evaluating several <strong>Hugo themes</strong>, I selected:</p>
+<ul>
+<li><strong>Hugo Extended Binary</strong> → Fast, portable, no complex dependencies</li>
+<li><strong>LoveIt theme</strong> → Responsive, SEO-friendly, and perfect for blogs &amp; portfolios</li>
+</ul>
+<hr>
+<h2 id="2-local-setup">2️⃣ Local Setup</h2>
+<p>Setting up <strong>Hugo locally</strong> is the first step to building your site.<br>
+Here’s how I prepared my environment on <strong>Linux 64-bit</strong>:</p>
+<p><strong>Install Hugo Extended</strong></p>
+
+<pre><code class="language-bash"># Create tools folder
 mkdir -p /opt/software/hugo
 cd /opt/software/hugo
 
@@ -15,21 +161,65 @@ tar -xvzf hugo_extended_0.143.1_Linux-64bit.tar.gz
 rm hugo_extended_0.143.1_Linux-64bit.tar.gz
 
 # Verify installation
-./hugo version</code></pre><p>Expected output:</p><pre><code class=language-text>hugo v0.143.1-extended+linux/amd64 BuildDate=xxxx</code></pre><p>(Optional) <strong>Add Hugo to your PATH</strong></p><pre><code class=language-code>echo 'export PATH=/opt/software/hugo:$PATH' >> ~/.coderc
-source ~/.coderc</code></pre><hr><p>Once Hugo is installed, create a <strong>new site</strong> and set up the <strong>LoveIt theme</strong>:</p><ul><li><p><strong>Initialize project</strong></p><pre><code class=language-bash>hugo new site OwnWebsite
+./hugo version</code></pre>
+<p>Expected output:</p>
+
+<pre><code class="language-text">hugo v0.143.1-extended+linux/amd64 BuildDate=xxxx</code></pre>
+<p>(Optional) <strong>Add Hugo to your PATH</strong></p>
+
+<pre><code class="language-code">echo 'export PATH=/opt/software/hugo:$PATH' >> ~/.coderc
+source ~/.coderc</code></pre>
+<hr>
+<p>Once Hugo is installed, create a <strong>new site</strong> and set up the <strong>LoveIt theme</strong>:</p>
+<ul>
+<li>
+<p><strong>Initialize project</strong></p>
+
+<pre><code class="language-bash">hugo new site OwnWebsite
 cd OwnWebsite
-git init</code></pre></li><li><p><strong>Add LoveIt theme as submodule and ensure exact version is taken</strong></p><pre><code class=language-bash>git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+git init</code></pre>
+</li>
+<li>
+<p><strong>Add LoveIt theme as submodule and ensure exact version is taken</strong></p>
+
+<pre><code class="language-bash">git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 git add .gitmodules themes/LoveIt
 cd ./themes/LoveIt
 git fetch --all --tags
 git checkout v0.3.0
-git pull</code></pre><p><strong>.gitignore Setup for Submodule</strong></p><pre><code class=language-text>Edit# Ignore all other themes except LoveIt submodule
+git pull</code></pre>
+<p><strong>.gitignore Setup for Submodule</strong></p>
+
+<pre><code class="language-text">Edit# Ignore all other themes except LoveIt submodule
 themes/*/
-!themes/LoveIt/</code></pre></li><li><p><strong>Configure <code>hugo.toml</code></strong></p><pre><code class=language-text>baseURL = "https://<username>.github.io/"
+!themes/LoveIt/</code></pre>
+</li>
+<li>
+<p><strong>Configure <code>hugo.toml</code></strong></p>
+
+<pre><code class="language-text">baseURL = "https://<username>.github.io/"
 title = "My Personal Website"
-theme = ["LoveIt"]</code></pre></li></ul><hr><h2 id=3-creating-your-first-post--handling-images>3️⃣ Creating Your First Post & Handling Images</h2><p>Hugo <strong>page bundles</strong> make it easy to keep <strong>Markdown and images together</strong>.<br>Here’s how I created my <strong>first blog post</strong> with a sample image:</p><p><strong>To create the first post</strong>:</p><pre><code class=language-code>hugo new posts/first-post/index.md</code></pre><p><strong>Add images inside the post folder</strong>:</p><pre><code class=language-text>content/posts/first-post/
+theme = ["LoveIt"]</code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="3-creating-your-first-post--handling-images">3️⃣ Creating Your First Post &amp; Handling Images</h2>
+<p>Hugo <strong>page bundles</strong> make it easy to keep <strong>Markdown and images together</strong>.<br>
+Here’s how I created my <strong>first blog post</strong> with a sample image:</p>
+<p><strong>To create the first post</strong>:</p>
+
+<pre><code class="language-code">hugo new posts/first-post/index.md</code></pre>
+<p><strong>Add images inside the post folder</strong>:</p>
+
+<pre><code class="language-text">content/posts/first-post/
     index.md
-    SampleImage.jpg</code></pre><p><strong>Reference images in Markdown</strong>:</p><pre><code class=language-markdown>![Legend Walks](SampleImage.jpg)</code></pre><p><strong>Example front matter for a blog post</strong></p><pre><code class=language-markdown>---
+    SampleImage.jpg</code></pre>
+<p><strong>Reference images in Markdown</strong>:</p>
+
+<pre><code class="language-markdown">![Legend Walks](SampleImage.jpg)</code></pre>
+<p><strong>Example front matter for a blog post</strong></p>
+
+<pre><code class="language-markdown">---
 title: "My First Blog Post"
 subtitle: "Learning Hugo + LoveIt"
 date: 2025-07-31T10:00:00+02:00
@@ -53,10 +243,89 @@ Welcome to my **first blog post** with the [LoveIt](https://hugoloveit.com) them
 3. Deployment via **GitHub Pages** is simple
 
 ---
-![Legend Walks](SampleImage.jpg)</code></pre><hr><h2 id=4-deploying-to-github-pages>4️⃣ Deploying to GitHub Pages</h2><p>Once your site is ready, <strong>deploy it to GitHub Pages</strong> for free hosting:</p><p><strong>Created public Pages repo</strong>:
-<code>&lt;username>.github.io</code></p><p><strong>Add public/ folder as submodule (gh-pages branch)</strong>:</p><pre><code class=language-text>git submodule add -b gh-pages git@github.com:<username>/<username>.github.io.git public</code></pre><p><strong>Build & deploy your site</strong></p><pre><code class=language-code>hugo --minify
+![Legend Walks](SampleImage.jpg)</code></pre>
+<hr>
+<h2 id="4-deploying-to-github-pages">4️⃣ Deploying to GitHub Pages</h2>
+<p>Once your site is ready, <strong>deploy it to GitHub Pages</strong> for free hosting:</p>
+<p><strong>Created public Pages repo</strong>:
+<code>&lt;username&gt;.github.io</code></p>
+<p><strong>Add public/ folder as submodule (gh-pages branch)</strong>:</p>
+
+<pre><code class="language-text">git submodule add -b gh-pages git@github.com:<username>/<username>.github.io.git public</code></pre>
+<p><strong>Build &amp; deploy your site</strong></p>
+
+<pre><code class="language-code">hugo --minify
 cd public
 git add .
 git commit -m "Deploy site"
-git push origin gh-pages</code></pre><p><strong>Enable GitHub Pages</strong> → In <code>gh-pages</code> branch Go to Repo <strong>Settings → Pages</strong> Select branch → ✅ Live!</p><hr><h2 id=5-adding-a-custom-subdomain>5️⃣ Adding a Custom Subdomain</h2><p>To make your site accessible via a <strong>personal subdomain</strong> like<br><code>ownwebsite.example.com</code> instead of <code>&lt;username>.github.io</code>:</p><p><strong>Add a CNAME Record in DNS</strong></p><ul><li>Host: <code>ownwebsite</code></li><li>Type: <code>CNAME</code></li><li>Points to: <code>&lt;username>.github.io</code></li></ul><p><strong>Verify DNS propagation</strong></p><pre><code class=language-bash>dig ownwebsite.example.com</code></pre><p><strong>Enable HTTPS on GitHub Pages</strong></p><p>Go to Repo → Settings → Pages
-Check “Enforce HTTPS”</p><p>Within 30 minutes, the <strong>custom domain with HTTPS</strong> was active.</p><hr><h2 id=6-key-lessons-learned>6️⃣ Key Lessons Learned</h2><p>Here are the <strong>top takeaways</strong> from building my site with <strong>Hugo & LoveIt</strong>:</p><p><strong>Use Hugo Extended Binary</strong><br>→ Cleaner setup, supports SCSS & modern themes without system pollution.</p><p><strong>Manage <code>public/</code> and <code>themes/</code> as Git submodules</strong><br>→ Keeps deployment and theme updates under version control.</p><p><strong>Organize posts as page bundles</strong><br>→ Store Markdown and images together to <strong>avoid 404 errors</strong>.</p><p><strong>Verify theme & Hugo version compatibility</strong><br>→ Prevents build errors and broken layouts.</p><hr><p><strong>Happy Learning</strong></p><p>“<em>Technically authored by me, accelerated with insights from <a href=https://openai.com target=_blank rel="noopener noreffer">ChatGPT by OpenAI</a>.</em>” Refer: <a href=/posts/leveraging_chatgpt_as_a_professional_companion/ rel>Leverage ChatGPT</a></p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Updated on 2025-07-31</span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Share on X" data-sharer=x data-url=https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/ data-title="How I Built My Personal Website with Hugo & LoveIt" data-hashtags="Hugo,LoveIt,GitHub Pages,Static Site,Personal Website"><i class="fab fa-x-twitter fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Threads" data-sharer=threads data-url=https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/ data-title="How I Built My Personal Website with Hugo & LoveIt"><i class="fab fa-threads fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Facebook" data-sharer=facebook data-url=https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/ data-hashtag=Hugo><i class="fab fa-facebook-square fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Hacker News" data-sharer=hackernews data-url=https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/ data-title="How I Built My Personal Website with Hugo & LoveIt"><i class="fab fa-hacker-news fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Line" data-sharer=line data-url=https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/ data-title="How I Built My Personal Website with Hugo & LoveIt"><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@14.9.0/icons/line.svg aria-hidden=true></i></a><a href=javascript:void(0); title="Share on 微博" data-sharer=weibo data-url=https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/ data-title="How I Built My Personal Website with Hugo & LoveIt"><i class="fab fa-weibo fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Diaspora" data-sharer=diaspora data-url=https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/ data-title="How I Built My Personal Website with Hugo & LoveIt" data-description="Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain."><i class="fab fa-diaspora fa-fw" aria-hidden=true></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fkathiravanmuthaiah.com%2fposts%2fhow-i-built-my-personal-website%2f&amp;text=How%20I%20Built%20My%20Personal%20Website%20with%20Hugo%20%26%20LoveIt" target=_blank title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw" aria-hidden=true></i>&nbsp;<a href=/tags/hugo/>Hugo</a>,&nbsp;<a href=/tags/loveit/>LoveIt</a>,&nbsp;<a href=/tags/github-pages/>GitHub Pages</a>,&nbsp;<a href=/tags/static-site/>Static Site</a>,&nbsp;<a href=/tags/personal-website/>Personal Website</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/posts/a_beautiful_evening/ class=prev rel=prev title="A Beautiful Evening"><i class="fas fa-angle-left fa-fw" aria-hidden=true></i>A Beautiful Evening</a></div></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line itemscope itemtype=http://schema.org/CreativeWork><i class="far fa-copyright fa-fw" aria-hidden=true></i><span itemprop=copyrightYear>2022 - 2025</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/about/ target=_blank>Kathiravan Muthaiah</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top"><i class="fas fa-arrow-up fa-fw" aria-hidden=true></i></a></div><div id=fixed-buttons-hidden><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment fa-fw" aria-hidden=true></i></a></div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css><script src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script><script src=https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js></script><script src=https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js></script><script src=https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js></script><script src=https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js></script><script src=https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js></script><script>window.config={comment:{},lightgallery:!0}</script><script src=/js/theme.min.js></script></body></html>
+git push origin gh-pages</code></pre>
+<p><strong>Enable GitHub Pages</strong> → In <code>gh-pages</code> branch Go to Repo <strong>Settings → Pages</strong> Select branch → ✅ Live!</p>
+<hr>
+<h2 id="5-adding-a-custom-subdomain">5️⃣ Adding a Custom Subdomain</h2>
+<p>To make your site accessible via a <strong>personal subdomain</strong> like<br>
+<code>ownwebsite.example.com</code> instead of <code>&lt;username&gt;.github.io</code>:</p>
+<p><strong>Add a CNAME Record in DNS</strong></p>
+<ul>
+<li>Host: <code>ownwebsite</code></li>
+<li>Type: <code>CNAME</code></li>
+<li>Points to: <code>&lt;username&gt;.github.io</code></li>
+</ul>
+<p><strong>Verify DNS propagation</strong></p>
+
+<pre><code class="language-bash">dig ownwebsite.example.com</code></pre>
+<p><strong>Enable HTTPS on GitHub Pages</strong></p>
+<p>Go to Repo → Settings → Pages
+Check “Enforce HTTPS”</p>
+<p>Within 30 minutes, the <strong>custom domain with HTTPS</strong> was active.</p>
+<hr>
+<h2 id="6-key-lessons-learned">6️⃣ Key Lessons Learned</h2>
+<p>Here are the <strong>top takeaways</strong> from building my site with <strong>Hugo &amp; LoveIt</strong>:</p>
+<p><strong>Use Hugo Extended Binary</strong><br>
+→ Cleaner setup, supports SCSS &amp; modern themes without system pollution.</p>
+<p><strong>Manage <code>public/</code> and <code>themes/</code> as Git submodules</strong><br>
+→ Keeps deployment and theme updates under version control.</p>
+<p><strong>Organize posts as page bundles</strong><br>
+→ Store Markdown and images together to <strong>avoid 404 errors</strong>.</p>
+<p><strong>Verify theme &amp; Hugo version compatibility</strong><br>
+→ Prevents build errors and broken layouts.</p>
+<hr>
+<p><strong>Happy Learning</strong></p>
+<p>“<em>Technically authored by me, accelerated with insights from <a href="https://openai.com" target="_blank" rel="noopener noreffer ">ChatGPT by OpenAI</a>.</em>” Refer: <a href="/posts/leveraging_chatgpt_as_a_professional_companion/" rel="">Leverage ChatGPT</a></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-07-31</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/" data-title="How I Built My Personal Website with Hugo &amp; LoveIt" data-hashtags="Hugo,LoveIt,GitHub Pages,Static Site,Personal Website"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/" data-title="How I Built My Personal Website with Hugo &amp; LoveIt"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/" data-hashtag="Hugo"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/" data-title="How I Built My Personal Website with Hugo &amp; LoveIt"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/" data-title="How I Built My Personal Website with Hugo &amp; LoveIt"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/" data-title="How I Built My Personal Website with Hugo &amp; LoveIt"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/" data-title="How I Built My Personal Website with Hugo &amp; LoveIt" data-description="Step-by-step guide to building a personal website using Hugo and LoveIt theme, deployed on GitHub Pages with a custom subdomain."><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fkathiravanmuthaiah.com%2fposts%2fhow-i-built-my-personal-website%2f&amp;text=How%20I%20Built%20My%20Personal%20Website%20with%20Hugo%20%26%20LoveIt" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/loveit/">LoveIt</a>,&nbsp;<a href="/tags/github-pages/">GitHub Pages</a>,&nbsp;<a href="/tags/static-site/">Static Site</a>,&nbsp;<a href="/tags/personal-website/">Personal Website</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/building_infrastructure_with_docker_part2/" class="prev" rel="prev" title="Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Building Infrastructure with Docker — Part 2: Kafka + Zookeeper</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Kathiravan Muthaiah</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Building Infrastructure with Docker — Part 1: PostgreSQL - Kathiravan Muthaiah</title><meta name="Description" content="Part 1 of the Docker Infrastructure Series dives into building a reusable, isolated, production-grade PostgreSQL infrastructure module with deterministic behaviour, health checks, pinned images, and Makefile-driven lifecycle."><meta property="og:url" content="http://localhost:1313/posts/building_infrastructure_with_docker_part1/">
+  <meta property="og:site_name" content="Kathiravan Muthaiah">
+  <meta property="og:title" content="Building Infrastructure with Docker — Part 1: PostgreSQL">
+  <meta property="og:description" content="Part 1 of the Docker Infrastructure Series dives into building a reusable, isolated, production-grade PostgreSQL infrastructure module with deterministic behaviour, health checks, pinned images, and Makefile-driven lifecycle.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-07T14:00:00+04:00">
+    <meta property="article:modified_time" content="2025-12-07T14:00:00+04:00">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Postgresql">
+    <meta property="article:tag" content="Infrastructure-Module">
+    <meta property="article:tag" content="Devops">
+    <meta property="article:tag" content="Reusable-Infrastructure">
+    <meta property="article:tag" content="Database-Engineering">
+    <meta property="og:image" content="http://localhost:1313/images/profile.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/profile.jpg">
+  <meta name="twitter:title" content="Building Infrastructure with Docker — Part 1: PostgreSQL">
+  <meta name="twitter:description" content="Part 1 of the Docker Infrastructure Series dives into building a reusable, isolated, production-grade PostgreSQL infrastructure module with deterministic behaviour, health checks, pinned images, and Makefile-driven lifecycle.">
+<meta name="application-name" content="Kathiravan Muthaiah">
+<meta name="apple-mobile-web-app-title" content="Kathiravan Muthaiah">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest">
+
+
+
+<link rel="canonical" href="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part1/" />
+    <link rel="prev" href="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part0/" />
+    <link rel="next" href="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Building Infrastructure with Docker — Part 1: PostgreSQL",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kathiravanmuthaiah.com\/posts\/building_infrastructure_with_docker_part1\/"
+        },"genre": "posts","keywords": "docker, postgresql, infrastructure-module, devops, reusable-infrastructure, database-engineering","wordcount":  1909 ,
+        "url": "https:\/\/kathiravanmuthaiah.com\/posts\/building_infrastructure_with_docker_part1\/","datePublished": "2025-12-07T14:00:00+04:00","dateModified": "2025-12-07T14:00:00+04:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Kathiravan Muthaiah"
+            },"description": "Part 1 of the Docker Infrastructure Series dives into building a reusable, isolated, production-grade PostgreSQL infrastructure module with deterministic behaviour, health checks, pinned images, and Makefile-driven lifecycle."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Building Infrastructure with Docker — Part 1: PostgreSQL</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://kathiravanmuthaiah.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Kathiravan Muthaiah</a></span>&nbsp;<span class="post-category">included in <a href="/categories/engineering/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Engineering</a>&nbsp;<a href="/categories/infrastructure/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Infrastructure</a>&nbsp;<a href="/categories/docker-series/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Docker Series</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-12-07">2025-12-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1909 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;9 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#postgresql-a-reusable-independent-database-module">PostgreSQL: A Reusable, Independent Database Module</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#2-postgresql-module-files">2. PostgreSQL module files</a>
+      <ul>
+        <li><a href="#21-modulespostgresenvexample">2.1 <code>modules/postgres/.env.example</code></a></li>
+        <li><a href="#22-modulespostgresinfradocker-composeyml">2.2 <code>modules/postgres/infra/docker-compose.yml</code></a></li>
+        <li><a href="#23-modulespostgresmakefile-module-level">2.3 <code>modules/postgres/Makefile</code> (module-level)</a></li>
+        <li><a href="#24-modulespostgresscriptstest_healthsh">2.4 <code>modules/postgres/scripts/test_health.sh</code></a></li>
+        <li><a href="#25-modulespostgresdocsreadmemd">2.5 <code>modules/postgres/docs/README.md</code></a></li>
+        <li><a href="#26-modulespostgresdocsrequirementsmd">2.6 <code>modules/postgres/docs/requirements.md</code></a></li>
+        <li><a href="#27-modulespostgresdocsdesign-intentmd">2.7 <code>modules/postgres/docs/design-intent.md</code></a></li>
+        <li><a href="#28-modulespostgresjenkinsfile-skeleton">2.8 <code>modules/postgres/Jenkinsfile</code> (skeleton)</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#github-repository-link"><strong>GitHub Repository Link</strong></a></li>
+        <li><a href="#building-infrastructure-with-docker-series-post-links"><strong>Building Infrastructure with Docker Series: post links</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="-building-infrastructure-with-docker--part-1">🗄️ Building Infrastructure with Docker — Part 1</h1>
+<h2 id="postgresql-a-reusable-independent-database-module">PostgreSQL: A Reusable, Independent Database Module</h2>
+<p>Welcome to <strong>Part 1</strong> of the <em>Building Infrastructure with Docker</em> series.
+In Part-0, we set the foundation: one mono-repo, multiple fully independent modules, each engineered with deterministic behaviour, pinned container images, self-contained docs, health checks, and Makefile-driven execution.</p>
+<p>We now begin the first real module in the series — <strong>PostgreSQL</strong>.</p>
+<p>This module is intentionally simple but extremely important: every other module in this series that interacts with a relational database or requires CDC (Change Data Capture using Debezium later) will rely on the principles we establish here.</p>
+<p>Our goal is not to “run PostgreSQL in Docker.”
+Our goal is to <strong>engineer a reusable infrastructure component</strong> you can plug into any project.</p>
+<hr>
+<h1 id="-what-we-are-building-in-part-1">🎯 What We Are Building in Part 1</h1>
+<p>This module provides a <strong>standalone PostgreSQL instance</strong> inside the repository under:</p>
+
+<pre><code class="language-text">infra-docker-series/modules/postgres/</code></pre>
+<p>Once built, this module:</p>
+<ul>
+<li>Runs independently using <code>make up</code></li>
+<li>Provides health checks using <code>pg_isready</code></li>
+<li>Stores data consistently under <code>docker-volume/data/</code></li>
+<li>Uses pinned Docker image versions (no <code>latest</code>)</li>
+<li>Exposes a simple smoke test (<code>SELECT 1</code>)</li>
+<li>Can be reused across any other project you build</li>
+</ul>
+<p>If you learn the pattern here, every future module will feel natural.</p>
+<hr>
+<h1 id="1--folder-structure--postgres-module">1. 🧱 Folder Structure — Postgres Module</h1>
+<p>Inside the mono-repo, the PostgreSQL module lives here:</p>
+
+<pre><code class="language-text">modules/
+  postgres/
+    docs/
+      README.md
+      requirements.md
+      design-intent.md
+      diagrams/
+    infra/
+      docker-compose.yml
+    docker-volume/
+      data/
+    scripts/
+      test_health.sh
+    .env.example
+    Makefile
+    Jenkinsfile</code></pre>
+<p>This layout is the <strong>canonical scaffold</strong> for the entire series.
+Kafka, Mosquitto, Keycloak, Prometheus, and all future parts will follow this identical pattern.</p>
+<hr>
+<h1 id="-the-architecture-simple-but-as-is">🧩 The Architecture (Simple but as-is)</h1>
+<div class="mermaid" id="id-1"></div><ul>
+<li>Data is bind-mounted locally (not named volumes)</li>
+<li>A dedicated Docker network <code>postgres_net</code> isolates traffic</li>
+<li>Everything is driven by environment variables loaded from <code>.env</code></li>
+</ul>
+<p>This keeps it production-minded while still very easy to work with.</p>
+<h2 id="2-postgresql-module-files">2. PostgreSQL module files</h2>
+<p>All paths below are relative to:
+<code>infra-docker-series/modules/postgres/</code></p>
+<hr>
+<h3 id="21-modulespostgresenvexample">2.1 <code>modules/postgres/.env.example</code></h3>
+
+<pre><code class="language-properties"># Postgres container settings
+POSTGRES_CONTAINER_NAME=infra_postgres
+POSTGRES_DB=app_db
+POSTGRES_USER=app_user
+POSTGRES_PASSWORD=change_me_locally
+POSTGRES_PORT=5432
+
+# Image version pin
+POSTGRES_VERSION=15</code></pre>
+<blockquote>
+<p>You will copy this to <code>.env</code> manually and adjust <code>POSTGRES_PASSWORD</code> etc. <code>.env</code> should be gitignored (already covered by root <code>.gitignore</code>).</p></blockquote>
+<hr>
+<h3 id="22-modulespostgresinfradocker-composeyml">2.2 <code>modules/postgres/infra/docker-compose.yml</code></h3>
+
+<pre><code class="language-yaml">version: "3.9"
+
+services:
+  postgres:
+    image: postgres:${POSTGRES_VERSION}
+    container_name: ${POSTGRES_CONTAINER_NAME}
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - ../docker-volume/data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    networks:
+      - postgres_net
+
+networks:
+  postgres_net:
+    name: postgres_net
+    driver: bridge</code></pre>
+<p>Notes:</p>
+<ul>
+<li>Volume path <code>../docker-volume/data</code> is relative to <code>infra/</code>, mapping to <code>docker-volume/data</code> at module root.</li>
+<li>Image pinned via <code>POSTGRES_VERSION</code> env, defaulting to <code>15</code>.</li>
+</ul>
+<hr>
+<h3 id="23-modulespostgresmakefile-module-level">2.3 <code>modules/postgres/Makefile</code> (module-level)</h3>
+
+<pre><code class="language-makefile"># PostgreSQL module Makefile
+
+COMPOSE_FILE := infra/docker-compose.yml
+DOCKER_COMPOSE := docker compose -f $(COMPOSE_FILE)
+ENV_FILE ?= .env
+
+.PHONY: help init up down logs test clean psql
+
+help:
+	@echo "PostgreSQL module"
+	@echo "Targets:"
+	@echo "  init  - prepare env and folders"
+	@echo "  up    - start postgres container"
+	@echo "  down  - stop postgres container"
+	@echo "  logs  - tail container logs"
+	@echo "  test  - run health/smoke test"
+	@echo "  clean - stop and remove data after confirmation"
+	@echo "  psql  - open psql shell into the database"
+
+init:
+	@if [ ! -f "$(ENV_FILE)" ]; then \
+	  echo "Creating $(ENV_FILE) from .env.example"; \
+	  cp .env.example $(ENV_FILE); \
+	else \
+	  echo "$(ENV_FILE) already exists, skipping copy."; \
+	fi
+	@mkdir -p docker-volume/data
+	@echo "Pulling images..."
+	@$(DOCKER_COMPOSE) --env-file $(ENV_FILE) pull
+
+up:
+	@$(DOCKER_COMPOSE) --env-file $(ENV_FILE) up -d
+
+down:
+	@$(DOCKER_COMPOSE) --env-file $(ENV_FILE) down
+
+logs:
+	@$(DOCKER_COMPOSE) --env-file $(ENV_FILE) logs -f
+
+test:
+	@./scripts/test_health.sh $(ENV_FILE)
+
+clean:
+	@read -p "This will stop the container and DELETE docker-volume/data. Continue? (y/N) " ans; \
+	if [ "$$ans" = "y" ] || [ "$$ans" = "Y" ]; then \
+	  $(DOCKER_COMPOSE) --env-file $(ENV_FILE) down; \
+	  rm -rf docker-volume/data; \
+	  echo "Data directory removed."; \
+	else \
+	  echo "Aborted."; \
+	fi
+
+psql:
+	@./scripts/test_health.sh $(ENV_FILE) --psql</code></pre>
+<hr>
+<h3 id="24-modulespostgresscriptstest_healthsh">2.4 <code>modules/postgres/scripts/test_health.sh</code></h3>
+
+<pre><code class="language-shell">#!/usr/bin/env bash
+set -euo pipefail
+
+ENV_FILE="${1:-.env}"
+MODE="${2:-health}"
+
+if [ ! -f "$ENV_FILE" ]; then
+  echo "Env file '$ENV_FILE' not found. Run 'make init' first."
+  exit 1
+fi
+
+# shellcheck disable=SC2046
+export $(grep -v '^\s*#' "$ENV_FILE" | xargs)
+
+CONTAINER_NAME="${POSTGRES_CONTAINER_NAME:-infra_postgres}"
+
+echo "Using container: ${CONTAINER_NAME}"
+echo "Checking health status..."
+
+HEALTH_STATUS=$(docker inspect \
+  --format='{{.State.Health.Status}}' \
+  "${CONTAINER_NAME}" 2>/dev/null || echo "not_found")
+
+if [ "$HEALTH_STATUS" != "healthy" ]; then
+  echo "Container health status: ${HEALTH_STATUS}"
+  echo "Hint: check logs with 'make logs' or 'docker logs ${CONTAINER_NAME}'"
+  exit 1
+fi
+
+echo "Container is healthy."
+
+if [ "$MODE" = "--psql" ]; then
+  echo "Opening psql shell..."
+  docker exec -it "${CONTAINER_NAME}" \
+    psql -U "${POSTGRES_USER}" -d "${POSTGRES_DB}"
+  exit 0
+fi
+
+echo "Running smoke test: SELECT 1;"
+
+docker exec -i "${CONTAINER_NAME}" \
+  psql -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" \
+  -c "SELECT 1;" >/dev/null
+
+echo "Smoke test passed."</code></pre>
+<blockquote>
+<p>Make sure to <code>chmod +x modules/postgres/scripts/test_health.sh</code>.</p></blockquote>
+<hr>
+<h3 id="25-modulespostgresdocsreadmemd">2.5 <code>modules/postgres/docs/README.md</code></h3>
+
+<pre><code class="language-markdown"># PostgreSQL Infrastructure Module
+
+This module provides a reusable PostgreSQL instance running in Docker with:
+
+- Pinned PostgreSQL version (configured via `.env`).
+- Local bind-mounted storage under `docker-volume/data`.
+- Healthcheck configuration.
+- Makefile-driven lifecycle (`init`, `up`, `test`, `down`, `clean`).
+- Simple smoke test using `psql` (`SELECT 1`).
+
+## Quick Start
+
+```bash
+# From repo root
+cd modules/postgres
+
+# Prepare env and pull images
+make init
+
+# Start PostgreSQL
+make up
+
+# Run health and smoke test
+make test
+
+# Optional: open psql shell into the DB
+make psql
+
+# Stop PostgreSQL
+make down</code></pre>
+<p>Data is stored under <code>modules/postgres/docker-volume/data</code> and persists across restarts.
+Use <code>make clean</code> to remove it after confirmation.</p>
+<h3 id="26-modulespostgresdocsrequirementsmd">2.6 <code>modules/postgres/docs/requirements.md</code></h3>
+
+<pre><code class="language-markdown"># PostgreSQL Module – Requirements
+
+## Business / Functional Intent
+
+- Provide a standalone PostgreSQL instance that can be:
+  - Started and stopped via Makefile and Docker Compose.
+  - Reused across multiple application projects.
+  - Used as the source database for future modules (e.g., Debezium CDC).
+
+- Keep the module self-contained so it can be cloned and used without the rest of the series.
+
+## Non-Functional Requirements
+
+- Deterministic setup:
+  - Explicit PostgreSQL image version (no `latest`).
+  - Single, documented port with override capability via `.env`.
+
+- Persistence:
+  - Data stored under `docker-volume/data` inside the module.
+  - Safe cleanup via `make clean` only after explicit confirmation.
+
+- Observability:
+  - Docker healthcheck using `pg_isready`.
+  - Smoke test using `psql` (`SELECT 1`).
+
+- Security:
+  - Credentials defined in `.env` (not committed).
+  - `.env.example` provided for reference.
+
+- Portability:
+  - No external dependencies beyond Docker and Docker Compose.
+  - No hard-coded host paths; everything relative to the module root.</code></pre>
+<hr>
+<h3 id="27-modulespostgresdocsdesign-intentmd">2.7 <code>modules/postgres/docs/design-intent.md</code></h3>
+
+<pre><code class="language-markdown"># PostgreSQL Module – Design Intent
+
+## Overview
+
+This module provides a single PostgreSQL instance intended as:
+
+- A reusable DB for local development.
+- A base for CDC experiments (e.g., with Debezium in another module).
+- A template for how other infrastructure modules in this series are structured.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    dev[Developer] --> docker[Docker Engine]
+    docker --> compose[Docker Compose]
+    compose --> pg[PostgreSQL Container]
+    pg --> vol[docker-volume data]</code></pre>
+<ul>
+<li><code>docker-compose.yml</code> defines a single <code>postgres</code> service.</li>
+<li>Data directory is bind-mounted from <code>docker-volume/data</code>.</li>
+<li>A dedicated Docker bridge network <code>postgres_net</code> isolates traffic.</li>
+</ul>
+<h3 id="28-modulespostgresjenkinsfile-skeleton">2.8 <code>modules/postgres/Jenkinsfile</code> (skeleton)</h3>
+
+<pre><code class="language-groovy">pipeline {
+    agent any
+
+    environment {
+        MODULE_DIR = "modules/postgres"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Init') {
+            steps {
+                dir(MODULE_DIR) {
+                    sh 'make init'
+                }
+            }
+        }
+
+        stage('Up') {
+            steps {
+                dir(MODULE_DIR) {
+                    sh 'make up'
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                dir(MODULE_DIR) {
+                    sh 'make test'
+                }
+            }
+        }
+
+        stage('Down') {
+            steps {
+                dir(MODULE_DIR) {
+                    sh 'make down'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            script {
+                try {
+                    dir(MODULE_DIR) {
+                        sh 'make down || true'
+                    }
+                } catch (err) {
+                    echo "Cleanup failed: ${err}"
+                }
+            }
+        }
+    }
+}</code></pre>
+<p>This is just a reference Jenkins skeleton file, not yet complete. leaving Jenkins out of scope for this series.</p>
+<h1 id="3-core-configuration">3.⚙️ Core Configuration</h1>
+<p>The PostgreSQL behaviour is driven by <code>.env.example</code>, which you copy into <code>.env</code>:</p>
+
+<pre><code class="language-properties">POSTGRES_DB=app_db
+POSTGRES_USER=app_user
+POSTGRES_PASSWORD=change_me_locally
+POSTGRES_PORT=5432
+POSTGRES_VERSION=15</code></pre>
+<p>Why this matters:</p>
+<ul>
+<li>You can change the port without editing the compose file.</li>
+<li>You can rotate credentials without committing secrets.</li>
+<li>You can upgrade PostgreSQL by adjusting a single version variable.</li>
+</ul>
+<p>This reflects real-world configuration hygiene.</p>
+<hr>
+<h1 id="4--docker-composeyml--pinned-predictable-safe">4. 🐘 docker-compose.yml — Pinned, Predictable, Safe</h1>
+<p>The module’s <code>docker-compose.yml</code> pins PostgreSQL to a specific version:</p>
+
+<pre><code class="language-text">image: postgres:${POSTGRES_VERSION}</code></pre>
+<p>and sets a solid health check:</p>
+
+<pre><code class="language-yaml">healthcheck:
+  test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+  interval: 10s
+  timeout: 5s
+  retries: 5
+  start_period: 15s</code></pre>
+<p>The container is only considered ready when PostgreSQL is truly accepting connections.</p>
+<p>This tiny decision prevents unpredictable behavior in downstream systems—something every engineer learns the hard way at least once.</p>
+<hr>
+<h1 id="5--makefile-driven-lifecycle">5. 🔧 Makefile-Driven Lifecycle</h1>
+<p>Every module in this series uses the same Makefile contract:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>What It Does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>make init</code></td>
+          <td>Creates <code>.env</code>, prepares folders, pulls images</td>
+      </tr>
+      <tr>
+          <td><code>make up</code></td>
+          <td>Starts the PostgreSQL container</td>
+      </tr>
+      <tr>
+          <td><code>make test</code></td>
+          <td>Health check + smoke test (<code>SELECT 1</code>)</td>
+      </tr>
+      <tr>
+          <td><code>make down</code></td>
+          <td>Stops the service</td>
+      </tr>
+      <tr>
+          <td><code>make clean</code></td>
+          <td>Stops service + removes data (with confirmation)</td>
+      </tr>
+      <tr>
+          <td><code>make psql</code></td>
+          <td>Opens an interactive shell inside PostgreSQL</td>
+      </tr>
+  </tbody>
+</table>
+<p>You can run it inside the module:</p>
+
+<pre><code class="language-bash">cd modules/postgres
+make init
+make up
+make test
+make psql
+make down</code></pre>
+<p>Or from the root of the repo:</p>
+
+<pre><code class="language-bash">make init MODULE=postgres
+make up MODULE=postgres
+make test MODULE=postgres</code></pre>
+<p>This uniform experience across all modules is the core training aspect of this series.</p>
+<hr>
+<h1 id="6--smoke-test-trust-but-verify">6. 🩺 Smoke Test: Trust, but Verify</h1>
+<p>After <code>make up</code>, you run:</p>
+
+<pre><code class="language-bash">make test</code></pre>
+<p>This executes <code>test_health.sh</code> which:</p>
+<ol>
+<li>Checks Docker health status → must be <code>healthy</code></li>
+<li>Runs:</li>
+</ol>
+
+<pre><code class="language-sql">SELECT 1;</code></pre>
+<p>via <code>psql</code> inside the container.</p>
+<p>If both succeed, your PostgreSQL module is considered operational.</p>
+<p>If either fails, logs are suggested:</p>
+
+<pre><code class="language-bash">make logs</code></pre>
+<p>This one minute test ensures your infra module isn’t just “running”…
+…it’s actually <strong>working</strong>.</p>
+<hr>
+<h1 id="7--persistence-strategy">7. 💾 Persistence Strategy</h1>
+<p>Your data lives here:</p>
+
+<pre><code class="language-yaml">modules/postgres/docker-volume/data/</code></pre>
+<p>This folder:</p>
+<ul>
+<li>is <strong>bind-mounted</strong> (not named volume)</li>
+<li>is owned by this module only</li>
+<li>is always safe to delete manually if needed</li>
+<li>is ignored from Git by default</li>
+</ul>
+<p>This approach:</p>
+<ul>
+<li>Lets you snapshot/copy/backup easily</li>
+<li>Ensures no global Docker volumes pollute your system</li>
+<li>Keeps module state self-contained</li>
+</ul>
+<p>Exactly how enterprise infra-as-code teams work.</p>
+<hr>
+<h1 id="8--real-world-deployment-notes-quick">8. 🧪 Real-World Deployment Notes (Quick)</h1>
+<p>Even though this module runs locally:</p>
+<ul>
+<li>The same Docker Compose file becomes your base for <strong>Kubernetes StatefulSets</strong>.</li>
+<li><code>.env</code> values map to <strong>Kubernetes Secrets</strong> and ConfigMaps.</li>
+<li><code>docker-volume/data</code> maps to <strong>PersistentVolumeClaims</strong>.</li>
+<li>Healthchecks translate to <strong>liveness/readiness probes</strong>.</li>
+</ul>
+<p>This is deliberate.
+This series trains you for <strong>real production patterns</strong>, not just local demos.</p>
+<hr>
+<h1 id="9--common-pitfalls-and-how-we-avoid-them">9. ⚠️ Common Pitfalls (and How We Avoid Them)</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Pitfall</th>
+          <th>How This Module Prevents It</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Using <code>latest</code> image</td>
+          <td>Version pinned in <code>.env.example</code></td>
+      </tr>
+      <tr>
+          <td>Global Docker volumes</td>
+          <td>Local bind-mount inside module only</td>
+      </tr>
+      <tr>
+          <td>Weak health checks</td>
+          <td><code>pg_isready</code> validates actual DB readiness</td>
+      </tr>
+      <tr>
+          <td>Secrets committed to git</td>
+          <td><code>.env</code> ignored, <code>.env.example</code> only</td>
+      </tr>
+      <tr>
+          <td>Data loss on tear-down</td>
+          <td><code>make clean</code> requires explicit confirmation</td>
+      </tr>
+      <tr>
+          <td>Non-repeatable setup</td>
+          <td>Deterministic Makefile + explicit design files</td>
+      </tr>
+  </tbody>
+</table>
+<p>Consistency in environment setup prevents 90% of infra headaches.</p>
+<hr>
+<h1 id="10--summary-of-part-1">10. 📘 Summary of Part 1</h1>
+<p>By completing this module, you now have:</p>
+<ul>
+<li>A <strong>fully reusable Postgres infra unit</strong></li>
+<li>Pinned version</li>
+<li>Deterministic runtime</li>
+<li>Isolated storage</li>
+<li>Health checks</li>
+<li>Makefile-driven execution</li>
+<li>Aligned folder structure for all upcoming modules</li>
+</ul>
+<p>This is your first building block in the larger infrastructure library we are constructing.</p>
+<p>You can take this <code>modules/postgres</code> folder and drop it into any other project you build — it will behave exactly the same.</p>
+<h1 id="coming-up-next--part-2-kafka--zookeeper">Coming Up Next — Part 2: Kafka + Zookeeper</h1>
+<p>In the next part, we’ll build:</p>
+<ul>
+<li>A pinned Kafka 3.4.x + Zookeeper 3.6.x module</li>
+<li>With health checks</li>
+<li>With a topic creation smoke test</li>
+<li>With producer and consumer validation</li>
+<li>And the same canonical scaffold structure</li>
+</ul>
+<p>Kafka is the backbone for many downstream modules (Debezium, telemetry pipelines, distributed tracing), so it’s the natural next step.</p>
+<hr>
+<h3 id="github-repository-link"><strong>GitHub Repository Link</strong></h3>
+<p>🔗 <strong>Project Repo:</strong>
+<a href="https://github.com/KathiravanMuthaiah/infrastructureWithDocker" target="_blank" rel="noopener noreffer ">https://github.com/KathiravanMuthaiah/infrastructureWithDocker</a></p>
+<hr>
+<h3 id="building-infrastructure-with-docker-series-post-links"><strong>Building Infrastructure with Docker Series: post links</strong></h3>
+<p>🔗 <a href="/posts/building_infrastructure_with_docker_part0/" rel=""><strong>Building Infrastructure with Docker — Part0:</strong></a></p>
+<p>🔗 <a href="/posts/building_infrastructure_with_docker_part2/" rel=""><strong>Building Infrastructure with Docker — Part2:</strong></a></p>
+<p>“<em>Technically authored by me, accelerated with insights from <a href="https://openai.com" target="_blank" rel="noopener noreffer ">ChatGPT by OpenAI</a>.</em>” Refer: <a href="/posts/leveraging_chatgpt_as_a_professional_companion/" rel="">Leverage ChatGPT</a></p>
+<p><strong>Happy Learning</strong></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-12-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part1/" data-title="Building Infrastructure with Docker — Part 1: PostgreSQL" data-hashtags="docker,postgresql,infrastructure-module,devops,reusable-infrastructure,database-engineering"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part1/" data-title="Building Infrastructure with Docker — Part 1: PostgreSQL"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part1/" data-hashtag="docker"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part1/" data-title="Building Infrastructure with Docker — Part 1: PostgreSQL"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part1/" data-title="Building Infrastructure with Docker — Part 1: PostgreSQL"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part1/" data-title="Building Infrastructure with Docker — Part 1: PostgreSQL"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part1/" data-title="Building Infrastructure with Docker — Part 1: PostgreSQL" data-description="Part 1 of the Docker Infrastructure Series dives into building a reusable, isolated, production-grade PostgreSQL infrastructure module with deterministic behaviour, health checks, pinned images, and Makefile-driven lifecycle."><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fkathiravanmuthaiah.com%2fposts%2fbuilding_infrastructure_with_docker_part1%2f&amp;text=Building%20Infrastructure%20with%20Docker%20%e2%80%94%20Part%201%3a%20PostgreSQL" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/docker/">Docker</a>,&nbsp;<a href="/tags/postgresql/">Postgresql</a>,&nbsp;<a href="/tags/infrastructure-module/">Infrastructure-Module</a>,&nbsp;<a href="/tags/devops/">Devops</a>,&nbsp;<a href="/tags/reusable-infrastructure/">Reusable-Infrastructure</a>,&nbsp;<a href="/tags/database-engineering/">Database-Engineering</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/building_infrastructure_with_docker_part0/" class="prev" rel="prev" title="Building Infrastructure with Docker — part 0"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Building Infrastructure with Docker — part 0</a>
+            <a href="/posts/building_infrastructure_with_docker_part2/" class="next" rel="next" title="Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper">Building Infrastructure with Docker — Part 2: Kafka + Zookeeper<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Kathiravan Muthaiah</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/mermaid/mermaid.min.js"></script><script>window.config={"comment":{},"data":{"id-1":"flowchart LR\n    dev[Developer Machine] --\u003e docker[Docker Engine]\n    docker --\u003e compose[Docker Compose]\n    compose --\u003e pg[PostgreSQL Container]\n    pg --\u003e vol[docker-volume/data]"},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

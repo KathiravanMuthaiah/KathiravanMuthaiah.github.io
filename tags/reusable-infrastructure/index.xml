@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Reusable-Infrastructure - Tag - Kathiravan Muthaiah</title>
+        <link>http://localhost:1313/tags/reusable-infrastructure/</link>
+        <description>Reusable-Infrastructure - Tag - Kathiravan Muthaiah</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>DM LinkedIn (Kathiravan Muthaiah)</managingEditor>
+            <webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sun, 07 Dec 2025 12:00:00 &#43;0400</lastBuildDate><atom:link href="http://localhost:1313/tags/reusable-infrastructure/" rel="self" type="application/rss+xml" /><item>
+    <title>Building Infrastructure with Docker — Part 1: PostgreSQL</title>
+    <link>http://localhost:1313/posts/building_infrastructure_with_docker_part1/</link>
+    <pubDate>Sun, 07 Dec 2025 12:00:00 &#43;0400</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/posts/building_infrastructure_with_docker_part1/</guid>
+    <description><![CDATA[Part 1 introduces the PostgreSQL infrastructure module of the Docker Infra Series — a fully reusable, deterministic, health-checked, Makefile-driven module engineered for enterprise-grade discipline.]]></description>
+</item>
+</channel>
+</rss>
