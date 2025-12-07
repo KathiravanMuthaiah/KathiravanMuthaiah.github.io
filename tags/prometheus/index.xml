@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Prometheus - Tag - Kathiravan Muthaiah</title>
+        <link>http://localhost:1313/tags/prometheus/</link>
+        <description>Prometheus - Tag - Kathiravan Muthaiah</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>DM LinkedIn (Kathiravan Muthaiah)</managingEditor>
+            <webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sun, 07 Dec 2025 10:00:00 &#43;0400</lastBuildDate><atom:link href="http://localhost:1313/tags/prometheus/" rel="self" type="application/rss+xml" /><item>
+    <title>Building Infrastructure with Docker — series</title>
+    <link>http://localhost:1313/posts/building_infrastructure_with_docker_series/</link>
+    <pubDate>Sun, 07 Dec 2025 10:00:00 &#43;0400</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/posts/building_infrastructure_with_docker_series/</guid>
+    <description><![CDATA[This post introduces the &lsquo;Building Infrastructure with Docker&rsquo; series — a hands-on journey into modular, production-grade infrastructure projects designed for reusability, persistence, and engineering discipline.]]></description>
+</item>
+</channel>
+</rss>

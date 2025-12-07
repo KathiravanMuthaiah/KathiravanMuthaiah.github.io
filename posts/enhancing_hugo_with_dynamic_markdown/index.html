@@ -1,16 +1,178 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC - Kathiravan Muthaiah</title><meta name=Description content="Learn how to dynamically render Markdown in Hugo with Mermaid diagrams, MathJax, GitHub-style tables, and a dynamic Table of Contents (TOC)."><meta property="og:url" content="https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/">
-<meta property="og:site_name" content="Kathiravan Muthaiah"><meta property="og:title" content="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC"><meta property="og:description" content="Learn how to dynamically render Markdown in Hugo with Mermaid diagrams, MathJax, GitHub-style tables, and a dynamic Table of Contents (TOC)."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-08-01T20:00:00+02:00"><meta property="article:modified_time" content="2025-08-01T20:00:00+02:00"><meta property="article:tag" content="Hugo"><meta property="article:tag" content="LoveIt"><meta property="article:tag" content="Markdown Viewer"><meta property="article:tag" content="Mermaid"><meta property="article:tag" content="MathJax"><meta property="article:tag" content="Dynamic TOC"><meta property="og:image" content="https://kathiravanmuthaiah.com/images/profile.jpg"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://kathiravanmuthaiah.com/images/profile.jpg"><meta name=twitter:title content="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC"><meta name=twitter:description content="Learn how to dynamically render Markdown in Hugo with Mermaid diagrams, MathJax, GitHub-style tables, and a dynamic Table of Contents (TOC)."><meta name=application-name content="Kathiravan Muthaiah"><meta name=apple-mobile-web-app-title content="Kathiravan Muthaiah"><meta name=referrer content="no-referrer"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/><link rel=prev href=https://kathiravanmuthaiah.com/posts/mathematical_foundation_and_sss/><link rel=next href=https://kathiravanmuthaiah.com/posts/towards_an_ethical_cognitive_presence_index/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css></noscript><link rel=preload href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC","inLanguage":"en-us","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/kathiravanmuthaiah.com\/posts\/enhancing_hugo_with_dynamic_markdown\/"},"genre":"posts","keywords":"Hugo, LoveIt, Markdown Viewer, Mermaid, MathJax, Dynamic TOC","wordcount":1740,"url":"https:\/\/kathiravanmuthaiah.com\/posts\/enhancing_hugo_with_dynamic_markdown\/","datePublished":"2025-08-01T20:00:00+02:00","dateModified":"2025-08-01T20:00:00+02:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"Kathiravan Muthaiah"},"description":"Learn how to dynamically render Markdown in Hugo with Mermaid diagrams, MathJax, GitHub-style tables, and a dynamic Table of Contents (TOC)."}</script></head><body data-header-desktop=fixed data-header-mobile=auto><script>const query=window.matchMedia("(prefers-color-scheme: dark)");function applyTheme(){let e=window.localStorage?.getItem("theme")||"auto",t=e==="dark"||e==="auto"&&query.matches;document.body.setAttribute("theme",t?"dark":"light"),document.body.setAttribute("cfg-theme",e)}applyTheme(),query.addEventListener("change",applyTheme)</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Kathiravan Muthaiah">Kathiravan Muthaiah</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/>Home </a><a class=menu-item href=/about/>About </a><a class=menu-item href=/posts/>Posts </a><a class=menu-item href=/categories/>Categories </a><a class=menu-item href=/tags/>Tags </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
-<i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Kathiravan Muthaiah">Kathiravan Muthaiah</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/ title>Home</a><a class=menu-item href=/about/ title>About</a><a class=menu-item href=/posts/ title>Posts</a><a class=menu-item href=/categories/ title>Categories</a><a class=menu-item href=/tags/ title>Tags</a><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
-<i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></header><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contents</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=https://kathiravanmuthaiah.com title=Author target=_blank rel="noopener noreffer author" class=author><i class="fas fa-user-circle fa-fw" aria-hidden=true></i>Kathiravan Muthaiah</a></span>&nbsp;<span class=post-category>included in <a href=/categories/webdevelopment/><i class="far fa-folder fa-fw" aria-hidden=true></i>WebDevelopment</a>&nbsp;<a href=/categories/hugotips/><i class="far fa-folder fa-fw" aria-hidden=true></i>HugoTips</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw" aria-hidden=true></i>&nbsp;<time datetime=2025-08-01>2025-08-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden=true></i>&nbsp;1740 words&nbsp;
-<i class="far fa-clock fa-fw" aria-hidden=true></i>&nbsp;9 minutes&nbsp;</div></div><div class="details toc" id=toc-static data-kept><div class="details-summary toc-title"><span>Contents</span>
-<span><i class="details-icon fas fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#enhancing-hugo-with-dynamic-markdown-mermaid-and-styled-toc><strong>Enhancing Hugo with Dynamic Markdown, Mermaid, and Styled TOC</strong></a><ul><li><a href=#1-why-dynamic-markdown-rendering><strong>1 Why Dynamic Markdown Rendering</strong></a></li><li><a href=#2-adding-dynamic-markdown-viewer><strong>2 Adding Dynamic Markdown Viewer</strong></a></li><li><a href=#3-table-styling-and-github-look><strong>3 Table Styling and GitHub Look</strong></a></li><li><a href=#4-adding-mermaid-diagram-support><strong>4 Adding Mermaid Diagram Support</strong></a></li><li><a href=#5-mathjax-for-math-expressions><strong>5 MathJax for Math Expressions</strong></a></li><li><a href=#6-dynamic-table-of-contents-toc><strong>6 Dynamic Table of Contents (TOC)</strong></a></li><li><a href=#7-ill-show-stepbystep-how-to><strong>7 I’ll show step‑by‑step how to</strong></a></li><li><a href=#8-test-in-local-hugo-server><strong>8 Test in Local Hugo Server</strong></a></li></ul></li></ul></nav></div></div><div class=content id=content><h2 id=enhancing-hugo-with-dynamic-markdown-mermaid-and-styled-toc><strong>Enhancing Hugo with Dynamic Markdown, Mermaid, and Styled TOC</strong></h2><p>After building my <strong>Hugo + LoveIt personal website</strong>,<br>I wanted to explore how to <strong>render Markdown dynamically in the browser</strong><br>instead of <strong>pre‑rendering all content at Hugo build time</strong>.</p><p>In this guide, you will learn how to:</p><ul><li>Render <strong>raw Markdown files dynamically</strong> with a GitHub‑style viewer</li><li>Add <strong>Mermaid diagrams</strong> for flowcharts and sequence diagrams</li><li>Enable <strong>MathJax</strong> for inline math expressions</li><li>Apply <strong>GitHub‑style tables and code block styling</strong></li><li>Generate a <strong>dynamic Table of Contents (TOC)</strong> at runtime</li></ul><hr><h3 id=1-why-dynamic-markdown-rendering><strong>1 Why Dynamic Markdown Rendering</strong></h3><p>By default, <strong>Hugo converts Markdown in <code>content/</code> into static HTML</strong> at build time.<br>This is great for most blogs, but it has <strong>limitations</strong> if you want:</p><ul><li>To <strong>view standalone <code>.md</code> files directly</strong> (perfect for sharing raw notes)</li><li>To <strong>avoid converting Markdown into Hugo shortcodes</strong> every time</li><li>To <strong>experiment with a GitHub‑style Markdown viewer</strong> on your site</li></ul><p>To achieve this, I used <strong>Marked.js</strong> to <strong>render Markdown at runtime</strong> directly in the browser.</p><hr><h3 id=2-adding-dynamic-markdown-viewer><strong>2 Adding Dynamic Markdown Viewer</strong></h3><p>To enable <strong>runtime Markdown rendering in Hugo</strong>, I created:</p><ol><li>A <strong>custom layout</strong> → <code>layouts/markdown-viewer.html</code></li><li>A <strong>JavaScript renderer</strong> → <code>static/js/markdown-viewer.js</code></li></ol><p>The script:</p><ul><li>Fetches Markdown files from <code>static/files/*.md</code></li><li>Renders them with <strong>Marked.js</strong></li><li>Applies syntax highlighting with <strong>Highlight.js</strong></li></ul><p><strong>HTML Structure:</strong></p><pre><code class=language-text>&ltdiv id="markdown-container" data-file="/files/sample.md"&gt
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC - Kathiravan Muthaiah</title><meta name="Description" content="Learn how to dynamically render Markdown in Hugo with Mermaid diagrams, MathJax, GitHub-style tables, and a dynamic Table of Contents (TOC)."><meta property="og:url" content="http://localhost:1313/posts/enhancing_hugo_with_dynamic_markdown/">
+  <meta property="og:site_name" content="Kathiravan Muthaiah">
+  <meta property="og:title" content="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC">
+  <meta property="og:description" content="Learn how to dynamically render Markdown in Hugo with Mermaid diagrams, MathJax, GitHub-style tables, and a dynamic Table of Contents (TOC).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-01T20:00:00+02:00">
+    <meta property="article:modified_time" content="2025-08-01T20:00:00+02:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="LoveIt">
+    <meta property="article:tag" content="Markdown Viewer">
+    <meta property="article:tag" content="Mermaid">
+    <meta property="article:tag" content="MathJax">
+    <meta property="article:tag" content="Dynamic TOC">
+    <meta property="og:image" content="http://localhost:1313/images/profile.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/profile.jpg">
+  <meta name="twitter:title" content="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC">
+  <meta name="twitter:description" content="Learn how to dynamically render Markdown in Hugo with Mermaid diagrams, MathJax, GitHub-style tables, and a dynamic Table of Contents (TOC).">
+<meta name="application-name" content="Kathiravan Muthaiah">
+<meta name="apple-mobile-web-app-title" content="Kathiravan Muthaiah">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest">
+
+
+
+<link rel="canonical" href="https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/" />
+    <link rel="prev" href="https://kathiravanmuthaiah.com/posts/mathematical_foundation_and_sss/" />
+    <link rel="next" href="https://kathiravanmuthaiah.com/posts/towards_an_ethical_cognitive_presence_index/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kathiravanmuthaiah.com\/posts\/enhancing_hugo_with_dynamic_markdown\/"
+        },"genre": "posts","keywords": "Hugo, LoveIt, Markdown Viewer, Mermaid, MathJax, Dynamic TOC","wordcount":  1740 ,
+        "url": "https:\/\/kathiravanmuthaiah.com\/posts\/enhancing_hugo_with_dynamic_markdown\/","datePublished": "2025-08-01T20:00:00+02:00","dateModified": "2025-08-01T20:00:00+02:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Kathiravan Muthaiah"
+            },"description": "Learn how to dynamically render Markdown in Hugo with Mermaid diagrams, MathJax, GitHub-style tables, and a dynamic Table of Contents (TOC)."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://kathiravanmuthaiah.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Kathiravan Muthaiah</a></span>&nbsp;<span class="post-category">included in <a href="/categories/webdevelopment/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>WebDevelopment</a>&nbsp;<a href="/categories/hugotips/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>HugoTips</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-08-01">2025-08-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1740 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;9 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#enhancing-hugo-with-dynamic-markdown-mermaid-and-styled-toc"><strong>Enhancing Hugo with Dynamic Markdown, Mermaid, and Styled TOC</strong></a>
+      <ul>
+        <li><a href="#1-why-dynamic-markdown-rendering"><strong>1 Why Dynamic Markdown Rendering</strong></a></li>
+        <li><a href="#2-adding-dynamic-markdown-viewer"><strong>2 Adding Dynamic Markdown Viewer</strong></a></li>
+        <li><a href="#3-table-styling-and-github-look"><strong>3 Table Styling and GitHub Look</strong></a></li>
+        <li><a href="#4-adding-mermaid-diagram-support"><strong>4 Adding Mermaid Diagram Support</strong></a></li>
+        <li><a href="#5-mathjax-for-math-expressions"><strong>5 MathJax for Math Expressions</strong></a></li>
+        <li><a href="#6-dynamic-table-of-contents-toc"><strong>6 Dynamic Table of Contents (TOC)</strong></a></li>
+        <li><a href="#7-ill-show-stepbystep-how-to"><strong>7 I’ll show step‑by‑step how to</strong></a></li>
+        <li><a href="#8-test-in-local-hugo-server"><strong>8 Test in Local Hugo Server</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="enhancing-hugo-with-dynamic-markdown-mermaid-and-styled-toc"><strong>Enhancing Hugo with Dynamic Markdown, Mermaid, and Styled TOC</strong></h2>
+<p>After building my <strong>Hugo + LoveIt personal website</strong>,<br>
+I wanted to explore how to <strong>render Markdown dynamically in the browser</strong><br>
+instead of <strong>pre‑rendering all content at Hugo build time</strong>.</p>
+<p>In this guide, you will learn how to:</p>
+<ul>
+<li>Render <strong>raw Markdown files dynamically</strong> with a GitHub‑style viewer</li>
+<li>Add <strong>Mermaid diagrams</strong> for flowcharts and sequence diagrams</li>
+<li>Enable <strong>MathJax</strong> for inline math expressions</li>
+<li>Apply <strong>GitHub‑style tables and code block styling</strong></li>
+<li>Generate a <strong>dynamic Table of Contents (TOC)</strong> at runtime</li>
+</ul>
+<hr>
+<h3 id="1-why-dynamic-markdown-rendering"><strong>1 Why Dynamic Markdown Rendering</strong></h3>
+<p>By default, <strong>Hugo converts Markdown in <code>content/</code> into static HTML</strong> at build time.<br>
+This is great for most blogs, but it has <strong>limitations</strong> if you want:</p>
+<ul>
+<li>To <strong>view standalone <code>.md</code> files directly</strong> (perfect for sharing raw notes)</li>
+<li>To <strong>avoid converting Markdown into Hugo shortcodes</strong> every time</li>
+<li>To <strong>experiment with a GitHub‑style Markdown viewer</strong> on your site</li>
+</ul>
+<p>To achieve this, I used <strong>Marked.js</strong> to <strong>render Markdown at runtime</strong> directly in the browser.</p>
+<hr>
+<h3 id="2-adding-dynamic-markdown-viewer"><strong>2 Adding Dynamic Markdown Viewer</strong></h3>
+<p>To enable <strong>runtime Markdown rendering in Hugo</strong>, I created:</p>
+<ol>
+<li>A <strong>custom layout</strong> → <code>layouts/markdown-viewer.html</code></li>
+<li>A <strong>JavaScript renderer</strong> → <code>static/js/markdown-viewer.js</code></li>
+</ol>
+<p>The script:</p>
+<ul>
+<li>Fetches Markdown files from <code>static/files/*.md</code></li>
+<li>Renders them with <strong>Marked.js</strong></li>
+<li>Applies syntax highlighting with <strong>Highlight.js</strong></li>
+</ul>
+<p><strong>HTML Structure:</strong></p>
+
+<pre><code class="language-text">&ltdiv id="markdown-container" data-file="/files/sample.md"&gt
   Loading markdown...
 &lt/div&gt
 &lt!-- Include scripts --&gt
 &ltlink rel="stylesheet" href="/css/github-markdown.min.css"&gt
 &ltscript src="/js/marked.min.js"&gt&lt/script&gt
 &ltscript src="/js/highlight.min.js"&gt&lt/script&gt
-&ltscript src="/js/markdown-viewer.js"&gt&lt/script&gt</code></pre><hr><h3 id=3-table-styling-and-github-look><strong>3 Table Styling and GitHub Look</strong></h3><p>By default, <strong>Markdown tables in Hugo</strong> are plain and lack visual distinction.<br>To improve readability, I <strong>added GitHub‑style table formatting</strong>:</p><pre><code class=language-css.markdown-body>  border-collapse: collapse;
+&ltscript src="/js/markdown-viewer.js"&gt&lt/script&gt</code></pre>
+<hr>
+<h3 id="3-table-styling-and-github-look"><strong>3 Table Styling and GitHub Look</strong></h3>
+<p>By default, <strong>Markdown tables in Hugo</strong> are plain and lack visual distinction.<br>
+To improve readability, I <strong>added GitHub‑style table formatting</strong>:</p>
+
+<pre><code class="language-css.markdown-body">  border-collapse: collapse;
   margin: 1rem 0;
   width: 100%;
 }
@@ -23,8 +185,19 @@
 
 .markdown-body tr:nth-child(even) {
   background-color: #f6f8fa;
-}</code></pre><p>And ensured <code>markdown-viewer.js</code> adds <code>.markdown-body</code> class for styling.
-All tables automatically inherit <strong>GitHub-like</strong> styling.</p><hr><h3 id=4-adding-mermaid-diagram-support><strong>4 Adding Mermaid Diagram Support</strong></h3><p>LoveIt does not natively support Mermaid for dynamically loaded Markdown.</p><p><strong>Steps I followed:</strong></p><ol><li>Added <strong>Mermaid.js</strong> to <code>static/js/mermaid.min.js</code></li><li>In <code>markdown-viewer.js</code>, converted fenced code blocks:</li></ol><pre><code class=language-js>// Convert mermaid code fences into <div class=mermaid>
+}</code></pre>
+<p>And ensured <code>markdown-viewer.js</code> adds <code>.markdown-body</code> class for styling.
+All tables automatically inherit <strong>GitHub-like</strong> styling.</p>
+<hr>
+<h3 id="4-adding-mermaid-diagram-support"><strong>4 Adding Mermaid Diagram Support</strong></h3>
+<p>LoveIt does not natively support Mermaid for dynamically loaded Markdown.</p>
+<p><strong>Steps I followed:</strong></p>
+<ol>
+<li>Added <strong>Mermaid.js</strong> to <code>static/js/mermaid.min.js</code></li>
+<li>In <code>markdown-viewer.js</code>, converted fenced code blocks:</li>
+</ol>
+
+<pre><code class="language-js">// Convert mermaid code fences into <div class="mermaid">
 container.querySelectorAll('pre code.language-mermaid').forEach(block => {
   const div = document.createElement('div');
   div.classList.add('mermaid');
@@ -35,16 +208,40 @@ container.querySelectorAll('pre code.language-mermaid').forEach(block => {
 if (window.mermaid) {
   mermaid.initialize({ startOnLoad: false });
   mermaid.run({ querySelector: ".mermaid" });
-}</code></pre><p>Now my Markdown with:</p><pre> ```mermaid graph TD A[Start] --> B[Process] --> C[End] ``` </pre><p>…renders a live Mermaid diagram in the browser.</p><hr><h3 id=5-mathjax-for-math-expressions><strong>5 MathJax for Math Expressions</strong></h3><p>To support LaTeX‑style math like:</p><pre><code class=language-text>$$ 10 \mod 7 = 3 $$</code></pre><p>I included <strong>MathJax v3</strong>:</p><pre><code class=language-js>&lt;script&gt;
+}</code></pre>
+<p>Now my Markdown with:</p>
+<pre> ```mermaid graph TD A[Start] --> B[Process] --> C[End] ``` </pre>
+<p>…renders a live Mermaid diagram in the browser.</p>
+<hr>
+<h3 id="5-mathjax-for-math-expressions"><strong>5 MathJax for Math Expressions</strong></h3>
+<p>To support LaTeX‑style math like:</p>
+
+<pre><code class="language-text">$$ 10 \mod 7 = 3 $$</code></pre>
+<p>I included <strong>MathJax v3</strong>:</p>
+
+<pre><code class="language-js">&lt;script&gt;
 window.MathJax = {
   tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
   svg: { fontCache: 'global' }
 };
 &lt;/script&gt;
-&lt;script src=&quot;/js/tex-svg.js&quot;&gt;&lt;/script&gt;</code></pre><p>Then triggered it in JS:</p><pre><code class=language-js>if (window.MathJax) {
+&lt;script src=&quot;/js/tex-svg.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Then triggered it in JS:</p>
+
+<pre><code class="language-js">if (window.MathJax) {
   window.MathJax.typesetPromise();
-}</code></pre><hr><h3 id=6-dynamic-table-of-contents-toc><strong>6 Dynamic Table of Contents (TOC)</strong></h3><p>Hugo normally builds TOC at <strong>build time</strong>.
-Since my Markdown is <strong>dynamic</strong>, I built the TOC <strong>after rendering</strong>:</p><ul><li>Detected headings <code>h1</code>, <code>h2</code>, <code>h3</code> in <code>#markdown-container</code></li><li>Populated the existing LoveIt <code>&lt;nav id="TableOfContents"></code> dynamically</li></ul><p><strong>Simplified Example:</strong></p><pre><code class=language-js>const tocNav = document.getElementById("TableOfContents");
+}</code></pre>
+<hr>
+<h3 id="6-dynamic-table-of-contents-toc"><strong>6 Dynamic Table of Contents (TOC)</strong></h3>
+<p>Hugo normally builds TOC at <strong>build time</strong>.
+Since my Markdown is <strong>dynamic</strong>, I built the TOC <strong>after rendering</strong>:</p>
+<ul>
+<li>Detected headings <code>h1</code>, <code>h2</code>, <code>h3</code> in <code>#markdown-container</code></li>
+<li>Populated the existing LoveIt <code>&lt;nav id=&quot;TableOfContents&quot;&gt;</code> dynamically</li>
+</ul>
+<p><strong>Simplified Example:</strong></p>
+
+<pre><code class="language-js">const tocNav = document.getElementById("TableOfContents");
 const headings = container.querySelectorAll("h1, h2, h3");
 
 if (tocNav && headings.length > 0) {
@@ -62,7 +259,22 @@ if (tocNav && headings.length > 0) {
   });
   tocNav.innerHTML = "";
   tocNav.appendChild(ul);
-}</code></pre><p>Now LoveIt’s floating TOC shows headings for dynamically loaded Markdown too.</p><h3 id=7-ill-show-stepbystep-how-to><strong>7 I’ll show step‑by‑step how to</strong></h3><ul><li>Create a <strong>HTML viewer layout</strong> in Hugo</li><li>Add a <strong>JavaScript file to render Markdown dynamically</strong></li><li>Support <strong>Mermaid diagrams, MathJax formulas, and GitHub‑style tables</strong></li><li>Generate a <strong>dynamic Table of Contents (TOC)</strong> for the loaded Markdown file</li></ul><h4 id=71-create-a-hugo-layout-for-the-markdown-viewer><strong>7.1 Create a Hugo Layout for the Markdown Viewer</strong></h4><p>Inside your Hugo project:</p><pre><code class=language-text>layouts/markdown-viewer.html</code></pre><p><strong>Example:</strong></p><pre><code class=language-html>html
+}</code></pre>
+<p>Now LoveIt’s floating TOC shows headings for dynamically loaded Markdown too.</p>
+<h3 id="7-ill-show-stepbystep-how-to"><strong>7 I’ll show step‑by‑step how to</strong></h3>
+<ul>
+<li>Create a <strong>HTML viewer layout</strong> in Hugo</li>
+<li>Add a <strong>JavaScript file to render Markdown dynamically</strong></li>
+<li>Support <strong>Mermaid diagrams, MathJax formulas, and GitHub‑style tables</strong></li>
+<li>Generate a <strong>dynamic Table of Contents (TOC)</strong> for the loaded Markdown file</li>
+</ul>
+<h4 id="71-create-a-hugo-layout-for-the-markdown-viewer"><strong>7.1 Create a Hugo Layout for the Markdown Viewer</strong></h4>
+<p>Inside your Hugo project:</p>
+
+<pre><code class="language-text">layouts/markdown-viewer.html</code></pre>
+<p><strong>Example:</strong></p>
+
+<pre><code class="language-html">html
 {{- define &quot;title&quot; }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
 
 {{- define &quot;content&quot; -}}
@@ -185,7 +397,20 @@ if (tocNav && headings.length > 0) {
         {{- /* Comment */ -}}
         {{- partial &quot;comment.html&quot; . -}}
     &lt;/article&gt;
-{{- end -}}</code></pre><p><strong>Key points:</strong></p><ul><li><code>data-file="{{ .Params.markdownFile }}"</code> → Tells JS which Markdown to load</li><li>TOC <code>&lt;nav></code> is pre‑rendered for LoveIt floating TOC</li></ul><hr><h4 id=72-create-the-javascript-renderer><strong>7.2 Create the JavaScript Renderer</strong></h4><p>File:</p><pre><code class=language-text>static/js/markdown-viewer.js</code></pre><p><strong>Full Script (Development Version)</strong></p><pre><code class=language-js>document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+{{- end -}}</code></pre>
+<p><strong>Key points:</strong></p>
+<ul>
+<li><code>data-file=&quot;{{ .Params.markdownFile }}&quot;</code> → Tells JS which Markdown to load</li>
+<li>TOC <code>&lt;nav&gt;</code> is pre‑rendered for LoveIt floating TOC</li>
+</ul>
+<hr>
+<h4 id="72-create-the-javascript-renderer"><strong>7.2 Create the JavaScript Renderer</strong></h4>
+<p>File:</p>
+
+<pre><code class="language-text">static/js/markdown-viewer.js</code></pre>
+<p><strong>Full Script (Development Version)</strong></p>
+
+<pre><code class="language-js">document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
   const container = document.getElementById(&quot;markdown-container&quot;);
   if (!container) return;
 
@@ -320,13 +545,39 @@ if (tocNav && headings.length > 0) {
       container.innerHTML = `&lt;p style=&quot;color:red&quot;&gt;Failed to load markdown: ${err}&lt;/p&gt;`;
       console.error(err);
     });
-});</code></pre><p>This script:</p><ul><li>Loads Markdown dynamically</li><li>Highlights code and styles tables</li><li>Supports Mermaid and MathJax</li><li>Generates LoveIt‑style TOC</li></ul><hr><h4 id=73-create-a-sample-hugo-content-page><strong>7.3 Create a Sample Hugo Content Page</strong></h4><p>Inside your Hugo project:</p><pre><code class=language-text>content/posts/markdown-demo/index.md</code></pre><p><strong>Front Matter:</strong></p><pre><code class=language-markdown>---
+});</code></pre>
+<p>This script:</p>
+<ul>
+<li>Loads Markdown dynamically</li>
+<li>Highlights code and styles tables</li>
+<li>Supports Mermaid and MathJax</li>
+<li>Generates LoveIt‑style TOC</li>
+</ul>
+<hr>
+<h4 id="73-create-a-sample-hugo-content-page"><strong>7.3 Create a Sample Hugo Content Page</strong></h4>
+<p>Inside your Hugo project:</p>
+
+<pre><code class="language-text">content/posts/markdown-demo/index.md</code></pre>
+<p><strong>Front Matter:</strong></p>
+
+<pre><code class="language-markdown">---
 title: &quot;Dynamic Markdown Demo&quot;
 date: 2025-08-01
 ---
 &lt;div id=&quot;markdown-container&quot; data-file=&quot;/files/sample.md&quot;&gt;
   Loading markdown...
-&lt;/div&gt;</code></pre><ul><li>Uses the <strong><code>markdown-viewer</code> layout</strong></li><li>Loads Markdown from <code>/static/files/sample.md</code></li></ul><hr><h4 id=74-provide-a-sample-markdown-file><strong>7.4 Provide a Sample Markdown File</strong></h4><pre><code class=language-text>static/files/sample.md</code></pre><p><strong>Example Markdown:</strong></p><pre><code class=language-markdown># 1️⃣ Introduction
+&lt;/div&gt;</code></pre>
+<ul>
+<li>Uses the <strong><code>markdown-viewer</code> layout</strong></li>
+<li>Loads Markdown from <code>/static/files/sample.md</code></li>
+</ul>
+<hr>
+<h4 id="74-provide-a-sample-markdown-file"><strong>7.4 Provide a Sample Markdown File</strong></h4>
+
+<pre><code class="language-text">static/files/sample.md</code></pre>
+<p><strong>Example Markdown:</strong></p>
+
+<pre><code class="language-markdown"># 1️⃣ Introduction
 
 This is a dynamic markdown demo with **Mermaid**, **MathJax**, and **TOC**.
 
@@ -340,5 +591,62 @@ $10 \mod 7 = 3$
 | Item   | Price |
 | ------ | ----- |
 | Apple  | $1    |
-| Banana | $2    |</code></pre><hr><h3 id=8-test-in-local-hugo-server><strong>8 Test in Local Hugo Server</strong></h3><pre><code class=language-bash>hugo server -D</code></pre><p>Open the page:</p><pre><code class=language-url>http://localhost:1313/posts/markdown-demo/</code></pre><p>You should see:</p><ul><li>Rendered Markdown</li><li>Highlighted code</li><li>Mermaid diagram</li><li>Math formula</li><li>GitHub‑style table</li><li>Floating TOC</li></ul><p>“<em>Technically authored by me, accelerated with insights from <a href=https://openai.com target=_blank rel="noopener noreffer">ChatGPT by OpenAI</a>.</em>” Refer: <a href=/posts/leveraging_chatgpt_as_a_professional_companion/ rel>Leverage ChatGPT</a></p><p><strong>Happy Learning</strong></p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Updated on 2025-08-01</span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Share on X" data-sharer=x data-url=https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/ data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC" data-hashtags="Hugo,LoveIt,Markdown Viewer,Mermaid,MathJax,Dynamic TOC"><i class="fab fa-x-twitter fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Threads" data-sharer=threads data-url=https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/ data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC"><i class="fab fa-threads fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Facebook" data-sharer=facebook data-url=https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/ data-hashtag=Hugo><i class="fab fa-facebook-square fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Hacker News" data-sharer=hackernews data-url=https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/ data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC"><i class="fab fa-hacker-news fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Line" data-sharer=line data-url=https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/ data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC"><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@14.9.0/icons/line.svg aria-hidden=true></i></a><a href=javascript:void(0); title="Share on 微博" data-sharer=weibo data-url=https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/ data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC"><i class="fab fa-weibo fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Diaspora" data-sharer=diaspora data-url=https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/ data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC" data-description="Learn how to dynamically render Markdown in Hugo with Mermaid diagrams, MathJax, GitHub-style tables, and a dynamic Table of Contents (TOC)."><i class="fab fa-diaspora fa-fw" aria-hidden=true></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fkathiravanmuthaiah.com%2fposts%2fenhancing_hugo_with_dynamic_markdown%2f&amp;text=Enhancing%20Hugo%20with%20Dynamic%20Markdown%2c%20Mermaid%2c%20and%20TOC" target=_blank title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw" aria-hidden=true></i>&nbsp;<a href=/tags/hugo/>Hugo</a>,&nbsp;<a href=/tags/loveit/>LoveIt</a>,&nbsp;<a href=/tags/markdown-viewer/>Markdown Viewer</a>,&nbsp;<a href=/tags/mermaid/>Mermaid</a>,&nbsp;<a href=/tags/mathjax/>MathJax</a>,&nbsp;<a href=/tags/dynamic-toc/>Dynamic TOC</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/posts/mathematical_foundation_and_sss/ class=prev rel=prev title="Mathematical Foundation of Shamir's Secret Sharing (SSS)"><i class="fas fa-angle-left fa-fw" aria-hidden=true></i>Mathematical Foundation of Shamir's Secret Sharing (SSS)</a>
-<a href=/posts/towards_an_ethical_cognitive_presence_index/ class=next rel=next title="Towards an Ethical Cognitive-Presence Index (CPI)">Towards an Ethical Cognitive-Presence Index (CPI)<i class="fas fa-angle-right fa-fw" aria-hidden=true></i></a></div></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line itemscope itemtype=http://schema.org/CreativeWork><i class="far fa-copyright fa-fw" aria-hidden=true></i><span itemprop=copyrightYear>2022 - 2025</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/about/ target=_blank>Kathiravan Muthaiah</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top"><i class="fas fa-arrow-up fa-fw" aria-hidden=true></i></a></div><div id=fixed-buttons-hidden><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment fa-fw" aria-hidden=true></i></a></div><script src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script><script src=https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js></script><script src=https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js></script><script>window.config={comment:{}}</script><script src=/js/theme.min.js></script></body></html>
+| Banana | $2    |</code></pre>
+<hr>
+<h3 id="8-test-in-local-hugo-server"><strong>8 Test in Local Hugo Server</strong></h3>
+
+<pre><code class="language-bash">hugo server -D</code></pre>
+<p>Open the page:</p>
+
+<pre><code class="language-url">http://localhost:1313/posts/markdown-demo/</code></pre>
+<p>You should see:</p>
+<ul>
+<li>Rendered Markdown</li>
+<li>Highlighted code</li>
+<li>Mermaid diagram</li>
+<li>Math formula</li>
+<li>GitHub‑style table</li>
+<li>Floating TOC</li>
+</ul>
+<p>“<em>Technically authored by me, accelerated with insights from <a href="https://openai.com" target="_blank" rel="noopener noreffer ">ChatGPT by OpenAI</a>.</em>” Refer: <a href="/posts/leveraging_chatgpt_as_a_professional_companion/" rel="">Leverage ChatGPT</a></p>
+<p><strong>Happy Learning</strong></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-08-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/" data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC" data-hashtags="Hugo,LoveIt,Markdown Viewer,Mermaid,MathJax,Dynamic TOC"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/" data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/" data-hashtag="Hugo"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/" data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/" data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/" data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://kathiravanmuthaiah.com/posts/enhancing_hugo_with_dynamic_markdown/" data-title="Enhancing Hugo with Dynamic Markdown, Mermaid, and TOC" data-description="Learn how to dynamically render Markdown in Hugo with Mermaid diagrams, MathJax, GitHub-style tables, and a dynamic Table of Contents (TOC)."><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fkathiravanmuthaiah.com%2fposts%2fenhancing_hugo_with_dynamic_markdown%2f&amp;text=Enhancing%20Hugo%20with%20Dynamic%20Markdown%2c%20Mermaid%2c%20and%20TOC" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/loveit/">LoveIt</a>,&nbsp;<a href="/tags/markdown-viewer/">Markdown Viewer</a>,&nbsp;<a href="/tags/mermaid/">Mermaid</a>,&nbsp;<a href="/tags/mathjax/">MathJax</a>,&nbsp;<a href="/tags/dynamic-toc/">Dynamic TOC</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/mathematical_foundation_and_sss/" class="prev" rel="prev" title="Mathematical Foundation of Shamir&#39;s Secret Sharing (SSS)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Mathematical Foundation of Shamir's Secret Sharing (SSS)</a>
+            <a href="/posts/towards_an_ethical_cognitive_presence_index/" class="next" rel="next" title="Towards an Ethical Cognitive-Presence Index (CPI)">Towards an Ethical Cognitive-Presence Index (CPI)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Kathiravan Muthaiah</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>

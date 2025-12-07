@@ -1,1 +1,16 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Talent Discovery - Tag - Kathiravan Muthaiah</title><link>https://kathiravanmuthaiah.com/tags/talent-discovery/</link><description>Talent Discovery - Tag - Kathiravan Muthaiah</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>DM LinkedIn (Kathiravan Muthaiah)</managingEditor><webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://kathiravanmuthaiah.com/tags/talent-discovery/" rel="self" type="application/rss+xml"/><item><title>Towards an Ethical Cognitive-Presence Index (CPI)</title><link>https://kathiravanmuthaiah.com/posts/towards_an_ethical_cognitive_presence_index/</link><pubDate>Sat, 02 Aug 2025 00:00:00 +0000</pubDate><author>Kathiravan Muthaiah</author><guid>https://kathiravanmuthaiah.com/posts/towards_an_ethical_cognitive_presence_index/</guid><description>Introducing the Cognitive-Presence Index (CPI) — a human-first, AI-assisted framework for ethical talent discovery and cognitive profiling.</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Talent Discovery - Tag - Kathiravan Muthaiah</title>
+        <link>http://localhost:1313/tags/talent-discovery/</link>
+        <description>Talent Discovery - Tag - Kathiravan Muthaiah</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>DM LinkedIn (Kathiravan Muthaiah)</managingEditor>
+            <webMaster>DM LinkedIn (Kathiravan Muthaiah)</webMaster><lastBuildDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/talent-discovery/" rel="self" type="application/rss+xml" /><item>
+    <title>Towards an Ethical Cognitive-Presence Index (CPI)</title>
+    <link>http://localhost:1313/posts/towards_an_ethical_cognitive_presence_index/</link>
+    <pubDate>Sat, 02 Aug 2025 00:00:00 &#43;0000</pubDate>
+    <author>Kathiravan Muthaiah</author>
+    <guid>http://localhost:1313/posts/towards_an_ethical_cognitive_presence_index/</guid>
+    <description><![CDATA[Introducing the Cognitive-Presence Index (CPI) — a human-first, AI-assisted framework for ethical talent discovery and cognitive profiling.]]></description>
+</item>
+</channel>
+</rss>

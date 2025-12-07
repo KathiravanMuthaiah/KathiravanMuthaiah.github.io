@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper - Kathiravan Muthaiah</title><meta name="Description" content="Part 2 of the Docker Infrastructure Series focuses on building a reusable Kafka &#43; Zookeeper module with custom Dockerfiles, debugging tools, Prometheus JMX metrics, topic initialization, and disciplined infra engineering."><meta property="og:url" content="http://localhost:1313/posts/building_infrastructure_with_docker_part2/">
+  <meta property="og:site_name" content="Kathiravan Muthaiah">
+  <meta property="og:title" content="Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper">
+  <meta property="og:description" content="Part 2 of the Docker Infrastructure Series focuses on building a reusable Kafka &#43; Zookeeper module with custom Dockerfiles, debugging tools, Prometheus JMX metrics, topic initialization, and disciplined infra engineering.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-07T15:00:00+04:00">
+    <meta property="article:modified_time" content="2025-12-07T15:00:00+04:00">
+    <meta property="article:tag" content="Kafka">
+    <meta property="article:tag" content="Zookeeper">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Devops">
+    <meta property="article:tag" content="Observability">
+    <meta property="article:tag" content="Infra-Modules">
+    <meta property="og:image" content="http://localhost:1313/images/profile.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/profile.jpg">
+  <meta name="twitter:title" content="Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper">
+  <meta name="twitter:description" content="Part 2 of the Docker Infrastructure Series focuses on building a reusable Kafka &#43; Zookeeper module with custom Dockerfiles, debugging tools, Prometheus JMX metrics, topic initialization, and disciplined infra engineering.">
+<meta name="application-name" content="Kathiravan Muthaiah">
+<meta name="apple-mobile-web-app-title" content="Kathiravan Muthaiah">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest">
+
+
+
+<link rel="canonical" href="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part2/" />
+    <link rel="prev" href="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part1/" />
+    <link rel="next" href="https://kathiravanmuthaiah.com/posts/how-i-built-my-personal-website/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Building Infrastructure with Docker — Part 2: Kafka + Zookeeper",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kathiravanmuthaiah.com\/posts\/building_infrastructure_with_docker_part2\/"
+        },"genre": "posts","keywords": "kafka, zookeeper, docker, devops, observability, infra-modules, jmx, event-streaming","wordcount":  966 ,
+        "url": "https:\/\/kathiravanmuthaiah.com\/posts\/building_infrastructure_with_docker_part2\/","datePublished": "2025-12-07T15:00:00+04:00","dateModified": "2025-12-07T15:00:00+04:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Kathiravan Muthaiah"
+            },"description": "Part 2 of the Docker Infrastructure Series focuses on building a reusable Kafka + Zookeeper module with custom Dockerfiles, debugging tools, Prometheus JMX metrics, topic initialization, and disciplined infra engineering."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kathiravan Muthaiah">Kathiravan Muthaiah</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Building Infrastructure with Docker — Part 2: Kafka + Zookeeper</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://kathiravanmuthaiah.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Kathiravan Muthaiah</a></span>&nbsp;<span class="post-category">included in <a href="/categories/engineering/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Engineering</a>&nbsp;<a href="/categories/infrastructure/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Infrastructure</a>&nbsp;<a href="/categories/docker-series/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Docker Series</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-12-07">2025-12-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;966 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#kafka--zookeeper-with-dedicated-dockerfiles-better-debugging-and-real-observability">Kafka + Zookeeper with Dedicated Dockerfiles, Better Debugging, and Real Observability</a></li>
+    <li><a href="#-objectives-for-the-kafka-module">🎯 Objectives for the Kafka Module</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-components-in-this-module">🧱 Components in This Module</a></li>
+    <li><a href="#-debug-enriched-kafka-image">🛠 Debug-Enriched Kafka Image</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#why-a-custom-dockerfile">Why a custom Dockerfile?</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#-topic-initialization-script-realistic-test-topics">🧪 Topic Initialization Script (Realistic Test Topics)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#moduleskafkascriptstest_healthsh"><code>modules/kafka/scripts/test_health.sh</code></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#github-repository-link"><strong>GitHub Repository Link</strong></a></li>
+        <li><a href="#building-infrastructure-with-docker-series-post-links"><strong>Building Infrastructure with Docker Series: post links</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="-building-infrastructure-with-docker--part-2">🚀 Building Infrastructure with Docker — Part 2</h1>
+<h2 id="kafka--zookeeper-with-dedicated-dockerfiles-better-debugging-and-real-observability">Kafka + Zookeeper with Dedicated Dockerfiles, Better Debugging, and Real Observability</h2>
+<p>In Part 1, we created a reusable PostgreSQL module with a disciplined scaffold: pinned versions, Makefile lifecycle, health checks, and local bind-mount volumes.</p>
+<p>In this part, we focus on <strong>Kafka + Zookeeper</strong> — but not as a bare-minimum broker.
+We’ll run Kafka as an <strong>independent, reusable module</strong>, enriched with:</p>
+<ul>
+<li><strong>Extra debugging tools</strong> inside the container</li>
+<li><strong>Prometheus-friendly JMX metrics</strong></li>
+<li><strong>Scripted topic initialization</strong> for realistic usage</li>
+<li>The same canonical project structure and Makefile contract</li>
+</ul>
+<p>This module is designed to be dropped into any project as a ready-to-use event backbone.</p>
+<hr>
+<h2 id="-objectives-for-the-kafka-module">🎯 Objectives for the Kafka Module</h2>
+<p>From the requirements, the Kafka setup must satisfy: kafkaRequirements</p>
+<table>
+  <thead>
+      <tr>
+          <th>Area</th>
+          <th>Requirement</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Deployment</td>
+          <td>Local via Docker Compose</td>
+      </tr>
+      <tr>
+          <td>Modularity</td>
+          <td>Kafka lives in its own subfolder, sharing a Docker bridge network</td>
+      </tr>
+      <tr>
+          <td>Persistence</td>
+          <td>Message logs in <code>./docker-volume/kafka/</code></td>
+      </tr>
+      <tr>
+          <td>Observability</td>
+          <td>JMX exporter enabled, Prometheus-ready metrics exposed</td>
+      </tr>
+      <tr>
+          <td>Debuggability</td>
+          <td>Container image enriched with basic debugging tools</td>
+      </tr>
+      <tr>
+          <td>Security</td>
+          <td>Prepared for future mTLS / JWT / hardened configs (not forced yet)</td>
+      </tr>
+  </tbody>
+</table>
+<p>We keep <strong>Kafka fully independent</strong> as a module, but it’s ready to plug into other infra (Prometheus, Grafana, Debezium, etc.) later.</p>
+<h1 id="-high-level-architecture">📦 High-Level Architecture</h1>
+<p>Your reference file defines the new compose layout (Kafka + Zookeeper built from Dockerfiles).
+This architecture now looks like:</p>
+<div class="mermaid" id="id-1"></div><p>Zookeeper starts first → Kafka waits for readiness → Kafka registers properly with Zookeeper → JMX metrics become available → Topics can be initialized.</p>
+<p>This sequence ensures deterministic startup.</p>
+<hr>
+<h1 id="-folder-structure-canonical-clean-uniform">🧱 Folder Structure (Canonical, Clean, Uniform)</h1>
+
+<pre><code class="language-text">modules/kafka/
+  infra/
+    docker-compose.yml
+    Dockerfile.kafka
+    Dockerfile.zookeeper
+  docker-volume/
+    kafka/
+    zookeeper/
+  init/
+    init-topics.sh
+  jmx-exporter/
+    kafka-2_0_0.yml
+  scripts/
+    test_health.sh
+  .env.example
+  Makefile
+  Jenkinsfile
+  docs/
+    README.md
+    requirements.md
+    design-intent.md
+    diagrams/</code></pre>
+<p>This matches the structure defined in Part-0 and Part-1 — every module in this series follows this consistent pattern so that once you learn one, you master them all.</p>
+<h2 id="-components-in-this-module">🧱 Components in This Module</h2>
+<p>From the requirement spec: kafkaRequirements</p>
+<table>
+  <thead>
+      <tr>
+          <th>Service</th>
+          <th>Source</th>
+          <th>Role</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Kafka Broker</td>
+          <td>Bitnami Custom image kafka (Dockerfile)</td>
+          <td>Core message broker + debug tooling</td>
+      </tr>
+      <tr>
+          <td>Zookeeper</td>
+          <td>Bitnami Custom image Zookeeper (Dockerfile)</td>
+          <td>Coordination and metadata</td>
+      </tr>
+      <tr>
+          <td>JMX Exporter Conf</td>
+          <td><code>jmx-exporter/kafka-2_0_0.yml</code></td>
+          <td>Exposes Kafka metrics to Prometheus</td>
+      </tr>
+  </tbody>
+</table>
+<p>Key points:</p>
+<ul>
+<li>Kafka runs from a <strong>custom Dockerfile</strong> that includes additional debug tools.</li>
+<li>Debug tools are installed via <code>requirements_debug.sh</code> at image build time, providing utilities like <code>curl</code>, <code>net-tools</code>, <code>ping</code>, <code>lsof</code>, <code>procps</code>, <code>htop</code>, etc., for live troubleshooting inside the container. requirements_debug</li>
+<li>JMX metrics are enabled and configured using <code>kafka-2_0_0.yml</code>, so Prometheus can scrape Kafka with minimal additional setup. kafkaRequirements</li>
+</ul>
+<h2 id="-debug-enriched-kafka-image">🛠 Debug-Enriched Kafka Image</h2>
+<p>The Kafka broker image is built from a dedicated <code>Dockerfile</code> (in this module), which uses <code>requirements_debug.sh</code> to install a curated set of CLI tools: requirements_debug</p>
+<ul>
+<li><code>curl</code></li>
+<li><code>net-tools</code> (e.g., <code>netstat</code>)</li>
+<li><code>iputils-ping</code></li>
+<li><code>dnsutils</code></li>
+<li><code>iproute2</code></li>
+<li><code>lsof</code></li>
+<li><code>procps</code> (<code>ps</code>, <code>top</code>)</li>
+<li><code>less</code>, <code>vim</code>, <code>nano</code></li>
+<li><code>htop</code></li>
+</ul>
+<p>This means when something goes wrong, you don’t have to rebuild images just to run basic diagnostics; you can:</p>
+<ul>
+<li>Inspect network connectivity directly from inside the broker container.</li>
+<li>Test DNS resolution and connectivity to other services.</li>
+<li>Inspect open ports and processes.</li>
+</ul>
+<p>For infra education and local troubleshooting, this is a big win.</p>
+<hr>
+<h1 id="-kafka-as-a-custom-image-dockerfilekafka">🛠 Kafka as a Custom Image (Dockerfile.kafka)</h1>
+<p>Our Kafka Dockerfile now:</p>
+<ul>
+<li>Installs Kafka from the official Apache distribution</li>
+<li>Installs <strong>debugging utilities</strong> using <code>requirements_debug.sh</code></li>
+<li>Enables <strong>JMX exporter</strong> for Prometheus</li>
+<li>Uses <code>.env</code> to configure listener host, ports, and broker ID</li>
+<li>Uses <code>docker-volume/kafka/</code> for logs and persistent storage</li>
+</ul>
+<h3 id="why-a-custom-dockerfile">Why a custom Dockerfile?</h3>
+<p>Because real clusters aren’t built from “tutorial images.”</p>
+<p>We need:</p>
+<ul>
+<li><strong>Predictability</strong></li>
+<li><strong>Debuggability</strong></li>
+<li><strong>Observability</strong></li>
+<li><strong>Reusability across projects</strong></li>
+</ul>
+<p>This aligns exactly with enterprise design constraints.</p>
+
+<pre><code class="language-dockerfile">FROM bitnamilegacy/kafka:3.4
+
+# Copy the JMX config directory
+COPY jmx-exporter/ /jmx_exporter/
+
+# Copy Kafka topic initialization scripts
+#COPY init/ /opt/kafka-init/
+
+# Ensure permissions are correct
+USER root
+
+# debugging steps start ---
+COPY requirements_debug.sh .
+
+# Conditionally install debug tools
+RUN if [ -f requirements_debug.sh ]; then \
+        echo "[INFO] Found requirements_debug.sh. Executing..."; \
+        chmod +x requirements_debug.sh && ./requirements_debug.sh; \
+    else \
+        echo "[INFO] No debug script found. Skipping..."; \
+    fi
+# debugging steps end ---
+
+#RUN chmod +x /opt/kafka-init/init-topics.sh
+RUN chown -R 1001:1001 /jmx_exporter
+RUN chown -R 1001:1001 /bitnami/kafka
+#RUN chown -R 1001:1001 /opt/kafka-init
+USER 1001</code></pre>
+<hr>
+<h1 id="-zookeeper-as-a-custom-image-dockerfilezookeeper">🦍 Zookeeper as a Custom Image (Dockerfile.zookeeper)</h1>
+<p>We no longer rely on Bitnami or Confluent base images.</p>
+<p>Our Zookeeper Dockerfile:</p>
+<ul>
+<li>Installs Zookeeper natively</li>
+<li>Includes the <strong>same debugging tools strategy</strong></li>
+<li>Exposes metrics-friendly configuration</li>
+<li>Uses <code>docker-volume/zookeeper/</code> for its data</li>
+<li>Keeps everything deterministic and version-pinned</li>
+</ul>
+<p>This also unlocks the option to add:</p>
+<ul>
+<li>Zookeeper JMX metrics</li>
+<li>ACLs</li>
+<li>Multi-node quorum setups</li>
+</ul>
+<p>in future parts if needed.</p>
+
+<pre><code class="language-dockerfile">FROM bitnamilegacy/zookeeper:3.8
+# Ensure permissions are correct
+USER root
+
+# debugging steps start ---
+COPY requirements_debug.sh .
+
+# Conditionally install debug tools
+RUN if [ -f requirements_debug.sh ]; then \
+        echo "[INFO] Found requirements_debug.sh. Executing..."; \
+        chmod +x requirements_debug.sh && ./requirements_debug.sh; \
+    else \
+        echo "[INFO] No debug script found. Skipping..."; \
+    fi
+# debugging steps end ---
+
+
+RUN chown -R 1001:1001 /bitnami/zookeeper
+USER 1001</code></pre>
+<h1 id="-docker-composeyml-using-the-dockerfiles">📦 docker-compose.yml (using the Dockerfiles)</h1>
+<p>Your reference file defines the new compose layout (Kafka + Zookeeper built from Dockerfiles).</p>
+
+<pre><code class="language-yaml">
+services:
+  zookeeper-bank:
+    build:
+      context: .
+      dockerfile: Dockerfile.zookeeper
+    image: zookeeper-bank
+    container_name: zookeeper-bank
+ #   restart: unless-stopped
+ #   user: "1001:1001"
+    ports:
+      - "${ZOOKEEPER_CLIENT_PORT}:2181"
+    env_file:
+      - .env
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    volumes:
+      - ./docker-volume/zookeeper/data:/bitnami/zookeeper
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    healthcheck:
+      test: ["CMD-SHELL", "exit 0"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      - bankingnet
+
+  kafka-bank:
+    build:
+      context: .
+      dockerfile: Dockerfile.kafka
+    image: kafka-bank
+    container_name: kafka-bank
+#    restart: unless-stopped
+#    user: "1001:1001"
+    depends_on:
+      - zookeeper-bank
+    ports:
+      - "${KAFKA_LISTENER_PORT}:${KAFKA_LISTENER_PORT}"
+      - 9094:9094
+      - "${KAFKA_JMX_PORT}:${KAFKA_JMX_PORT}"  # for JMX_exporter
+    env_file:
+      - .env
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-bank:2181
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,EXTERNAL://0.0.0.0:9094
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka-bank:9092,EXTERNAL://localhost:9094
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=false
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_JMX_PORT=${KAFKA_JMX_PORT}
+      - KAFKA_OPTS=-javaagent:/jmx_exporter/jmx_prometheus_javaagent-0.18.0.jar=${KAFKA_JMX_PORT}:/jmx_exporter/kafka-2_0_0.yml
+    volumes:
+      - ./docker-volume/kafka/data:/bitnami/kafka
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    healthcheck:
+      test: ["CMD-SHELL", "exit 0"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - bankingnet
+
+networks:
+  bankingnet:
+    external: true</code></pre>
+<hr>
+<h1 id="-jmx-exporter-for-kafka-metrics">📡 JMX Exporter for Kafka Metrics</h1>
+<p>Kafka exposes JMX &ldquo;<strong>jmx_prometheus_javaagent-0.18.0.jar</strong>&rdquo; on a configured port (e.g., 9404).</p>
+<p>We mount: jmx-exporter/kafka-2_0_0.yml</p>
+
+<pre><code class="language-yaml">lowercaseOutputName: true
+lowercaseOutputLabelNames: true
+rules:
+  - pattern: "kafka.server<type=(.+), name=(.+)PerSec, topic=(.+)><>Count"
+    name: "kafka_server_$1_$2_per_sec"
+    labels:
+      topic: "$3"
+    type: COUNTER
+
+  - pattern: "kafka.server<type=(.+), name=(.+), topic=(.+)><>Value"
+    name: "kafka_server_$1_$2"
+    labels:
+      topic: "$3"
+    type: GAUGE
+
+  - pattern: "kafka.server<type=(.+), name=(.+)><>Value"
+    name: "kafka_server_$1_$2"
+    type: GAUGE
+
+  - pattern: "kafka.log<type=Log, name=(.+), topic=(.+), partition=(.+)><>Value"
+    name: "kafka_log_$1"
+    labels:
+      topic: "$2"
+      partition: "$3"
+    type: GAUGE
+
+  - pattern: "kafka.network<type=(.+), name=(.+)><>Value"
+    name: "kafka_network_$1_$2"
+    type: GAUGE
+
+  - pattern: "kafka.controller<type=(.+), name=(.+)><>Value"
+    name: "kafka_controller_$1_$2"
+    type: GAUGE
+
+  - pattern: "java.lang<type=Memory><>HeapMemoryUsage"
+    name: "jvm_memory_heap"
+    type: GAUGE
+
+  - pattern: "java.lang<type=GarbageCollector, name=(.+)><>CollectionCount"
+    name: "jvm_gc_collection_count"
+    labels:
+      gc: "$1"
+    type: COUNTER</code></pre>
+<p>This gives us ready-to-scrape metrics:</p>
+<ul>
+<li>Message in/out</li>
+<li>Request latency</li>
+<li>Topic partition stats</li>
+<li>Consumer lag</li>
+<li>Controller operations</li>
+</ul>
+<p>This is essential when we integrate Prometheus and Grafana later in the series.</p>
+<hr>
+<hr>
+<h1 id="-configuration-via-envexample">🔧 Configuration via <code>.env.example</code></h1>
+<p>Your <code>.env</code> file controls:</p>
+
+<pre><code class="language-text">KAFKA_BROKER_ID=1
+KAFKA_LISTENER_PORT=9092
+KAFKA_ADVERTISED_LISTENER=PLAINTEXT://kafka-broker:9092
+
+ZOOKEEPER_CLIENT_PORT=2181
+
+KAFKA_JMX_PORT=9404
+KAFKA_AUTO_CREATE_TOPICS=false</code></pre>
+<p>With clear design intent:</p>
+<ul>
+<li>No auto topic creation</li>
+<li>No uncontrolled image version drift</li>
+<li>Cleaner network behavior with <code>kafka-broker</code> hostname</li>
+</ul>
+<hr>
+<h2 id="-topic-initialization-script-realistic-test-topics">🧪 Topic Initialization Script (Realistic Test Topics)</h2>
+<p>Instead of manually creating topics on the CLI each time, the module ships with <code>init/init-topics.sh</code>, which:</p>
+<ul>
+<li>Lists existing topics, and</li>
+<li>Creates a set of <strong>predefined topics</strong> with realistic names and partition counts: init-topics</li>
+</ul>
+
+<pre><code class="language-text">topics=(
+  "transaction_events:3"
+  "account_changes:2"
+  "audit_logs:1"
+  "document_uploaded:1"
+  "metrics.service_health:1"
+  "metrics.db_health:1"
+  "metrics.kafka_health:1"
+)</code></pre>
+<p>For each <code>&lt;name&gt;:&lt;partitions&gt;</code> pair, it runs:</p>
+
+<pre><code class="language-text">docker run --rm -it --network "${NETWORK}" -e KAFKA_JMX_OPTS="" bitnami/kafka:3.4 \
+  kafka-topics.sh --create --if-not-exists \
+  --bootstrap-server "$BOOTSTRAP_SERVER" \
+  --replication-factor 1 \
+  --partitions "$partitions" \
+  --topic "$name"</code></pre>
+<p>using:</p>
+<ul>
+<li><code>BOOTSTRAP_SERVER=&quot;kafka-broker:9092&quot;</code></li>
+<li><code>NETWORK=&quot;bankingnet&quot;</code> init-topics</li>
+</ul>
+<p>This approach has key advantages:</p>
+<ul>
+<li>Topic initialization is <strong>idempotent</strong> (<code>--if-not-exists</code>).</li>
+<li>No need to exec into the broker; everything is driven via <strong>ephemeral kafka CLI containers</strong> on the same Docker network.</li>
+<li>The topics match a realistic banking/microplatform use case: transactions, account changes, audit, and metrics streams.</li>
+</ul>
+<p>You can run the script any time you reset Kafka.</p>
+<hr>
+<h1 id="-smoke-testing-health--topic-listing">🩺 Smoke Testing (Health + Topic Listing)</h1>
+<p>The module uses an improved <code>test_health.sh</code> which validates:</p>
+<ul>
+<li>Zookeeper health</li>
+<li>Kafka health</li>
+<li>Kafka CLI connectivity</li>
+<li>Topic listing or existence checks</li>
+</ul>
+<p>This is the same pattern used in Part-1 for PostgreSQL, but extended for Kafka’s more complex lifecycle.</p>
+<hr>
+<h1 id="-makefile-lifecycle--pattern-as-part-1">🔧 Makefile Lifecycle ( Pattern as Part-1)</h1>
+
+<pre><code class="language-makefile"># Kafka module Makefile
+
+# ---- Config ----
+ENV_FILE      ?= .env
+COMPOSE_FILE  ?= infra/docker-compose.kafka.yml
+PROJECT_NAME  ?= kafka-module
+
+DC            := docker compose --env-file $(ENV_FILE) -f $(COMPOSE_FILE) -p $(PROJECT_NAME)
+
+# ---- Phony Targets ----
+.PHONY: help init build up down restart logs ps test clean topics-init topics-list
+
+help:
+	@echo "Kafka module targets:"
+	@echo "  init         - prepare env file, folders, and pull/build images"
+	@echo "  build        - build Kafka and Zookeeper images"
+	@echo "  up           - start Kafka + Zookeeper in background"
+	@echo "  down         - stop containers"
+	@echo "  restart      - restart stack"
+	@echo "  logs         - follow logs for all services"
+	@echo "  ps           - show container status"
+	@echo "  test         - run health + smoke checks"
+	@echo "  topics-init  - create standard test topics (init-topics.sh)"
+	@echo "  topics-list  - list topics using kafka-topics.sh"
+	@echo "  clean        - stop stack and delete data volumes (with confirmation)"
+
+init:
+	@if [ ! -f "$(ENV_FILE)" ]; then \
+	  if [ -f ".env.example" ]; then \
+	    echo "Creating $(ENV_FILE) from .env.example"; \
+	    cp .env.example $(ENV_FILE); \
+	  else \
+	    echo "ERROR: .env.example not found. Create it first."; \
+	    exit 1; \
+	  fi \
+	else \
+	  echo "$(ENV_FILE) already exists, not overwriting."; \
+	fi
+	@mkdir -p docker-volume/kafka docker-volume/zookeeper
+	@echo "Pulling / building images (if required)..."
+	@$(DC) pull || true
+	@$(DC) build --pull
+
+build:
+	@$(DC) build --pull
+
+up:
+	@$(DC) up -d
+
+down:
+	@$(DC) down
+
+restart: down up
+
+logs:
+	@$(DC) logs -f
+
+ps:
+	@$(DC) ps
+
+test:
+	@./scripts/test_health.sh $(ENV_FILE)
+
+topics-init:
+	@./init/init-topics.sh
+
+topics-list:
+	@if [ ! -f "$(ENV_FILE)" ]; then \
+	  echo "Env file $(ENV_FILE) not found. Run 'make init' first."; \
+	  exit 1; \
+	fi; \
+	. "$(ENV_FILE)"; \
+	KAFKA_CONTAINER_NAME="$${KAFKA_CONTAINER_NAME:-kafka-broker}"; \
+	KAFKA_LISTENER_PORT="$${KAFKA_LISTENER_PORT:-9092}"; \
+	echo "Listing topics via $$KAFKA_CONTAINER_NAME on port $$KAFKA_LISTENER_PORT"; \
+	docker exec -it "$$KAFKA_CONTAINER_NAME" \
+	  kafka-topics.sh --bootstrap-server localhost:$$KAFKA_LISTENER_PORT --list || true
+
+clean:
+	@echo "WARNING: This will stop Kafka + Zookeeper and DELETE docker-volume data."
+	@read -p "Continue? (y/N) " ans; \
+	if [ "$$ans" = "y" ] || [ "$$ans" = "Y" ]; then \
+	  $(DC) down; \
+	  rm -rf docker-volume/kafka docker-volume/zookeeper; \
+	  echo "Data removed."; \
+	else \
+	  echo "Aborted."; \
+	fi</code></pre>
+<p>Key points:</p>
+<ul>
+<li>Uses <code>PROJECT_NAME</code> so this stack doesn’t clash with others.</li>
+<li><code>init</code>:
+<ul>
+<li>Copies <code>.env.example</code> → <code>.env</code> (one-time).</li>
+<li>Creates <code>docker-volume/</code> folders.</li>
+<li>Pulls and builds images.</li>
+</ul>
+</li>
+<li><code>test</code> just delegates to <code>scripts/test_health.sh</code>.</li>
+<li><code>topics-list</code> uses env to determine container name and port.</li>
+</ul>
+<h2 id="moduleskafkascriptstest_healthsh"><code>modules/kafka/scripts/test_health.sh</code></h2>
+
+<pre><code class="language-bash">#!/usr/bin/env bash
+set -euo pipefail
+
+ENV_FILE="${1:-.env}"
+
+if [ ! -f "$ENV_FILE" ]; then
+  echo "Env file '$ENV_FILE' not found. Run 'make init' first."
+  exit 1
+fi
+
+# Load env (ignore comments / empty lines)
+# shellcheck disable=SC2046
+export $(grep -v '^\s*#' "$ENV_FILE" | grep -v '^\s*$' | xargs)
+
+KAFKA_CONTAINER_NAME="${KAFKA_CONTAINER_NAME:-kafka-broker}"
+ZOOKEEPER_CONTAINER_NAME="${ZOOKEEPER_CONTAINER_NAME:-zookeeper-bank}"
+KAFKA_LISTENER_PORT="${KAFKA_LISTENER_PORT:-9092}"
+ZOOKEEPER_CLIENT_PORT="${ZOOKEEPER_CLIENT_PORT:-2181}"
+
+echo "Using containers:"
+echo "  Kafka     : ${KAFKA_CONTAINER_NAME} (port ${KAFKA_LISTENER_PORT})"
+echo "  Zookeeper : ${ZOOKEEPER_CONTAINER_NAME} (port ${ZOOKEEPER_CLIENT_PORT})"
+echo
+
+# -------- Healthcheck: container state --------
+check_container_health() {
+  local name="$1"
+  local label="$2"
+
+  local status
+  status=$(docker inspect --format='{{.State.Health.Status}}' "$name" 2>/dev/null || echo "no_healthcheck")
+
+  if [ "$status" = "healthy" ]; then
+    echo "[OK] $label container health: $status"
+  elif [ "$status" = "no_healthcheck" ]; then
+    echo "[WARN] $label container has no Docker healthcheck. Skipping health status check."
+  else
+    echo "[ERROR] $label container health: $status"
+    echo "Hint: docker logs $name"
+    exit 1
+  fi
+}
+
+echo "Checking Docker health status..."
+check_container_health "$ZOOKEEPER_CONTAINER_NAME" "Zookeeper"
+check_container_health "$KAFKA_CONTAINER_NAME" "Kafka"
+echo
+
+# -------- Zookeeper sanity: ruok --------
+echo "Running Zookeeper sanity check (ruok)..."
+docker exec -i "$ZOOKEEPER_CONTAINER_NAME" \
+  bash -c "echo ruok | nc localhost ${ZOOKEEPER_CLIENT_PORT} || exit 1" | grep -q "imok" \
+  && echo "[OK] Zookeeper responded with 'imok'" \
+  || { echo "[ERROR] Zookeeper did not respond with 'imok'"; exit 1; }
+echo
+
+# -------- Kafka sanity: list topics --------
+echo "Running Kafka topic list sanity check..."
+docker exec -i "$KAFKA_CONTAINER_NAME" \
+  kafka-topics.sh --bootstrap-server "localhost:${KAFKA_LISTENER_PORT}" --list || {
+    echo "[ERROR] Failed to list Kafka topics."
+    exit 1
+  }
+
+echo "[OK] Kafka topic list command executed successfully."
+echo
+echo "Health + smoke checks completed successfully."</code></pre>
+<p>Notes:</p>
+<ul>
+<li>
+<p>Expects (in <code>.env</code>):</p>
+<ul>
+<li><code>KAFKA_CONTAINER_NAME</code> (optional, defaults to <code>kafka-broker</code>)</li>
+<li><code>ZOOKEEPER_CONTAINER_NAME</code> (optional, defaults to <code>zookeeper-bank</code>)</li>
+<li><code>KAFKA_LISTENER_PORT</code> (optional, defaults to <code>9092</code>)</li>
+<li><code>ZOOKEEPER_CLIENT_PORT</code> (optional, defaults to <code>2181</code>)</li>
+</ul>
+</li>
+<li>
+<p>If your actual container names differ, either:</p>
+<ul>
+<li>
+<p>Set them in <code>.env</code>, e.g.:</p>
+
+<pre><code class="language-properties">KAFKA_CONTAINER_NAME=kafka-broker
+ZOOKEEPER_CONTAINER_NAME=zookeeper-bank</code></pre>
+</li>
+<li>
+<p>Or adjust defaults at the top of the script.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Zookeeper check: uses <code>ruok</code> → expects <code>imok</code>.</p>
+</li>
+<li>
+<p>Kafka check: lists topics via <code>kafka-topics.sh</code> inside the broker container.</p>
+</li>
+</ul>
+<p>Finally:</p>
+
+<pre><code class="language-bash">chmod +x modules/kafka/scripts/test_health.sh</code></pre>
+<hr>
+<h1 id="-real-world-readiness">🧭 Real-World Readiness</h1>
+<p>This new Kafka module is now:</p>
+<ul>
+<li><strong>Production-friendly</strong></li>
+<li><strong>Debuggable in real time</strong></li>
+<li><strong>Observable with JMX exporter</strong></li>
+<li><strong>Independent for multi-team reuse</strong></li>
+<li><strong>Mapped directly to Kubernetes / OpenShift patterns</strong></li>
+</ul>
+<p>The separate Dockerfiles reflect how teams package infra images in real enterprises.</p>
+<p>You now have a Kafka module that belongs in a real system — not just a tutorial.</p>
+<hr>
+<h1 id="-summary-of-part-2">📝 Summary of Part 2</h1>
+<p>You now have a:</p>
+<ul>
+<li><strong>Custom Kafka image</strong> with debugging tools</li>
+<li><strong>Custom Zookeeper image</strong> with debugging tools</li>
+<li><strong>Prometheus-ready Kafka JMX metrics</strong></li>
+<li><strong>Topic initialization script</strong> modeling realistic event domains</li>
+<li><strong>Standardized Makefile and folder structure</strong></li>
+<li><strong>Canonical docker-volume/ layout</strong></li>
+<li><strong>Deterministic and reusable Kafka Infra Module</strong></li>
+</ul>
+<p>This is the Kafka every backend platform team wishes they had ready to go.</p>
+<hr>
+<h3 id="github-repository-link"><strong>GitHub Repository Link</strong></h3>
+<p>🔗 <strong>Project Repo:</strong>
+<a href="https://github.com/KathiravanMuthaiah/infrastructureWithDocker" target="_blank" rel="noopener noreffer ">https://github.com/KathiravanMuthaiah/infrastructureWithDocker</a></p>
+<hr>
+<h3 id="building-infrastructure-with-docker-series-post-links"><strong>Building Infrastructure with Docker Series: post links</strong></h3>
+<p>🔗 <a href="/posts/building_infrastructure_with_docker_part0/" rel=""><strong>Building Infrastructure with Docker — Part0:</strong></a></p>
+<p>🔗 <a href="/posts/building_infrastructure_with_docker_part1/" rel=""><strong>Building Infrastructure with Docker — Part1:</strong></a></p>
+<p>“<em>Technically authored by me, accelerated with insights from <a href="https://openai.com" target="_blank" rel="noopener noreffer ">ChatGPT by OpenAI</a>.</em>” Refer: <a href="/posts/leveraging_chatgpt_as_a_professional_companion/" rel="">Leverage ChatGPT</a></p>
+<p><strong>Happy Learning</strong></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-12-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part2/" data-title="Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper" data-hashtags="kafka,zookeeper,docker,devops,observability,infra-modules,jmx,event-streaming"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part2/" data-title="Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part2/" data-hashtag="kafka"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part2/" data-title="Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part2/" data-title="Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part2/" data-title="Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://kathiravanmuthaiah.com/posts/building_infrastructure_with_docker_part2/" data-title="Building Infrastructure with Docker — Part 2: Kafka &#43; Zookeeper" data-description="Part 2 of the Docker Infrastructure Series focuses on building a reusable Kafka &#43; Zookeeper module with custom Dockerfiles, debugging tools, Prometheus JMX metrics, topic initialization, and disciplined infra engineering."><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fkathiravanmuthaiah.com%2fposts%2fbuilding_infrastructure_with_docker_part2%2f&amp;text=Building%20Infrastructure%20with%20Docker%20%e2%80%94%20Part%202%3a%20Kafka%20%2b%20Zookeeper" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kafka/">Kafka</a>,&nbsp;<a href="/tags/zookeeper/">Zookeeper</a>,&nbsp;<a href="/tags/docker/">Docker</a>,&nbsp;<a href="/tags/devops/">Devops</a>,&nbsp;<a href="/tags/observability/">Observability</a>,&nbsp;<a href="/tags/infra-modules/">Infra-Modules</a>,&nbsp;<a href="/tags/jmx/">Jmx</a>,&nbsp;<a href="/tags/event-streaming/">Event-Streaming</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/building_infrastructure_with_docker_part1/" class="prev" rel="prev" title="Building Infrastructure with Docker — Part 1: PostgreSQL"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Building Infrastructure with Docker — Part 1: PostgreSQL</a>
+            <a href="/posts/how-i-built-my-personal-website/" class="next" rel="next" title="How I Built My Personal Website with Hugo &amp; LoveIt">How I Built My Personal Website with Hugo & LoveIt<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">Kathiravan Muthaiah</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/mermaid/mermaid.min.js"></script><script>window.config={"comment":{},"data":{"id-1":"flowchart LR\n    dev[Developer] --\u003e docker[Docker Engine]\n    docker --\u003e compose[Docker Compose]\n    \n    compose --\u003e zk[Zookeeper Container 'Custom Image']\n    compose --\u003e kfk[Kafka Broker 'Custom Image']\n    \n    zk --\u003e zv[docker-volume/zookeeper]\n    kfk --\u003e kv[docker-volume/kafka]\n    \n    kfk --\u003e jmx[JMX Exporter Port]"},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
+</html>
